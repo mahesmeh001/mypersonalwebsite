@@ -1,2 +1,5 @@
 background image:
 found in main.css underneath the wrapper section (towards the bottom half of the flie)
+
+
+rename new pages every time otherwise scrolling will be sussed

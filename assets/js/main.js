@@ -165,6 +165,8 @@
 
 	// Get inner.
 	$navPanelInner = $navPanel.children('nav');
+	$navPanelInner = $navPanel.children('mainnav');
+
 
 	function disablescroll() {
 // To get the scroll position of current webpage
@@ -186,13 +188,9 @@
 		$('#subMenu').hide();
 		$('#scrollAnimation').hide();
 		window.scrollTo(0, 0);
-
-		disablescroll();
-		<!--style="margin: 0; height: 100%; overflow: hidden"-->
-		document.getElementById('html').style.margin='0';
-		document.getElementById('html').style.height='100%';
-		document.getElementById('html').overflow = 'hidden';
-
+		if(window.name==='home'){
+			disablescroll();
+		}
 	});
 	//Mobile menu on
 	breakpoints.on('<=medium', function () {
