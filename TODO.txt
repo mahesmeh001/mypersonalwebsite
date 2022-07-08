@@ -1,0 +1,5 @@
+-consider adding buttons to other pages at the bottom of the page for accessibility
+-change the date on the about me page to be at the bottom 
+-figure out a better way organize the images on the about me page
+-add gallery page 
+-write book stuff 

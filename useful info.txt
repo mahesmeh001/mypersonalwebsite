@@ -1,0 +1,2 @@
+background image:
+found in main.css underneath the wrapper section (towards the bottom half of the flie)
