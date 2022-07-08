@@ -123,6 +123,7 @@
 	// Background.
 	$wrapper._parallax(0.925);
 
+
 	// Nav Panel.
 
 	// Toggle.
@@ -164,6 +165,43 @@
 
 	// Get inner.
 	$navPanelInner = $navPanel.children('nav');
+
+	function disablescroll() {
+// To get the scroll position of current webpage
+		TopScroll = window.pageYOffset || document.documentElement.scrollTop;
+		LeftScroll = window.pageXOffset || document.documentElement.scrollLeft,
+
+// if scroll happens, set it to the previous value
+			window.onscroll = function() {
+				window.scrollTo(LeftScroll, TopScroll);
+			};
+	}
+
+	function enablescroll() {
+		window.onscroll = function() {};
+	}
+
+	//Mobile Menu off
+	breakpoints.on('>medium', function() {
+		$('#subMenu').hide();
+		$('#scrollAnimation').hide();
+		window.scrollTo(0, 0);
+
+		disablescroll();
+		<!--style="margin: 0; height: 100%; overflow: hidden"-->
+		document.getElementById('html').style.margin='0';
+		document.getElementById('html').style.height='100%';
+		document.getElementById('html').overflow = 'hidden';
+
+	});
+	//Mobile menu on
+	breakpoints.on('<=medium', function () {
+		enablescroll();
+		$('#subMenu').show();
+		$('#scrollAnimation').show();
+
+	});
+
 
 	// Move nav content on breakpoint change.
 	var $navContent = $nav.children();
