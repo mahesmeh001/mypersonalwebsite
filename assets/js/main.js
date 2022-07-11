@@ -165,7 +165,6 @@
 
 	// Get inner.
 	$navPanelInner = $navPanel.children('nav');
-	$navPanelInner = $navPanel.children('mainnav');
 
 
 	function disablescroll() {
