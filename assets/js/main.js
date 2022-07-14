@@ -12,6 +12,7 @@
 		$header = $('#header'),
 		$nav = $('#nav'),
 		$main = $('#main'),
+		$slideshow = $('#cb-slideshow'),
 		$navPanelToggle, $navPanel, $navPanelInner;
 
 	// Breakpoints.
@@ -24,6 +25,16 @@
 		xsmall:    ['361px',    '480px'    ],
 		xxsmall:   [null,       '360px'    ]
 	});
+
+/*
+	function resizeBackground() {
+		$slideshow.height($(window).height()+60);
+	}
+
+	$window.resize(resizeBackground);
+	resizeBackground();
+*/
+
 
 	/**
 	 * Applies parallax scrolling to an element's background image.

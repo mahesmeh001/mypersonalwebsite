@@ -3351,7 +3351,7 @@ body {
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;
+			height: 100vh;
 			background-color: #212931;
 			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/mehulcliff.JPG");
 			background-size: auto,								auto,														100% auto;
@@ -3380,7 +3380,7 @@ body {
 			background: #1e252d;
 			content: '';
 			display: block;
-			height: 100%;
+			height: 100vh;
 			left: 0;
 			opacity: 0;
 			position: fixed;
@@ -4325,6 +4325,7 @@ body {
 			align-items: stretch;
 			text-align: center;
 			width: 100%;
+			height: 100vh;
 			padding: 0;
 		}
 
@@ -4428,6 +4429,7 @@ body {
 
 			#main {
 				width: 100%;
+				height: 100vh;
 			}
 
 		}
