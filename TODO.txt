@@ -1,28 +1,11 @@
-<!--1-->
-							<div class="w3-row">
-								<div class="w3-row">
-									<h2 style="margin-left: 10%">1.</h2>
-									<div class="w3-col w3-half">
-										<div class="w3-center">
-											<h3 class="">Solo Leveling</h3>
-										</div>
-									</div>
-									<div class="w3-col w3-half">
-										<h3 style="margin-left: 5%">My Rating: Gas/10</h3>
-									</div>
-								</div>
+Bigger:
+Create easter-egg pages with my personal poetry? (tell nobody)?
+    Idea: have the first number be smaller or a different font or smth? Have hints for other easter eggs?
 
-								<p style="margin-left: 10%">Constantly on the verge of death? Congratulations, you have
-									everything you need to turn into a OP MC.</p>
+Music:
+Figure out a good background
 
-								<div class="box alt w3-content" style="align-self: center">
-									<div class="row gtr-50 gtr-uniform">
-										<div class="col-5"><span class="image fit"><img src="images/sololeveling1.jpg" alt="" /></span></div>
-										<div class="col-5"><span class="image fit"><img src="images/sololeveling3.jpg" alt="" /></span></div>
-										<!-- Break -->
-										<div class="col-5"><span class="image fit"><img src="images/sololeveling2.png" alt="" /></span></div>
-										<div class="col-5"><span class="image fit"><img src="images/sololeveling4.jpg" alt="" /></span></div>
-									</div>
-								</div>
-
-							</div>
+Books:
+Fix Bullet points - padding
+Fix spacing for numbers
+Add additional sections
