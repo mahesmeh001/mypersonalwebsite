@@ -3,3 +3,51 @@
             <p></p>
         </div> <!-- End section -->
 
+<!-- Copyright -->
+		<div id="copyright">
+			<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+		</div>
+
+
+<p style="font-size: xx-large"><b><a href="easteregg2.html" style="text-decoration: none">2.</a></b></p>
+
+
+<!--#table-->
+<div class="w3-center">
+    <!--row-->
+    <div class="w3-row">
+        <div class="w3-col w3-half">
+            <div class="w3-center">
+                <h3>The Inheritance Cycle - 10/10</h3>
+                <img alt="The Inheritance cycle" class="w3-image" height="600"
+                     src="images/the-inheritance-cycle-4-book-collection.jpg" width="400">
+            </div>
+        </div>
+        <div class="w3-col w3-half">
+            <h3>Overlord Series - 8/10</h3>
+            <img alt="Overlord" class="w3-image" height="600"
+                 src="images/overlord.jpg" width="400">
+        </div>
+    </div>
+
+    <br>
+
+    <!--row-->
+    <div class="w3-row">
+        <div class="w3-col w3-half">
+            <div class="w3-center">
+                <h3>The Heroes of Olympus - 9/10</h3>
+                <img alt="The Heroes of Olympus" class="w3-image" height="600"
+                     src="images/heroesofolympus.jpg" width="400">
+            </div>
+        </div>
+        <div class="w3-col w3-half">
+            <div class="">
+                <h3>Solo Leveling - 7/10</h3>
+                <img alt="Solo Leveling" class="w3-image" height="600"
+                     src="images/sololeveling.jpg" width="400">
+            </div>
+        </div>
+    </div>
+
+</div>
