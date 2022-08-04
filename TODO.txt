@@ -3,14 +3,21 @@ Create easter-egg pages with my personal poetry? (tell nobody)?
     Idea: have the first number be smaller or a different font or smth? Have hints for other easter eggs?
 
 Music:
-Figure out a good background
+finish inserting playlists and tabling all the stuff in
 
 Books:
-Fix Bullet points - padding
-Fix spacing for numbers
-Add additional sections
+do book reviews to add content
 
 
+
+
+reset hash with this:
+html:
+<a href="#1" onclick="resetHref();">go to Content 1</a>
+js:
+function resetHref() {
+    location.hash = '';
+}
 
 
 
