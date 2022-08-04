@@ -9,3 +9,13 @@ Books:
 Fix Bullet points - padding
 Fix spacing for numbers
 Add additional sections
+
+
+
+
+
+
+
+fix background for the text on slideshows
+to have the slideshow work, put onload with the first slide on the iframe element
+figure out what is causing slow load apresolv? clienttok? something?
