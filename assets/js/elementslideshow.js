@@ -71,6 +71,18 @@ function showSlides(n,e) {
             slides = document.getElementsByClassName("mySlides14");
             dots = document.getElementsByClassName("dot14");
             break;
+        case 15:
+            slides = document.getElementsByClassName("mySlides15");
+            dots = document.getElementsByClassName("dot15");
+            break;
+        case 16:
+            slides = document.getElementsByClassName("mySlides16");
+            dots = document.getElementsByClassName("dot16");
+            break;
+        case 17:
+            slides = document.getElementsByClassName("mySlides17");
+            dots = document.getElementsByClassName("dot17");
+            break;
     }
 
 

@@ -85,6 +85,237 @@
 
 
 
+slideshow for indian artists
+									<div class="w3-row-padding">
+										<div class="w3-col w3-half w3-auto w3-margin-bottom">
+											<div class="w3-display-container">
+
+
+												<p style="margin-bottom: 0; text-align: center"><b>Prominent Artists</b></p>
+
+												<!--slideshow #5, indian artists -->
+
+												<div>
+													<div class="slideshow-container">
+
+														<div class="mySlides5 fade">
+															<div class="numbertext">1 / 6</div>
+															<iframe onload="showSlides(1,5)" style="border-radius:12px"
+																	src="https://open.spotify.com/embed/playlist/3U9jJwrWZtffMTrmWfwkYT?utm_source=generator"
+																	width="100%" height="380" frameBorder="0" allowFullScreen=""
+																	allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides5 fade">
+															<div class="numbertext">2 / 6</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1n4IHkUkGy3UbfNzdO7E42?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides5 fade">
+															<div class="numbertext">3 / 6</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2ac5OpF097xjLcAV9Oy6Mz?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+															<div class="text" style="background-color: #962424">Immortalized by his assassination, one of the most influential artists of our time</div>
+														</div>
+
+														<div class="mySlides5 fade">
+															<div class="numbertext">4 / 6</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0WIel1PhJvg8lo56SyvieA?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides5 fade">
+															<div class="numbertext">5 / 6</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4f4WHYc4vp0Aq6m4zvFpYK?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides5 fade">
+															<div class="numbertext">6 / 6</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3bWfS9mdoPvVttPMNNWPSa?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<a class="prev" onclick="plusSlides(-1,5)">❮</a>
+														<a class="next" onclick="plusSlides(1,5)">❯</a>
+
+													</div>
+													<br>
+
+													<div style="text-align:center">
+														<span class="dot5" onclick="currentSlide(1,5)"></span>
+														<span class="dot5" onclick="currentSlide(2,5)"></span>
+														<span class="dot5" onclick="currentSlide(3,5)"></span>
+														<span class="dot5" onclick="currentSlide(4,5)"></span>
+														<span class="dot5" onclick="currentSlide(5,5)"></span>
+														<span class="dot5" onclick="currentSlide(6,5)"></span>
+													</div>
+												</div>
+												<br>
+
+											</div>
+										</div>
+									</div>
+
+
+
+
+slideshow for hip hop artsits
+								<!--w3-table-->
+								<div class="w3-content" style="max-width:1564px">
+									<div class="w3-row-padding">
+
+										<div class="w3-col w3-half w3-auto w3-margin-bottom">
+											<div class="w3-display-container">
+
+												<!--Hip Hop general here-->
+
+											</div>
+										</div>
+										<div class="w3-col w3-half w3-auto w3-margin-bottom">
+											<div class="w3-display-container">
+
+												<p style="margin-bottom: 0px; text-align: center"><b>Prominent Artists:</b></p>
+												<!--slideshow #7, hip hop artists -->
+												<div>
+													<div class="slideshow-container" style="margin-bottom: 0">
+
+														<div class="mySlides7 fade">
+															<div class="numbertext">1 / 9</div>
+															<iframe onload="showSlides(1,7)" style="border-radius:12px"
+																	src="https://open.spotify.com/embed/playlist/201RJfSVgd0Su1MzXW7hb0?utm_source=generator"
+																	width="100%" height="380" frameBorder="0" allowFullScreen=""
+																	allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides7 fade">
+															<div class="numbertext">2 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/53uqN7uMKBeQvnENni2X7Y?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides7 fade">
+															<div class="numbertext">3 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7dz0LeJPbVx7DK1ZGYI5lx?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides7 fade">
+															<div class="numbertext">4 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4odGe77PyRSpfMU7QfOB6A?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides7 fade">
+															<div class="numbertext">5 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4qRHCFvEsyMItKaZxcjwqE?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides7 fade">
+															<div class="numbertext">6 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6emCdUWuOdy2D011dpHdWx?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides7 fade">
+															<div class="numbertext">7 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2e3hF251bBcPha6csiv5Wi?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides7 fade">
+															<div class="numbertext">8 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7LXIEOu2GtAtuQOXZXWZmo?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides7 fade">
+															<div class="numbertext">9 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5AfWB4tV6f7YnLsBhZT3Nq?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<a class="prev" onclick="plusSlides(-1,7)">❮</a>
+														<a class="next" onclick="plusSlides(1,7)">❯</a>
+
+													</div>
+													<br>
+
+													<div style="text-align:center; margin-top: 0">
+														<span class="dot7" onclick="currentSlide(1,7)"></span>
+														<span class="dot7" onclick="currentSlide(2,7)"></span>
+														<span class="dot7" onclick="currentSlide(3,7)"></span>
+														<span class="dot7" onclick="currentSlide(4,7)"></span>
+														<span class="dot7" onclick="currentSlide(5,7)"></span>
+														<span class="dot7" onclick="currentSlide(6,7)"></span>
+														<span class="dot7" onclick="currentSlide(7,7)"></span>
+														<span class="dot7" onclick="currentSlide(8,7)"></span>
+														<span class="dot7" onclick="currentSlide(9,7)"></span>
+													</div>
+												</div>
+												<br>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+
+slideshow chill artists here
+								<!--w3-table-->
+								<div class="w3-content" style="max-width:1564px">
+									<div class="w3-row-padding">
+
+										<div class="w3-col w3-half w3-auto w3-margin-bottom">
+											<div class="w3-display-container">
+
+												<!--Chill general playlists here-->
+
+											</div>
+										</div>
+										<div class="w3-col w3-half w3-auto w3-margin-bottom">
+											<div class="w3-display-container">
+
+												<p style="margin-bottom: 0px; text-align: center"><b>Prominent Artists:</b></p>
+												<!--slideshow #9, chill artists -->
+												<div>
+													<div class="slideshow-container" style="margin-bottom: 0">
+
+														<div class="mySlides9 fade">
+															<div class="numbertext">1 / 9</div>
+															<iframe onload="showSlides(1,9)" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0YW2Uu3epOAi5xAPoWrPeU?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides9 fade">
+															<div class="numbertext">2 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0bzVWZTy9JMg8eCZVi0B57?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+															<div class="text" style="background-color: #365e7c">Kevin Nguyen?</div>
+
+														</div>
+
+														<div class="mySlides9 fade">
+															<div class="numbertext">3 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1GcnHVMMOLG3JHZwqRunbD?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+														</div>
+
+														<div class="mySlides9 fade">
+															<div class="numbertext">4 / 9</div>
+															<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/475M2ZXJaPWxZKfLNZVDRR?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+															<div class="text" style="background-color: #365e7c">Zaeden</div>
+														</div>
+
+														<a class="prev" onclick="plusSlides(-1,9)">❮</a>
+														<a class="next" onclick="plusSlides(1,9)">❯</a>
+
+													</div>
+													<br>
+
+													<div style="text-align:center; margin-top: 0">
+														<span class="dot9" onclick="currentSlide(1,9)"></span>
+														<span class="dot9" onclick="currentSlide(2,9)"></span>
+														<span class="dot9" onclick="currentSlide(3,9)"></span>
+														<span class="dot9" onclick="currentSlide(4,9)"></span>
+													</div>
+												</div>
+												<br>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+
 
 
 
