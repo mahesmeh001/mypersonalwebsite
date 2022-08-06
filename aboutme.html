@@ -9,13 +9,17 @@
 		<title>About Me Page</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/topbutton.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	</head>
 	<body>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+				<a id="button" style="background-color: #4954ff; color: #f3f7ff"></a>
 
 				<!-- Header -->
 					<header id="header">
@@ -26,7 +30,7 @@
 					<nav id="nav">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li class="active" style="background:#fff2e4"><a href="aboutme.html">About Me</a></li>
+							<li class="active" style="background:#f3f7ff"><a href="aboutme.html">About Me</a></li>
 							<li><a href="music.html">Music</a></li>
 							<li><a href="books.html">Book Stuff</a></li>
 						</ul>
@@ -40,43 +44,42 @@
 					</nav>
 
 				<!-- Main -->
-					<div id="main" style="background:#fff2e4">
+					<div id="main" style="background:#f3f7ff">
 
 						<!-- Post -->
 							<div class="post">
-								<header class="major">
+								<header class="major" style="margin-bottom: 0">
 									<h2>About Me</h2>
 									<div class="image main"><img src="images/mehulaboutme.jpg" alt="mehulguitaraesthetic" /></div>
 									<p>Student, Educator; Brother, Friend; Musician, Athlete; I've worn lots of different
 									hats in my life. This page is a slice of what makes me, Me.</p>
+
+									<br>
+									<div><a href="#college"><b>University</b></a> • <a href="#hs"><b>High School</b></a></div>
+
+
 								</header>
 							</div>
 
 
-						<!--New Section-->
+						<!--College-->
 						<div style="border-color: #262626">
 							<h2 style="text-align: center">University of Wisconsin-Madison</h2>
 							<p>Starting from 2020, I've been a student at the University of Wisconsin-Madison. I'm
 							planning on double majoring in both Computer Science and Mathematics for Programing with an Honors in the Major through the
 							College of Letters and Science. Here's how I've been spending my time:</p>
 
-							<h3 style="text-align: center; text-decoration: underline"><b>Activities</b></h3>
+							<!--<h3 style="text-align: center; text-decoration: underline"><b>Activities</b></h3>-->
 
 							<!--Table of Contents-->
-
-							<div style="border-color: transparent">
-								<div class="w3-content align-center">
-									<div class="w3-content">
-										<div><a href="#badminton"> Badminton Club </a></div>
-										<div><a href="#bhangra"> Wisconsin School of Bhangra </a></div>
-										<div><a href="#AASU"> Asian American Student Union</a></div>
-										<div><a href="#transcend"> Transcend: UW-Madison</a></div>
-										<div><a href="#surma"> Wisconsin Surma</a></div>
-										<div><a href="#ISA"> Indian Student Association</a></div>
-										<div><a href="#CFG"> Coding For Good</a></div>
-									</div>
-								</div>
-							</div>
+							<div style="text-align: center; margin-bottom: 60px"><i><a href="#BPA">Badminton Club</a>
+								• <a href="#soccer">Wisconsin School of Bhangra</a>
+								• <a href="#AASU">Asian American Student Union</a>
+								• <a href="#transcend">Transcend: UW-Madison</a>
+								• <a href="#surma">Wisconsin Surma</a>
+								• <a href="#ISA">Indian Student Association</a>
+								• <a href="#CFG">Coding for Good</a>
+							</i></div>
 
 							<!--Badminton Club-->
 							<div id="badminton">
@@ -146,7 +149,7 @@
 								<a href="https://www.instagram.com/isa_uwmadison/?hl=en"><blockquote style="border-left-color: black">We
 									are a secular student organization at UW-Madison welcoming students of all backgrounds
 									to come celebrate and learn about the Indian culture!</blockquote></a>
-								<p><b>First Year Committee: </b>I'd never tried any planning committee-esk organization before, so I joined the First
+								<p>First Year Committee: I'd never tried any planning committee-esk organization before, so I joined the First
 									Year Committee in the ISA to get an insight into what a planning committee does.</p>
 								<p>After that, I became a regular member of the club.</p>
 							</div>
@@ -159,14 +162,93 @@
 										organization that focuses on creating programs and applications that serve the
 										community.</blockquote></a>
 								<p>Coding for good is a hub for computer science projects. Each team works independently.
-									The team I joined helped the Dane County Timebank transition their webpage to and updated version of Drupal.</p>
+									The team I joined helped the Dane County Timebank transition their webpage to an updated version of Drupal.</p>
 							</div>
 
 
 						</div> <!-- End section -->
 
 
+						<!--High School-->
+						<div id="hs" style="border-color: #262626">
+							<h2 style="text-align: center">High School</h2>
+							<p style="margin-bottom: 0">
+								Although there were many activities that I participated in through High School, here is a brief
+								snapshot of the more memorable ones.
+							</p>
+							<div style="text-align: center;"><i><a href="#BPA">Buisness Professionals of America</a>
+								• <a href="#soccer">Soccer</a> • <a href="#HMSC">Hindu Mandir Summer Camp</a></i></div>
 
+							<br>
+							<!--BPA-->
+							<div id="BPA">
+								<p><b>Buisness Professionals of America</b></p>
+								<p>I spent three years involved in Business Professional of America, and became a club captain in my second year.</p>
+							</div>
+
+							<!--Soccer-->
+							<div id="soccer">
+								<p><b>Soccer</b></p>
+								<p>
+									Soccer used to be my main sport. I played for about 10 years, through both club soccer
+									and my high school. I started out at the worst division and slowly made my way to
+									the premier division of competitive soccer.
+								</p>
+
+								<!--pic table-->
+								<div class="w3-content" style="max-width:1564px">
+									<div class="w3-row-padding">
+										<div class="w3-col w3-half w3-auto w3-margin-bottom">
+											<div class="w3-display-container">
+												<img src="images/soccer1.jpg" alt="soccer"  style="max-width:500px; width: 100%"/>
+												<p></p>
+											</div>
+										</div>
+										<div class="w3-col w3-half w3-auto w3-margin-bottom">
+											<div class="w3-display-container">
+												<img src="images/soccer2.jpg" alt="soccer"  style="max-width:500px; width: 100%"/>
+												<p></p>
+											</div>
+										</div>
+									</div>
+									<div class="w3-row-padding">
+										<div class="w3-col w3-half w3-auto w3-margin-bottom">
+											<div class="w3-display-container">
+												<img src="images/soccer3.jpg" alt="BPA"  style="max-width:500px; width: 100%"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--Hindu Mandir-->
+							<div id="HMSC">
+								<p><b>Hindu Mandir Summer Camp</b></p>
+									<p>
+										Hindu Mandir Summer Camp was an amazing opportunity for both younger and older kids to learn more about their cultural background
+										by participating in a week long camp, every eyar. Unfortunately I was only involved at the HMSC for two years, but it left
+										me with memories I'll never forget.
+									</p>
+								<!--pic table-->
+								<div class="w3-content" style="max-width:1564px">
+									<div class="w3-row-padding">
+
+										<div class="w3-col w3-half w3-auto w3-margin-bottom">
+											<div class="w3-display-container">
+												<div class="w3-image align-center"><img src="images/hmsc1.jpg" alt="hmcs"  style="max-width:700px; width: 90%"/></div>
+											</div>
+										</div>
+										<div class="w3-col w3-half w3-auto w3-margin-bottom">
+											<div class="w3-display-container">
+												<div class="w3-image align-center"><img src="images/hmsc2.jpg" alt="hmsc"  style="max-width:700px; width: 90%"/></div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div> <!--end hs-->
 
 
 
@@ -183,6 +265,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script src="assets/js/topbutton.js"></script>
 
 	</body>
 </html>
