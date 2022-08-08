@@ -2,11 +2,24 @@ Bigger:
 Create easter-egg pages with my personal poetry? (tell nobody)?
     Idea: have the first number be smaller or a different font or smth? Have hints for other easter eggs?
 
+
+General:
+-Make table of contents stand out more
+    -> diff color background
+-lot of scrolling
+    -> down arrow somewhere
+    -> Collapse content <--might work
+-each section is its own color
+
+
+About me page:
+-put pics after title
+
+
 Music:
 finish inserting playlists and tabling all the stuff in
 
 Books:
-do book reviews to add content
 
 
 
