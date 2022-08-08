@@ -20,6 +20,26 @@ Music:
 finish inserting playlists and tabling all the stuff in
 
 Books:
+Sci fi:
+-fahrenheit 451
+-1984
+-the feed
+-do androids dream of sheep
+
+French:
+-Crossing the Mangrove
+-Pierre and Jean
+-Old Goriot
+
+Lit fic:
+
+
+Historical fic:
+-of mice and men
+-to kill a mockingbird
+-the alchemist
+
+
 
 
 
