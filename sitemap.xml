@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 ">
+
+    <url>
+
+        <loc>https://mahesmeh001.github.io/mypersonalwebsite/index.html</loc>
+
+        <lastmod>2022-08-19</lastmod>
+
+        <changefreq>monthly</changefreq>
+
+        <priority>1</priority>
+
+    </url>
+
+    <url>
+
+        <loc>https://mahesmeh001.github.io/mypersonalwebsite/aboutme.html</loc>
+
+        <lastmod>2022-08-19</lastmod>
+
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+
+    </url>
+
+    <url>
+
+        <loc>https://mahesmeh001.github.io/mypersonalwebsite/books.html</loc>
+
+        <lastmod>2022-08-19</lastmod>
+
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+
+    </url>
+
+    <url>
+
+        <loc>https://mahesmeh001.github.io/mypersonalwebsite/music.html</loc>
+
+        <lastmod>2022-08-19</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>0.5</priority>
+
+    </url>
+
+</urlset>
