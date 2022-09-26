@@ -25,7 +25,7 @@ French:
 -Old Goriot
 
 Lit fic:
-
+-jane eyre
 
 Historical fic:
 -of mice and men
@@ -44,11 +44,3 @@ js:
 function resetHref() {
     location.hash = '';
 }
-
-
-
-
-
-fix background for the text on slideshows
-to have the slideshow work, put onload with the first slide on the iframe element
-figure out what is causing slow load apresolv? clienttok? something?

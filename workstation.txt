@@ -406,3 +406,236 @@ if you see me dont say hi takeaways
 
 
 
+        <!-- cool favorites section attempt in books My favorites -->
+        <div id="favs" style="border-color: #262626">
+
+            <div class="w3-center">
+                <h2 style="text-decoration: underline">My Favorites</h2>
+                <p style="text-align: center"></p>
+            </div>
+
+            <br>
+
+            <!--banner-->
+            <!--<div id="favsbanner" class="w3-row w3-row-padding w3-center">
+                <div class="w3-col" style="width: 25%">
+                    <div><img src="images/invisibleman.jpg" style="width: 100%; max-width: 200px"></div>
+                </div>
+                <div class="w3-col" style="width: 25%">
+                    <div><img src="images/thekiterunner.jpg" style="width: 100%; max-width: 200px"></div>
+                </div>
+                <div class="w3-col" style="width: 25%">
+                    <div><img src="images/songofachilles.jpg" style="width: 100%; max-width: 200px"></div>
+                </div>
+                <div class="w3-col" style="width: 25%">
+                    <div><img src="images/circe.jpg" style="width: 100%; max-width: 200px"></div>
+                </div>
+            </div>-->
+
+
+            <div class="w3-content" style="max-width:1564px">
+
+                <!--#Invisible Man-->
+                <!--<button class="collapsible">Invisible Man by Ralph Ellison</button>-->
+                <div id="favinvisibleman" class="">
+                    <div class="w3-content">
+                        <div class="overlapcontainer">
+                            <div class="overlapbox" style="width: 25%; height: 600px;
+                         background-image: url(images/invisibleman.jpg); background-size: contain; background-repeat: no-repeat">
+
+                            </div>
+                            <p style="text-align: right; font-size: xx-large"><i>INVISIBLE MAN</i></p>
+                            <div class="overlapbox overlapoverlay">
+                                <div style="margin-left: 25%; margin-top: 50px">
+                                    <p>
+                                        asdfasdfasdfadsf
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+
+                    <div class="w3-row">
+                        <div class="w3-col w3-half">
+                            <div class="w3-center">
+                                <h3 style="margin-top: 15px">My Rating: 10/10</h3>
+                                <img alt="Invisible Man" class="w3-image" height="600" src="images/invisibleman.jpg"
+                                     width="400">
+                            </div>
+                        </div>
+                        <div class="w3-col w3-half" style="padding-left: 2%">
+                            <div class="">
+                                <p>Constantly purporting ideologies only to tear them down,
+                                    Ellison
+                                    creates a story that never lets you stop thinking beyond the lines. This
+                                    bildungsroman follows the journey of a black, nameless protagonist through
+                                    southern America. Beyond simply learning to deal with racism, the protagonist’s
+                                    tribulations help him develop his sense of identity. </p>
+                                <blockquote style="border-left-color: #87502f">“Live with your head in the lion's mouth.
+                                    I want you to overcome
+                                    ‘em with your yeses, undermine ‘em with grins, agree ‘em to death and destruction,
+                                    let ‘em swoller you till they vomit or bust wide open.”
+                                </blockquote>
+                                <blockquote style="border-left-color: #87502f">"By pretending to agree I had indeed
+                                    agreed"
+                                </blockquote>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="w3-content">
+                        <h3>My Key Takeaways</h3>
+                        <div class="row" style="padding-left: 7%">
+                            <ul>
+                                <li>Never forget your "why"--the driving force of your actions. This is important both for
+                                    being productive and actually doing stuff, and in doing stuff that is meaningful. Once you
+                                    have an underlying reason to accomplish something, setting out to do it becomes infinitely easier.</li>
+                                <li>Live and die on your own terms, both externally and internally. In conversations,
+                                    I've had with others, people have told me that they felt like they should act in a certain way, yet chose not to.
+                                    In those conversations I thought back to this idea. One should strive to, not only recognize what they should do, but act on it as well.
+                                    Only then can you say you are both externally and internally being true to yourself.</li>
+                                <li>Ignorance is a double-edged sword. Sure, sometimes ignorance eases the burden in the short term, but it always bites back.
+                                    If you know that it'll harm you down the line, should you ever choose to remain ignorant about something?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <br>
+
+                </div>
+
+                <br>
+
+
+                <!--The Kite Runner-->
+                <!--<button class="collapsible">The Kite Runner by Khaled Hosseini</button>-->
+                <div id="favkiterunner" class="">
+                    <h3 style="margin-top: 15px">My Rating: 10/10</h3>
+
+                    <div class="w3-row">
+                        <div class="w3-col w3-half">
+                            <div class="w3-center">
+                                <img alt="The Kite Runner" class="w3-image" src="images/thekiterunner.jpg"
+                                     height="600" width="400">
+                            </div>
+                        </div>
+                        <div class="w3-col w3-half" style="padding-left: 2%">
+                            <div class="">
+                                <p style="">This book’s focus centers around a heinous past transfixed on a
+                                    moment when the main character made the wrong decision. Struggling to
+                                    grapple with his past, the main character embarks on a journey of self-discovery
+                                    while revisiting his war-torn homeland. Hosseini does not pull any of his
+                                    punches simultaneously enthralling and horrifying you while depicting harsh truths.
+                                    Following the Biden administration’s US-Taliban Agreement, this book has become extremely
+                                    relevant in the political climate and can better help you understand what life is like in
+                                    Afghanistan. </p>
+                                <blockquote style="border-left-color: #118480">“A man who has no conscience, no
+                                    goodness, does not suffer”
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+
+                    <div class="w3-content">
+                        <div class="row">
+                            <h3>My Key Takeaways</h3>
+                            <div style="padding-left: 7%">
+                                <ul>
+                                    <li>Unless you face your demons, your fears will be realized. Not only will halfheartedly
+                                        trying to solve your problems destroy your mental health, it will also CAUSE the issues you are trying to solve.
+                                        It is a pretty extreme stance to take, but I've realized that there's actually a lot of truth to it.
+                                    </li>
+                                    <li>
+                                        Daily behavior predicts the outcome in critical moments. People don't just turn superhuman
+                                        out of nowhere in big moments. The things you do every day, the actions and thoughts you live by, they all predict
+                                        what you will do in those moments that really matter. If you want better outcomes
+                                        then, figure out what you can change in what you are doing now.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <!--#If You See Me, Don't Say Hi-->
+                <!--<button class="collapsible">If You See Me, Don't Say Hi by Neel Patel</button>-->
+                <div id="favifyouseeme" class="">
+                    <h3 style="margin-top: 15px">My Rating: 9/10</h3>
+
+                    <div class="w3-row">
+                        <div class="w3-col w3-half">
+                            <div class="w3-center">
+                                <img alt="If You See Me, Don't Say Hi" class="w3-image" height="600"
+                                     src="images/ifyouseeme.jpg" width="400">
+                            </div>
+                        </div>
+                        <div class="w3-col w3-half" style="padding-left: 2%">
+                            <div class="">
+                                <p>This is a short story collection about first-generation Indian
+                                    Americans. Through stories wrung with raw human emotion, Patel desiccates
+                                    overgrown stereotypes, tearing apart the minority myth. Careful not to
+                                    embellish life, each story gives us a small window to look at a wide
+                                    variety of brown experiences, leaving us with open endings to draw our
+                                    own conclusions. Written by a desi author for a desi audience, these stories
+                                    finally provide us with an authentic portrait of the brown experience. </p>
+                                <blockquote style="border-left-color: #d8a556">“No one ever told me that happiness
+                                    was
+                                    like a currency: that when it goes, it goes,
+                                    and that few people are willing to give you some of theirs”
+                                </blockquote>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <br>
+
+
+                </div>
+
+
+                <br>
+
+
+            </div> <!--End Table-->
+        </div> <!--End Section-->
+
+
+
+
+<!--foldable content section for extra photos in blog section-->
+        <p>We took a lot of pictures at the event! Check them out!</p>
+        <button class="collapsible">Photos</button>
+        <div id="arangetrum pics" class="collapsiblecontent">
+
+          <!--pic table of general photos-->
+          <div class="w3-content" style="max-width:1564px">
+            <div class="w3-row-padding">
+
+              <div class="w3-col w3-half w3-auto w3-margin-bottom">
+                <div class="w3-display-container">
+                  <div class="w3-image align-center"><img src="images/arangetrum%20group%20dinner.jpg" alt="mehul maheshwari group dinner"  style="max-width:700px; width: 90%"/></div>
+                </div>
+              </div>
+              <div class="w3-col w3-half w3-auto w3-margin-bottom">
+                <div class="w3-display-container">
+                  <div class="w3-image align-center"><img src="images/hmsc2.jpg" alt="mehul maheshwari hindu mandir summer camp"  style="max-width:700px; width: 90%"/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
