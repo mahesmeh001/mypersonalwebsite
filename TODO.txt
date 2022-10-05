@@ -1,16 +1,7 @@
 Bigger:
-Create easter-egg pages with my personal poetry? (tell nobody)?
-    Idea: have the first number be smaller or a different font or smth? Have hints for other easter eggs?
--Create Random page
-    -friends cool stuff
-    -random stuff I create
-    -photos
--Create "for recruiters" page for job related stuff
+-create FAVICON
 
-General:
--Make table of contents stand out more
-    -> diff color background
--each section is its own color
+-Create "for recruiters" page for job related stuff
 
 
 About me page:
@@ -34,6 +25,9 @@ Historical fic:
 
 
 
+archived ideas
+Create easter-egg pages with my personal poetry? (tell nobody)?
+    Idea: have the first number be smaller or a different font or smth? Have hints for other easter eggs?
 
 
 
