@@ -1,9 +1,11 @@
 Bigger:
 -Create "for recruiters" page for job related stuff
 -Create a fashion page?
+-add infinite scroll with incremental load on music page
 
 Random page
--Madison Open 22
+-ADZ
+-that one badminton tournament
 
 
 Music:
