@@ -7,3 +7,5 @@ rename new pages every time otherwise scrolling will be sussed
 for pics, first add to staging area and then commit
 
 collapsible content's active class is "aactive" because .active was being used by the element slideshow
+
+for lazyloading make sure to wrap content inside a <style type="text/lazyloading">

@@ -1,7 +1,6 @@
 Bigger:
 -Create "for recruiters" page for job related stuff
 -Create a fashion page?
--add infinite scroll with incremental load on music page
 -change intro pics and text to follow golden ratio/negative space/rule of thirds <- be more compelling
     -refer to 571 lec 5: web/interaction design pdf. Use these principles to redesign the website
     https://github.com/CS571-S23/lectures/blob/main/Week03/Week03-DesktopWebDesign/week03-desktopwebdesign.pdf
@@ -10,7 +9,6 @@ Bigger:
 Random page
 -bhangra at the alamo
 -jaggo night
--pioneer badminton tournament
 
 
 Music:
