@@ -1,6 +1,7 @@
 Bigger:
 -Create "for recruiters" page for job related stuff
--Create a fashion page?
+-Create a photography page
+    -2 galleries. 1 gallery for my personal pics. 1 gallery for my photographic pics
 -change intro pics and text to follow golden ratio/negative space/rule of thirds <- be more compelling
     -refer to 571 lec 5: web/interaction design pdf. Use these principles to redesign the website
     https://github.com/CS571-S23/lectures/blob/main/Week03/Week03-DesktopWebDesign/week03-desktopwebdesign.pdf

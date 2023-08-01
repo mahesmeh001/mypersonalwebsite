@@ -56,26 +56,26 @@
     line-height: 200px;
 }
 .cb-slideshow li:nth-child(1) span {
-    background-image: url("../../images/mehulcliff.JPG")
+    background-image: url("../../images/Landing/mehulcliff.JPG")
 }
 .cb-slideshow li:nth-child(2) span {
-    background-image: url("../../images/mehuGreecefancy.jpg");
+    background-image: url("../../images/Landing/mehuGreecefancy.jpg");
     animation-delay: 5s;
 }
 .cb-slideshow li:nth-child(3) span {
-    background-image: url("../../images/friendsstairs.jpg");
+    background-image: url("../../images/Landing/friendsstairs.jpg");
     animation-delay: 10s;
 }
 .cb-slideshow li:nth-child(4) span {
-    background-image: url("../../images/mehulholi.jpg");
+    background-image: url("../../images/Landing/mehulholi.jpg");
     animation-delay: 15s;
 }
 .cb-slideshow li:nth-child(5) span {
-    background-image: url("../../images/mehultinu.JPG");
+    background-image: url("../../images/Landing/mehultinu.JPG");
     animation-delay: 20s;
 }
 .cb-slideshow li:nth-child(6) span {
-    background-image: url("../../images/mehulriasparty.JPG");
+    background-image: url("../../images/Landing/mehulriasparty.JPG");
     animation-delay: 25s;
 }
 
