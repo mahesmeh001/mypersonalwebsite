@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mehul's Resume</title>
+
+    <!-- Customized Stylesheets -->
+    <link href="assets/css/Resume/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/Resume/style.css" rel="stylesheet">
+    <link href="assets/css/Resume/animate.min.css" rel="stylesheet">
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+            rel="stylesheet"
+    />
+
+    <!-- font awesome-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Monserrat Fonts -->
+    <link charset="utf-8" href="assets/webfonts/webfontkit-20230731-230515/stylesheet.css" rel="stylesheet"
+          type="text/css"/>
+
+
+</head>
+
+<style>
+    body {
+        background-color: #ffffff;
+        background-image: linear-gradient(
+                to bottom, rgba(255, 255, 255, 0.4), #ffffff
+        ), url("images/Resume/marble.JPG");
+        background-repeat: no-repeat;
+        font-family: 'montserratthin';
+        color: black;
+        font-weight: bold;
+        /*font-size:calc(12px + 1vw)*/
+    }
+
+    @media (max-width: 768px) {
+        .carousel-inner .carousel-item > div {
+            display: none;
+        }
+
+        .carousel-inner .carousel-item > div:first-child {
+            display: block;
+        }
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+    }
+
+    /* display 3 */
+    @media (min-width: 768px) {
+
+        .carousel-inner .carousel-item-right.active,
+        .carousel-inner .carousel-item-next {
+            transform: translateX(33.333%);
+        }
+
+        .carousel-inner .carousel-item-left.active,
+        .carousel-inner .carousel-item-prev {
+            transform: translateX(-33.333%);
+        }
+    }
+
+    .carousel-inner .carousel-item-right,
+    .carousel-inner .carousel-item-left {
+        transform: translateX(0);
+    }
+
+
+</style>
+
+<body class="min-vh-100">
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-light px-4 px-lg-5" id="navbar"
+     style="background-color: white;">
+    <a class="navbar-brand d-flex align-items-center m-fadeIn" href="#intro" id="resume">
+        <img alt="logo" src="images/favicon.png" style="height: 75px; width: 75px"/>
+    </a>
+
+    <button class="navbar-toggler me-0" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon navbar-dark"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0 navbar-light">
+<!--            <a class="nav-item nav-link" href="#intro" id="nav-1">Introduction</a>-->
+            <a class="nav-item nav-link" href="#education" id="nav-2">Education</a>
+            <a class="nav-item nav-link" href="#experience" id="nav-3">Experience</a>
+            <a class="nav-item nav-link" href="#projects" id="nav-4">Projects</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<!--intro-->
+<div class="container-fluid text-center" id="intro">
+
+    <div class="display-1 text-center mt-5">
+        <p>Mehul Maheshwari</p>
+    </div>
+
+    <!--    <div class="container">-->
+    <!--        <p>-->
+    <!--            Here is a little introduction about me!-->
+    <!--        </p>-->
+    <!--    </div>-->
+
+    <div class="container" style="width: 30%">
+        <div class="row">
+            <div class="col">
+                <a href="mailto:mahesmeh002@gmail.com?subject=Mail from Resume Page">
+                    <i class="fa fa-envelope fa-lg" style="color: black;"></i>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://www.facebook.com/madtownbhangra2020/">
+                    <i class="fa fa-github fa-lg" style="color: black;"></i>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://www.instagram.com/madtownbhangra/?hl=en">
+                    <i class="fa fa-instagram fa-lg" style="color: black;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+
+
+<!--education-->
+<!--TODO: add animate__delay-1s to class-->
+<div class="container-fluid animate__animated animate__fadeIn  " id="education">
+
+    <!--    header-->
+    <div class="display-4 text-center mt-5">
+        <p class="sub-title">Education</p>
+    </div>
+
+    <!--    wisco-->
+    <div class="container">
+        <div class="row">
+            <div class="col-10 text-start">
+                <h2>University of Wisconsin-Madison</h2>
+                <p>Senior at the University of Wisconsin Madison pursuing a major in Computer Science B.S, minor in
+                    Mathematics, and comprehensive Honors in the College of Letters and Science.</p>
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Resume/uw-madison.png" style="max-height: 100px">
+            </div>
+        </div>
+
+        <!--classes grid-->
+        <div class="container overflow-hidden">
+
+            <!-- key -->
+            <div class="mb-2 container " style="width: 40%;">
+                <!--                <div class="row text-center">-->
+                <!--                    <div class="col math">-->
+                <!--                        Math-->
+                <!--                    </div>-->
+                <!--                    <div class="col cs">-->
+                <!--                        Computer Science-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <div class="row">
+                    <div class="col three">
+                        300+ Level
+                    </div>
+                    <div class="col four">
+                        400+ Level
+                    </div>
+                    <div class="col five">
+                        500+ Level
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container overflow-hidden text-center">
+
+                <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse" href="#csGrid"
+                   role="button">
+                    Computer Science Courses
+                </a>
+
+                <!--grid of CS classes-->
+                <div class="row g-1 collapse" id="csGrid">
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="cs m-0">
+                                Building User Interfaces
+                            </h5>
+                            <p class="text-end five">
+                                CS 571
+                            </p>
+                            <p>
+                                Introduces software development of user interfaces (UIs). Teaches state-of-the-art UI
+                                paradigms, methods for capturing, interpreting, and responding to different forms of
+                                user input and states,
+                                including pointing, text entry, speech, touch, gestures, user activity, and context.
+                                Also teaches
+                                platform-specific UI development APIs, frameworks, and
+                                toolkits for multiple platforms including web/mobile/desktop interfaces, natural user
+                                interfaces, and voice user interfaces.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="cs m-0">
+                                Human Computer Interaction
+                            </h5>
+                            <p class="text-end five">
+                                CS 571
+                            </p>
+                            <p>
+                                User-centered software design; (1) principles of and methods for understanding user
+                                needs, designing and prototyping interface solutions, and evaluating their usability,
+                                (2) their applications in designing web-based, mobile,and embodied interfaces through
+                                month long group projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="cs m-0">
+                                Computer Graphics
+                            </h5>
+                            <p class="text-end five">
+                                CS 559
+                            </p>
+                            <p>
+                                Survey of computer graphics. Image representation, formation, presentation, composition
+                                and manipulation. Modeling, transformation, and display of geometric objects in two and
+                                three dimensions. Representation of curves and surfaces. Rendering, animation,
+                                multi-media and visualization.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="cs m-0">
+                                Intro to Artificial Intelligence
+                            </h5>
+                            <p class="text-end five">
+                                CS 540
+                            </p>
+                            <p>
+                                Principles of knowledge-based search techniques, automatic deduction, knowledge
+                                representation using predicate logic, machine learning, probabilistic reasoning.
+                                Applications in tasks such as problem solving, data mining, game playing, natural
+                                language understanding, computer vision, speech recognition, and robotics.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="col">
+                            <div class=" p-3 border border-dark mb-2">
+                                <h5 class="cs m-0">
+                                    Software Engineering
+                                </h5>
+                                <p class="text-end five">
+                                    CS 506
+                                </p>
+                                <p>
+                                    Ideas and techniques for designing, developing, and modifying large software
+                                    systems.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 border border-dark ">
+                                <h5 class="cs m-0">
+                                    Programming I, II, III
+                                </h5>
+                                <p class="four text-end">
+                                    CS 200, 300, 400
+                                </p>
+                                <p>
+                                    These courses detailed object-oriented programming as well as dealing with and
+                                    understanding different data structures.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="cs m-0">
+                                Machine Organization and Programming
+                            </h5>
+                            <p class="text-end three">
+                                CS 354
+                            </p>
+                            <p>
+                                An introduction to fundamental structures of computer systems and the C programming
+                                language with a focus on the low-level interrelationships and impacts on performance.
+                                Topics include the virtual address space and virtual memory, the heap and dynamic memory
+                                management, the memory hierarchy and caching, assembly language and the stack,
+                                communication and interrupts/signals, compiling and assemblers/linkers.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div> <!--end cs grid-->
+
+
+                <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse" href="#mathGrid"
+                   role="button">
+                    Mathematics / Other Courses
+                </a>
+
+                <!--grid of MATH/OTHER classes-->
+                <div class="row g-1 collapse" id="mathGrid">
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="math m-0">
+                                Numerical Analysis
+                            </h5>
+                            <p class="text-end five">
+                                MATH 514
+                            </p>
+                            <p>
+                                Polynomial forms, divided differences. Polynomial interpolation. Polynomial
+                                approximation: uniform approximation and Chebyshev polynomials, least-squares
+                                approximation and orthogonal polynomials. Numerical differentiation and integration.
+                                Splines, B-splines and spline approximation. Numerical methods for solving initial and
+                                boundary value problems for ordinary differential equations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="math m-0">
+                                Introduction to Numerical Methods
+                            </h5>
+                            <p class="text-end four">
+                                CS/MATH 412
+                            </p>
+                            <p>
+                                Interpolation, solution of linear and nonlinear systems of equations, approximate
+                                integration and differentiation, numerical solution of ordinary differential equations,
+                                Data fitting (such as least squares) by polynomials and splines.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="col mb-1">
+                            <div class=" p-3 border border-dark ">
+                                <h5 class="m-0">
+                                    Race and Gender in the Digital World
+                                </h5>
+                                <p class="text-end three">
+                                    GEN&WS 330
+                                </p>
+                                <p>
+                                    Topics in the feminist study of inequality and difference based on class, gender and
+                                    race/ethnicity, with a humanities emphasis.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class=" p-3 border border-dark ">
+                                <h5 class="m-0">
+                                    Modern Ethical Theories
+                                </h5>
+                                <p class="text-end five">
+                                    PHILOS 541
+                                </p>
+                                <p>
+                                    Ethical theories and problems as discussed in the late nineteenth and twentieth
+                                    centuries.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="math m-0">
+                                Theory of Single Var. Calc
+                            </h5>
+                            <p class="text-end four">
+                                MATH 421
+                            </p>
+                            <p>
+                                Teaches math students to write and understand proofs in mathematics in general and in
+                                calculus in particular.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="math m-0">
+                                Intro to Discrete Mathematics
+                            </h5>
+                            <p class="text-end">
+                                CS/MATH 240
+                            </p>
+                            <p>
+                                Basic concepts of logic, sets, partial order and other relations, and functions. Basic
+                                concepts of mathematics (definitions, proofs, sets, functions, and relations) with a
+                                focus on discrete structures: integers, bits, strings, trees, and graphs. Propositional
+                                logic, Boolean algebra, and predicate logic. Mathematical induction and recursion.
+                                Invariants and algorithmic correctness. Recurrences and asymptotic growth analysis.
+                                Fundamentals of counting.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="m-0">
+                                Contemporary Moral Issues
+                            </h5>
+                            <p class="text-end three">
+                                PHILOS 341
+                            </p>
+                            <p>
+                                A philosophical study of some of the major moral issues in contemporary society, such as
+                                those concerning abortion, euthanasia, punishment, property, politics, sex, nuclear
+                                disarmament, and world hunger.
+                            </p>
+                        </div>
+                    </div>
+
+                </div> <!--end math/other grid-->
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <br>
+
+    <!--UoM-->
+    <div class="container">
+        <div class="row">
+            <div class="col-10 text-start">
+                <h2>University of Minnesota-Twin Cities</h2>
+                <p>
+                    I was concurrently enrolled in the University of Minnesota Talented Youth Mathematics Program
+                    throughout my high school.
+                </p>
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Resume/UMN.png" style="max-height: 100px">
+            </div>
+        </div>
+
+        <!--classes grid-->
+        <div class="container overflow-hidden">
+
+            <div class="container overflow-hidden text-center">
+
+
+                <a aria-controls="" aria-expanded="false" class="btn btn-primary mb-2" data-toggle="collapse"
+                   href="#math2Grid" role="button">
+                    Mathematics Courses
+                </a>
+
+                <!--grid of MATH 2 classes-->
+                <div class="row g-1 collapse" id="math2Grid">
+
+                    <div class="col-4">
+                        <div class="col mb-1">
+                            <div class=" p-3 border border-dark ">
+                                <h5 class="math m-0">
+                                    Calculus & Analytic Geometry 2
+                                </h5>
+                                <p>
+                                    A rigorous study of integral calculus including techniques and applications of
+                                    integration. The course will also introduce students to differential equations.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class=" p-3 border border-dark ">
+                                <h5 class="math m-0">
+                                    Calculus & Analytic Geometry 1
+                                </h5>
+                                <p>
+                                    Calculus with Analytic Geometry presents the essentials of calculus with analytic
+                                    geometry. The emphasis is on how to set up and solve calculus problems, that is, how
+                                    to
+                                    apply calculus.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-4 mb-1">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="m-0">
+                                Calculus Functions of Variables
+                            </h5>
+                            <p>
+                                This introductory calculus course covers differentiation and integration of functions of
+                                one variable, with applications. Topics include: Concepts of Function, Limits and
+                                Continuity. Differentiation Rules, Application to Graphing, Rates, Approximations, and
+                                Extremum Problems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="m-0">
+                                Linear Alg & Diff Equations
+                            </h5>
+                            <p>
+                                MATH 2243
+                            </p>
+                            <p>
+                                Linear algebra: basis, dimension, matrices, eigenvalues/eigenvectors. Differential
+                                equations: first-order linear, separable; second-order linear with constant
+                                coefficients; linear systems with constant coefficients.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div> <!--end math 2 grid-->
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<!--experience-->
+<!--TODO: re-add animate__delay-2s-->
+<div class="container-fluid animate__animated animate__fadeIn" id="experience">
+
+    <!--    header-->
+    <div class="display-4 text-center mt-5">
+        <p class="sub-title">Experience</p>
+    </div>
+
+    <!--    optum-->
+    <div class="container">
+        <!--header of company-->
+        <div class="row mb-3">
+            <div class="col-10 text-start">
+                <div class="row">
+                    <div class="col">
+                        <p style="font-size: xx-large" class="mb-0">Optum</p>
+                        <h5 class="mt-0">Technology Development Intern</h5>
+                    </div>
+                    <div class="col text-end">
+                        <p style="font-size: x-large">
+                            2022-2023
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Resume/optum-cropped.png" style="max-height: 100px">
+            </div>
+        </div>
+
+        <!--description of role-->
+        <div>
+            <p>
+                Automated reusable de-identifying processes for test data, eliminating the need for third party softwares, such as informatica, <u>reducing costs by up to 300,000 dollars</u>.
+                Tech stack included React, SpringBoot, Rally, Kubernetes, and Docker.
+            </p>
+            <p>
+                Automated backlog reporting data analysis with Java. Tech stack included Java with Maven, Power BI, and Sharepoint.
+
+            </p>
+            <p>
+                Created a website providing stakeholders with relevant information about tech products.
+            </p>
+            <p>
+                Assisted in creating an AI which helps diagnose patients with appropriate illnesses.
+            </p>
+        </div>
+
+    </div>
+
+    <!--protolabs-->
+    <div class="container">
+        <!--header of company-->
+        <div class="row mb-3">
+            <div class="col-10 text-start">
+                <div class="row">
+                    <div class="col">
+                        <p style="font-size: xx-large" class="mb-0">Protolabs</p>
+                        <h5 class="mt-0">Injection Molding Operator</h5>
+                    </div>
+                    <div class="col text-end">
+                        <p style="font-size: x-large">
+                            2021
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Resume/protolabs.png" style="max-height: 100px">
+            </div>
+        </div>
+
+        <!--description of role-->
+        <div>
+            <p>
+                Finished thousands of parts for quality inspection and shipping
+            </p>
+            <p>
+                Communicated and problem solved handling issues and machine failures
+            </p>
+        </div>
+
+    </div>
+
+    <!--STEM Builders-->
+    <div class="container">
+        <!--header of company-->
+        <div class="row mb-3">
+            <div class="col-10 text-start">
+                <div class="row">
+                    <div class="col">
+                        <p style="font-size: xx-large" class="mb-0">STEM Builders Learning Center</p>
+                        <h5 class="mt-0">Instructor / Coach</h5>
+                    </div>
+                    <div class="col text-end">
+                        <p style="font-size: x-large">
+                            2018-2020
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Resume/stem-builders.png" style="max-height: 100px">
+            </div>
+        </div>
+
+        <!--description of role-->
+        <div>
+            <p>
+                Taught high school students an introduction to object-oriented programming using Java.
+            </p>
+            <p>
+                Instructed middle school and high school students how to create mobile applications through MIT App Inventor.
+            </p>
+            <p>
+                Coached middle school students with basic robotics through lego Mindstorm EV3.
+            </p>
+            <p>
+                Taught high school and elementary mathematics to students from all ages.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--projects-->
+<!--TODO: re-add animate__delay-3s-->
+<div class="container-fluid text-center animate__animated animate__fadeIn " id="projects">
+
+    <!--    header-->
+    <div class="display-4 mt-5 mb-3">
+        <p class="sub-title mb-0 pb-0">Projects</p>
+        <h5 class="mt-0">You can find all of my projects in my Github, linked <a href="https://github.com/mahesmeh001">here</a>!</h5>
+    </div>
+
+    <div class="container">
+        <!--card carousel-->
+        <div class="container text-center my-3">
+            <div class="row mx-auto my-auto">
+                <div class="carousel slide w-100" data-ride="carousel" id="recipeCarousel">
+                    <div class="carousel-inner w-100" role="listbox">
+
+                        <div class="carousel-item active">
+                            <div class="col-md-4">
+                                <a href="https://mahesmeh001.github.io/madtown-website/">
+                                    <div class="card card-body">
+                                        <h3>Madtown Bhangra Website</h3>
+                                        <img class="img-fluid" src="images/Resume/madtown.jpg">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <a href="https://mahesmeh001.github.io/mypersonalwebsite/index.html">
+                                    <div class="card card-body">
+                                        <h3>My Personal Website</h3>
+                                        <img class="img-fluid" src="images/Resume/personal-website.jpg">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <a href="https://github.com/mahesmeh001/Cryptography-ODE/blob/master/Cryptography%20Research.pdf">
+                                    <div class="card card-body">
+                                        <h3>Cryptography with Chaos</h3>
+                                        <img class="img-fluid" src="images/Resume/crypto.png">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <a href="https://mahesmeh001.github.io/Badminton_Club_Website/">
+                                    <div class="card card-body">
+                                        <h3>
+                                            Badminton Club Website
+                                        </h3>
+                                        <img class="img-fluid" src="images/Resume/badminton.jpg">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                                <div class="col-md-4">
+                                    <a href="https://mahesmeh001.github.io/sorting_visualizer/">
+
+                                    <div class="card card-body">
+                                        <h3>React Sorting Visualizer</h3>
+                                        <img class="img-fluid" src="images/Resume/sorting-visualizer.jpg">
+                                    </div>
+                                    </a>
+                                </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <div class="card card-body">
+                                    <img class="img-fluid" src="http://placehold.it/380?text=6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev w-auto" data-slide="prev" href="#recipeCarousel" role="button">
+                        <span aria-hidden="true"
+                              class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                    <a class="carousel-control-next w-auto" data-slide="next" href="#recipeCarousel" role="button">
+                        <span aria-hidden="true"
+                              class="carousel-control-next-icon bg-dark border border-dark rounded-circle"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                </div>
+            </div>
+            <h5 class="mt-2">Advances one slide at a time</h5>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<script>this.window.name = "resume";</script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/topbutton.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<!--https://www.codeply.com/go/EIOtI7nkP8/bootstrap-carousel-with-multiple-cards-->
+<script>
+    $('#recipeCarousel').carousel({
+        interval: 10000
+    })
+
+    $('.carousel .carousel-item').each(function () {
+        var minPerSlide = 3;
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < minPerSlide; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+</script>
+
+
+</html>

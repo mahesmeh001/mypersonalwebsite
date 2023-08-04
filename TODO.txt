@@ -1,3 +1,6 @@
+-figure out why navbar not working on mobile on resume page
+
+
 Bigger:
 -Create "for recruiters" page for job related stuff
 -Create a photography page
