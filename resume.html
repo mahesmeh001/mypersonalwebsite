@@ -32,6 +32,7 @@
         color: black;
         font-weight: bold;
         /*font-size:calc(12px + 1vw)*/
+        background-repeat: repeat-y;
     }
 
     @media (max-width: 768px) {
@@ -90,27 +91,34 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0 navbar-light">
-<!--            <a class="nav-item nav-link" href="#intro" id="nav-1">Introduction</a>-->
             <a class="nav-item nav-link" href="#education" id="nav-2">Education</a>
             <a class="nav-item nav-link" href="#experience" id="nav-3">Experience</a>
             <a class="nav-item nav-link" href="#projects" id="nav-4">Projects</a>
+            <a class="nav-item nav-link" href="#leadership" id="nav-1">Leadership / Accolades</a>
+
         </div>
     </div>
 </nav>
 <!-- Navbar End -->
 
 <!--intro-->
-<div class="container-fluid text-center" id="intro">
+<div class="container-fluid text-center mb-5" id="intro">
 
     <div class="display-1 text-center mt-5">
         <p>Mehul Maheshwari</p>
     </div>
 
-    <!--    <div class="container">-->
-    <!--        <p>-->
-    <!--            Here is a little introduction about me!-->
-    <!--        </p>-->
-    <!--    </div>-->
+        <div class="container">
+            <p>
+                mahesmeh002@gmail.com   |   760-600-3041
+            </p>
+            <!--TODO: ADD RESUME PDF HERE-->
+            <a href="">
+                <p class="">
+                    Resume
+                </p>
+            </a>
+        </div>
 
     <div class="container" style="width: 30%">
         <div class="row">
@@ -190,7 +198,9 @@
 
                 <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse" href="#csGrid"
                    role="button">
-                    Computer Science Courses
+                    <p class="m-0">
+                        Computer Science Courses
+                    </p>
                 </a>
 
                 <!--grid of CS classes-->
@@ -324,7 +334,9 @@
 
                 <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse" href="#mathGrid"
                    role="button">
-                    Mathematics / Other Courses
+                    <p class="m-0">
+                        Mathematics / Other Courses
+                    </p>
                 </a>
 
                 <!--grid of MATH/OTHER classes-->
@@ -569,6 +581,8 @@
         <p class="sub-title">Experience</p>
     </div>
 
+    <br>
+
     <!--    optum-->
     <div class="container">
         <!--header of company-->
@@ -599,8 +613,7 @@
                 Tech stack included React, SpringBoot, Rally, Kubernetes, and Docker.
             </p>
             <p>
-                Automated backlog reporting data analysis with Java. Tech stack included Java with Maven, Power BI, and Sharepoint.
-
+                Automated backlog reporting data analysis for stakeholders. Tech stack included Java with Maven, Power BI, and Sharepoint.
             </p>
             <p>
                 Created a website providing stakeholders with relevant information about tech products.
@@ -608,9 +621,14 @@
             <p>
                 Assisted in creating an AI which helps diagnose patients with appropriate illnesses.
             </p>
+            <p>
+                Overall Tech Stack: React, SpringBoot, Rally, Unix, Rally, Java, Maven, Power BI, Sharepoint, Kubernetes, Docker
+            </p>
         </div>
 
     </div>
+
+    <br>
 
     <!--protolabs-->
     <div class="container">
@@ -647,13 +665,15 @@
 
     </div>
 
+    <br>
+
     <!--STEM Builders-->
     <div class="container">
         <!--header of company-->
         <div class="row mb-3">
             <div class="col-10 text-start">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-auto">
                         <p style="font-size: xx-large" class="mb-0">STEM Builders Learning Center</p>
                         <h5 class="mt-0">Instructor / Coach</h5>
                     </div>
@@ -693,101 +713,381 @@
 
 <!--projects-->
 <!--TODO: re-add animate__delay-3s-->
-<div class="container-fluid text-center animate__animated animate__fadeIn " id="projects">
+<div class="container-fluid text-center animate__animated animate__fadeIn" id="projects">
 
     <!--    header-->
     <div class="display-4 mt-5 mb-3">
         <p class="sub-title mb-0 pb-0">Projects</p>
-        <h5 class="mt-0">You can find all of my projects in my Github, linked <a href="https://github.com/mahesmeh001">here</a>!</h5>
+        <h5 class="mt-2">You can find all of my projects in my Github, linked <a href="https://github.com/mahesmeh001">here</a>!</h5>
     </div>
 
-    <div class="container">
-        <!--card carousel-->
-        <div class="container text-center my-3">
-            <div class="row mx-auto my-auto">
-                <div class="carousel slide w-100" data-ride="carousel" id="recipeCarousel">
-                    <div class="carousel-inner w-100" role="listbox">
 
-                        <div class="carousel-item active">
-                            <div class="col-md-4">
-                                <a href="https://mahesmeh001.github.io/madtown-website/">
-                                    <div class="card card-body">
-                                        <h3>Madtown Website</h3>
-                                        <img class="img-fluid" src="images/Resume/madtown.jpg">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+    <!--Carousel-->
+    <div class="container text-center mb-3">
+        <!--breakdown header-->
+        <div class=" text-center mt-5">
+            <p style="font-size: xx-large;">Featured Projects</p>
+        </div>
 
-                        <div class="carousel-item">
-                            <div class="col-md-4">
-                                <a href="https://mahesmeh001.github.io/mypersonalwebsite/index.html">
-                                    <div class="card card-body">
-                                        <h3>My Personal Website</h3>
-                                        <img class="img-fluid" src="images/Resume/personal-website.jpg">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+        <div class="row mx-auto my-auto">
+            <div class="carousel slide w-100" data-ride="carousel" id="recipeCarousel">
+                <div class="carousel-inner w-100" role="listbox">
 
-                        <div class="carousel-item">
-                            <div class="col-md-4">
-                                <a href="https://github.com/mahesmeh001/Cryptography-ODE/blob/master/Cryptography%20Research.pdf">
-                                    <div class="card card-body">
-                                        <h3>Cryptography with Chaos</h3>
-                                        <img class="img-fluid" src="images/Resume/crypto.png">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="col-md-4">
-                                <a href="https://mahesmeh001.github.io/Badminton_Club_Website/">
-                                    <div class="card card-body">
-                                        <h3>
-                                            Badminton Club Website
-                                        </h3>
-                                        <img class="img-fluid" src="images/Resume/badminton.jpg">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <a href="https://mahesmeh001.github.io/sorting_visualizer/">
-
-                                    <div class="card card-body">
-                                        <h3>React Sorting Visualizer</h3>
-                                        <img class="img-fluid" src="images/Resume/sorting-visualizer.jpg">
-                                    </div>
-                                    </a>
+                    <div class="carousel-item active">
+                        <div class="col-md-4">
+                            <a href="https://mahesmeh001.github.io/madtown-website/">
+                                <div class="card card-body">
+                                    <h3>Madtown Website</h3>
+                                    <img class="img-fluid" src="images/Resume/madtown.jpg">
                                 </div>
+                            </a>
                         </div>
-<!--                        <div class="carousel-item">-->
-<!--                            <div class="col-md-4">-->
-<!--                                <div class="card card-body">-->
-<!--                                    <img class="img-fluid" src="http://placehold.it/380?text=6">-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
                     </div>
-                    <a class="carousel-control-prev w-auto" data-slide="prev" href="#recipeCarousel" role="button">
+
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <a href="https://mahesmeh001.github.io/mypersonalwebsite/index.html">
+                                <div class="card card-body">
+                                    <h3>My Personal Website</h3>
+                                    <img class="img-fluid" src="images/Resume/personal-website.jpg">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <a href="https://github.com/mahesmeh001/Cryptography-ODE/blob/master/Cryptography%20Research.pdf">
+                                <div class="card card-body">
+                                    <h3>Cryptography with Chaos</h3>
+                                    <img class="img-fluid" src="images/Resume/crypto.png">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <a href="https://mahesmeh001.github.io/Badminton_Club_Website/">
+                                <div class="card card-body">
+                                    <h3>
+                                        Badminton Club Website
+                                    </h3>
+                                    <img class="img-fluid" src="images/Resume/badminton.jpg">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev w-auto" data-slide="prev" href="#recipeCarousel" role="button">
                         <span aria-hidden="true"
                               class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"></span>
-                        <span class="sr-only"></span>
-                    </a>
-                    <a class="carousel-control-next w-auto" data-slide="next" href="#recipeCarousel" role="button">
+                    <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next w-auto" data-slide="next" href="#recipeCarousel" role="button">
                         <span aria-hidden="true"
                               class="carousel-control-next-icon bg-dark border border-dark rounded-circle"></span>
-                        <span class="sr-only"></span>
-                    </a>
-                </div>
+                    <span class="sr-only"></span>
+                </a>
             </div>
         </div>
     </div>
+
+
+    <!--TODO: ADD BUTTON TO MAKE BREAKDOWN COLLAPSIBLE-->
+
+    <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse" href="#projBreakdown"
+       role="button">
+        <p class="m-0" style="font-size: xx-large">
+            View Projects Breakdown
+        </p>
+    </a>
+
+    <!--project breakdown-->
+    <div class="container collapse" id="projBreakdown">
+        <!--breakdown header-->
+        <div class="text-center mt-5">
+            <p style="font-size: xx-large;">Projects Breakdown</p>
+        </div>
+
+        <!--madtown-->
+        <a href="https://mahesmeh001.github.io/madtown-website/" style="color: black">
+            <div class="container border-top border-dark">
+                <!--header of project-->
+                <div class="row mb-5">
+                    <div class="col-3 ps-0">
+                        <img class="img-fluid" src="images/Resume/madtown.jpg" >
+                    </div>
+                    <div class="col-9 text-start">
+
+                        <h3 style="font-size: xx-large" class="mb-0">Madtown Bhangra Website</h3>
+
+                        <br>
+
+                        <p>
+                            This is a website I developed for the Madtown Bhangra competition to help garner attention
+                            from sponsors and centralize information for prospective teams and audience members.
+                        </p>
+
+                        <p>
+                            Tech Stack: HTML, CSS, Javascript, Boostrap, GitPages
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+
+        <!--Personal Website-->
+        <a href="https://mahesmeh001.github.io/mypersonalwebsite/index.html" style="color: black">
+            <div class="container border-top border-dark">
+                <!--grid of project-->
+                <div class="row mb-5">
+                    <div class="col-9 text-start">
+
+                        <h3 style="font-size: xx-large" class="mb-0">Personal Website</h3>
+
+                        <br>
+
+                        <p>
+                            I've always wanted my own website, a little digital testament to myself. One day I decided to
+                            turn that dream into a reality.
+                        </p>
+
+                        <p>
+                            Tech Stack: HTML5, CSS, Javascript, GitPages
+                        </p>
+
+                    </div>
+
+                    <div class="col-3 pe-0">
+                        <img class="img-fluid" src="images/Resume/personal-website.jpg" >
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+
+        <!--Cryptography Project-->
+        <a href="https://github.com/mahesmeh001/Cryptography-ODE/blob/master/Cryptography%20Research.pdf" style="color: black">
+            <div class="container border-top border-dark">
+                <!--header of project-->
+                <div class="row mb-5">
+                    <div class="col-3 ps-0">
+                        <img class="img-fluid" src="images/Resume/crypto.png">
+                    </div>
+                    <div class="col-9 text-start">
+
+                        <h3 style="font-size: xx-large" class="mb-0">Cryptography with Chaotic Systems</h3>
+
+                        <br>
+
+                        <p>
+                            I created an encryption/decryption algorithm utilizing chaotic ordinary differential equations,
+                            which are extremely difficult to crack due to their turbulent nature. Additionaly I wrote a report
+                            on the nature of these encryption algorithms, as well as additional steps to bolster their security.
+                        </p>
+
+                        <p>
+                            Tech Stack / Skills: Python, Chaotic Differential Equations, Research, Analysis of Differential Systems
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+
+        <!--Badminton Website-->
+        <a href="https://mahesmeh001.github.io/mypersonalwebsite/index.html" style="color: black">
+            <div class="container border-top border-dark">
+                <!--grid of project-->
+                <div class="row mb-5">
+                    <div class="col-9 text-start">
+
+                        <h3 style="font-size: xx-large" class="mb-0">Badminton Club @ UW-Madison Website</h3>
+
+                        <br>
+
+                        <p>
+                            As the Media and Communications Chair of the badminton club at UW-Madison, I noticed that the
+                            club struggled to communicate information that all club members wanted access to, such as pictures
+                            or upcoming practice schedules. I decided to tackle this problem by leveraging my CS background,
+                            and created a website to communicate this information more readily.
+                        </p>
+
+                        <p>
+                            Tech Stack: HTML5, CSS, Javascript, GitPages
+                        </p>
+
+                    </div>
+
+                    <div class="col-3 pe-0">
+                        <img class="img-fluid" src="images/Resume/badminton.jpg" >
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+
+        <!--Office Hours-->
+        <a href="https://git.doit.wisc.edu/cdis/cs/courses/cs506/sp2023/l2_33/office-hours-waiting-list" style="color: black">
+            <div class="container border-top border-dark">
+                <!--header of project-->
+                <div class="row mb-5">
+                    <div class="col-3 ps-0">
+                        <img class="img-fluid" src="images/Resume/office-hours.jpg">
+                    </div>
+                    <div class="col-9 text-start">
+
+                        <h3 style="font-size: xx-large" class="mb-0">Office Hours Waitlist</h3>
+
+                        <br>
+
+                        <p>
+                            We created this application to help manage office hours queues, and cut down on waiting times.
+                            I worked on this full stack application alongside 3 of my peers.
+                        </p>
+
+                        <p>
+                            Although a minimum viable product exists, unfortunately this project did not complete. However,
+                            it was a useful learning opportunity for understanding full stack development.
+                        </p>
+
+                        <p>
+                            Tech Stack / Skills: React, Python, MySQL Workbench, Full-Stack Development
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+
+        <!--Computer Graphics Investigations-->
+        <a href="https://github.com/mahesmeh001/Graphics-Projects/tree/main" style="color: black">
+            <div class="container border-top border-dark">
+                <!--grid of project-->
+                <div class="row mb-5">
+                    <div class="col-9 text-start">
+
+                        <h3 style="font-size: xx-large" class="mb-0">Computer Graphics Investigation</h3>
+
+                        <br>
+
+                        <p>
+                            These are a series of projects I worked on to pursue the Graphics sect of CS. I worked methodologically,
+                            with each project increasing in complexity and tackling a new dimension (both
+                            metaphorically, and in project 4 onwards literally) of graphics.
+                        </p>
+
+                        <p>
+                            Topics Covered: 3D -> 2D Projected Views, Hierarchical Modeling, Parametrics in Animation,
+                            Transformations using Explicit Matrix and Vector Representations
+                        </p>
+
+                    </div>
+
+                    <div class="col-3 pe-0">
+                        <img class="img-fluid" src="images/Resume/graphics-flight.jpg">
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+
+        <!--Sorting Visualizer-->
+        <a href="https://mahesmeh001.github.io/sorting_visualizer/" style="color: black">
+            <div class="container border-top border-dark">
+                <!--header of project-->
+                <div class="row mb-5">
+                    <div class="col-3 ps-0">
+                        <img class="img-fluid" src="images/Resume/sorting-visualizer.jpg">
+                    </div>
+                    <div class="col-9 text-start">
+
+                        <h3 style="font-size: xx-large" class="mb-0">Sorting Visualizer</h3>
+
+                        <br>
+
+                        <p>
+                            I wanted to get some practice using React, as well as refreshing my memory on important algorithms
+                            and tackled both problems via this project.
+                        </p>
+
+                        <p>
+                            Tech Stack / Skills: React, Sorting Algorithms
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+
+    </div>
+
+
+
 </div>
 
+<!--TODO: ADD LEADERSHIP / AWARDS SECTION-->
+<!--education-->
+<!--TODO: add animate__delay-4s to class-->
+<div class="container-fluid animate__animated animate__fadeIn  " id="leadership">
+
+    <!--    header-->
+    <div class="display-4 text-center mt-5">
+        <p class="sub-title">Leadership / Accolades</p>
+    </div>
+    <!--madtown -->
+    <div class="container">
+        <div class="row">
+            <div class="col-10 text-start">
+                <h2>Madtown Bhangra Marketing Chair</h2>
+                <p>
+                    As the current marketing chair, I am responsible for Madtown branding, all social media, and
+                    designing and developing the madtown website which you can find linked in the projects section.
+                </p>
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Resume/madtown-brand.png" style="max-height: 100px">
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!--badmiton -->
+    <div class="container">
+        <div class="row">
+            <div class="col-10 text-start">
+                <h2>Badminton Club Media and Communications Chair</h2>
+                <p>
+                    As the communications chair I was responsible for managing all the platforms of communication. I additionally
+                    created a website for the club which you can find linked underneath the projects section.
+                </p>
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Resume/badminton-brand.jpg" style="max-height: 100px">
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>
 
 
 
