@@ -9,7 +9,7 @@
     <link href="assets/css/Resume/style.css" rel="stylesheet">
     <link href="assets/css/Resume/animate.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-            rel="stylesheet"/>
+          rel="stylesheet"/>
 
     <!-- font awesome-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
@@ -73,7 +73,15 @@
 
 </style>
 
-<body class="min-vh-100">
+<!--fade in -->
+<style>
+    .fade-in {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+</style>
+
+<body>
 
 
 <!-- Navbar Start -->
@@ -92,6 +100,7 @@
         <div class="navbar-nav ms-auto p-4 p-lg-0 navbar-light">
             <a class="nav-item nav-link" href="#education" id="nav-2">Education</a>
             <a class="nav-item nav-link" href="#experience" id="nav-3">Experience</a>
+            <a class="nav-item nav-link" href="#research" id="nav-5">Research</a>
             <a class="nav-item nav-link" href="#projects" id="nav-4">Projects</a>
             <a class="nav-item nav-link" href="#leadership" id="nav-1">Leadership / Accolades</a>
 
@@ -107,16 +116,16 @@
         <p>Mehul Maheshwari</p>
     </div>
 
-        <div class="container">
-            <p>
-                mahesmeh002@gmail.com   |   760-600-3041
+    <div class="container">
+        <p>
+            mahesmeh002@gmail.com | 760-600-3041
+        </p>
+        <a href="images/Resume/mehul-resume.pdf">
+            <p class="">
+                Resume
             </p>
-            <a href="images/Resume/mehul-resume.pdf">
-                <p class="">
-                    Resume
-                </p>
-            </a>
-        </div>
+        </a>
+    </div>
 
     <div class="container" style="width: 30%">
         <div class="row">
@@ -144,7 +153,7 @@
 
 
 <!--education-->
-<div class="container-fluid animate__animated animate__fadeIn animate__delay-1s " id="education">
+<div class="container-fluid fade-in" id="education">
 
     <!--    header-->
     <div class="display-4 text-center mt-5">
@@ -159,7 +168,7 @@
                 <p>Senior at the University of Wisconsin Madison pursuing a major in Computer Science B.S, minor in
                     Mathematics, and comprehensive Honors in the College of Letters and Science.</p>
             </div>
-            <div class="col-2 text-end">
+            <div class="col-2 text-center">
                 <img class="img-fluid" src="images/Resume/uw-madison.png" style="max-height: 100px">
             </div>
         </div>
@@ -193,7 +202,8 @@
 
             <div class="container overflow-hidden text-center">
 
-                <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse" href="#csGrid"
+                <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse"
+                   href="#csGrid"
                    role="button">
                     <p class="m-0">
                         Computer Science Courses
@@ -329,7 +339,8 @@
                 </div> <!--end cs grid-->
 
 
-                <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse" href="#mathGrid"
+                <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse"
+                   href="#mathGrid"
                    role="button">
                     <p class="m-0">
                         Mathematics / Other Courses
@@ -570,7 +581,7 @@
 </div>
 
 <!--experience-->
-<div class="container-fluid animate__animated animate__fadeIn animate__delay-2s" id="experience">
+<div class="container-fluid fade-in" id="experience">
 
     <!--    header-->
     <div class="display-4 text-center mt-5">
@@ -586,7 +597,7 @@
             <div class="col-10 text-start">
                 <div class="row">
                     <div class="col">
-                        <p style="font-size: xx-large" class="mb-0">Optum</p>
+                        <p class="mb-0" style="font-size: xx-large">Optum</p>
                         <h5 class="mt-0">Technology Development Intern</h5>
                     </div>
                     <div class="col text-end">
@@ -605,11 +616,13 @@
         <!--description of role-->
         <div>
             <p>
-                Automated reusable de-identifying processes for test data, eliminating the need for third party software, such as informatica.
+                Automated reusable de-identifying processes for test data, eliminating the need for third party
+                software, such as informatica.
                 Tech stack included React, SpringBoot, Rally, Kubernetes, and Docker.
             </p>
             <p>
-                Automated backlog reporting data analysis for stakeholders. Tech stack included Java with Maven, Power BI, and Sharepoint.
+                Automated backlog reporting data analysis for stakeholders. Tech stack included Java with Maven, Power
+                BI, and Sharepoint.
             </p>
             <p>
                 Created a website providing stakeholders with relevant information about tech products.
@@ -618,7 +631,8 @@
                 Assisted in creating an AI which helps diagnose patients with appropriate illnesses.
             </p>
             <p>
-                Overall Tech Stack: React, SpringBoot, Rally, Unix, Rally, Java, Maven, Power BI, Sharepoint, Kubernetes, Docker
+                Overall Tech Stack: React, SpringBoot, Rally, Unix, Rally, Java, Maven, Power BI, Sharepoint,
+                Kubernetes, Docker
             </p>
         </div>
 
@@ -633,7 +647,7 @@
             <div class="col-10 text-start">
                 <div class="row">
                     <div class="col">
-                        <p style="font-size: xx-large" class="mb-0">Protolabs</p>
+                        <p class="mb-0" style="font-size: xx-large">Protolabs</p>
                         <h5 class="mt-0">Injection Molding Operator</h5>
                     </div>
                     <div class="col text-end">
@@ -670,7 +684,7 @@
             <div class="col-10 text-start">
                 <div class="row">
                     <div class="col-auto">
-                        <p style="font-size: xx-large" class="mb-0">STEM Builders Learning Center</p>
+                        <p class="mb-0" style="font-size: xx-large">STEM Builders Learning Center</p>
                         <h5 class="mt-0">Instructor / Coach</h5>
                     </div>
                     <div class="col text-end">
@@ -692,7 +706,8 @@
                 Taught high school students an introduction to object-oriented programming using Java.
             </p>
             <p>
-                Instructed middle school and high school students how to create mobile applications through MIT App Inventor.
+                Instructed middle school and high school students how to create mobile applications through MIT App
+                Inventor.
             </p>
             <p>
                 Coached middle school students with basic robotics through lego Mindstorm EV3.
@@ -707,13 +722,109 @@
 
 </div>
 
+
+<!--research-->
+<div class="container-fluid fade-in" id="research">
+
+    <!--    header-->
+    <div class="display-4 text-center mt-5">
+        <p class="sub-title">Research</p>
+    </div>
+
+    <br>
+
+    <!--Enhancing Spatial Perception and Presence in Immersive Virtual Environments-->
+    <div class="container">
+        <!--header of company-->
+        <div class="row mb-3">
+            <div class="col-10 text-start">
+                <div class="row">
+                    <div class="col-9">
+                        <p class="mb-0" style="font-size: xx-large">Enhancing Spatial Perception and Presence in
+                            Immersive Virtual Environments</p>
+                        <h5 class="mt-0">Under Professor Victoria Interrante</h5>
+                    </div>
+                    <div class="col text-end">
+                        <p style="font-size: x-large">
+                            2018-2019
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2 text-center">
+                <img class="img-fluid" src="images/Resume/UMN.png" style="max-height: 100px">
+            </div>
+        </div>
+
+        <!--description of role-->
+        <div>
+            <p>
+                Spearheaded project proposal, The Field of View’s Associations on Cybersickness in Virtual Reality,
+                which investigated the association between field-of-view and cybersickness with passive control.
+            </p>
+            <p>
+                Collaborated with graduate students on Spatial Perception in Immersive Virtual Environments
+            </p>
+            <p>
+                Awarded the Minnesota Department of Education's <a
+                    href="https://education.mn.gov/mde/fam/gifted/sod/index.htm"
+                    style="color: inherit; text-decoration: underline">Scholars of Distinction</a>, Meritorious Award.
+            </p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!--Diversity Science Research Platform-->
+    <div class="container">
+        <!--header of company-->
+        <div class="row mb-3">
+            <div class="col-10 text-start">
+                <div class="row">
+                    <div class="col-9">
+                        <p class="mb-0" style="font-size: xx-large">Diversity Science Research Platform</p>
+                        <h5 class="mt-0">Under Assistant Professor <a
+                                href="https://ischool.wisc.edu/staff/thebault-spieker-jacob/"
+                                style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px">Jacob
+                            Thebault-Spieker</a></h5>
+                    </div>
+                    <div class="col text-end">
+                        <p style="font-size: x-large">
+                            2022-Present
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2 text-center">
+                <img class="img-fluid" src="images/Resume/uw-madison.png" style="max-height: 100px">
+            </div>
+        </div>
+
+        <!--description of role-->
+        <div>
+            <p>
+                Currently working to create a Full-Stack platform which helps conduct experiments with diversity science
+                in gig work economies.
+            </p>
+        </div>
+
+    </div>
+
+    <br>
+</div>
+
+
 <!--projects-->
-<div class="container-fluid text-center animate__animated animate__fadeIn animate__delay-3s" id="projects">
+<div class="container-fluid text-center fade-in" id="projects">
 
     <!--    header-->
     <div class="display-4 mt-5 mb-3">
         <p class="sub-title mb-0 pb-0">Projects</p>
-        <h5 class="mt-2">You can find all of my projects in my Github, linked <a href="https://github.com/mahesmeh001">here</a>!</h5>
+        <h5 class="mt-2">You can find all of my projects in my Github, linked <a href="https://github.com/mahesmeh001">here</a>!
+        </h5>
     </div>
 
 
@@ -790,7 +901,6 @@
     </div>
 
 
-
     <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse" href="#projBreakdown"
        role="button">
         <p class="m-0" style="font-size: xx-large">
@@ -811,11 +921,11 @@
                 <!--header of project-->
                 <div class="row mb-5">
                     <div class="col-3 ps-0">
-                        <img class="img-fluid" src="images/Resume/madtown.jpg" >
+                        <img class="img-fluid" src="images/Resume/madtown.jpg">
                     </div>
                     <div class="col-9 text-start">
 
-                        <h3 style="font-size: xx-large" class="mb-0">Madtown Bhangra Website</h3>
+                        <h3 class="mb-0" style="font-size: xx-large">Madtown Bhangra Website</h3>
 
                         <br>
 
@@ -842,12 +952,13 @@
                 <div class="row mb-5">
                     <div class="col-9 text-start">
 
-                        <h3 style="font-size: xx-large" class="mb-0">Personal Website</h3>
+                        <h3 class="mb-0" style="font-size: xx-large">Personal Website</h3>
 
                         <br>
 
                         <p>
-                            I've always wanted my own website, a little digital testament to myself. One day I decided to
+                            I've always wanted my own website, a little digital testament to myself. One day I decided
+                            to
                             turn that dream into a reality.
                         </p>
 
@@ -858,7 +969,7 @@
                     </div>
 
                     <div class="col-3 pe-0">
-                        <img class="img-fluid" src="images/Resume/personal-website.jpg" >
+                        <img class="img-fluid" src="images/Resume/personal-website.jpg">
                     </div>
 
                 </div>
@@ -867,7 +978,8 @@
         </a>
 
         <!--Cryptography Project-->
-        <a href="https://github.com/mahesmeh001/Cryptography-ODE/blob/master/Cryptography%20Research.pdf" style="color: black">
+        <a href="https://github.com/mahesmeh001/Cryptography-ODE/blob/master/Cryptography%20Research.pdf"
+           style="color: black">
             <div class="container border-top border-dark">
                 <!--header of project-->
                 <div class="row mb-5">
@@ -876,18 +988,22 @@
                     </div>
                     <div class="col-9 text-start">
 
-                        <h3 style="font-size: xx-large" class="mb-0">Cryptography with Chaotic Systems</h3>
+                        <h3 class="mb-0" style="font-size: xx-large">Cryptography with Chaotic Systems</h3>
 
                         <br>
 
                         <p>
-                            I created an encryption/decryption algorithm utilizing chaotic ordinary differential equations,
-                            which are extremely difficult to crack due to their turbulent nature. Additionaly I wrote a report
-                            on the nature of these encryption algorithms, as well as additional steps to bolster their security.
+                            I created an encryption/decryption algorithm utilizing chaotic ordinary differential
+                            equations,
+                            which are extremely difficult to crack due to their turbulent nature. Additionaly I wrote a
+                            report
+                            on the nature of these encryption algorithms, as well as additional steps to bolster their
+                            security.
                         </p>
 
                         <p>
-                            Tech Stack / Skills: Python, Chaotic Differential Equations, Research, Analysis of Differential Systems
+                            Tech Stack / Skills: Python, Chaotic Differential Equations, Research, Analysis of
+                            Differential Systems
                         </p>
 
                     </div>
@@ -904,14 +1020,17 @@
                 <div class="row mb-5">
                     <div class="col-9 text-start">
 
-                        <h3 style="font-size: xx-large" class="mb-0">Badminton Club @ UW-Madison Website</h3>
+                        <h3 class="mb-0" style="font-size: xx-large">Badminton Club @ UW-Madison Website</h3>
 
                         <br>
 
                         <p>
-                            As the Media and Communications Chair of the badminton club at UW-Madison, I noticed that the
-                            club struggled to communicate information that all club members wanted access to, such as pictures
-                            or upcoming practice schedules. I decided to tackle this problem by leveraging my CS background,
+                            As the Media and Communications Chair of the badminton club at UW-Madison, I noticed that
+                            the
+                            club struggled to communicate information that all club members wanted access to, such as
+                            pictures
+                            or upcoming practice schedules. I decided to tackle this problem by leveraging my CS
+                            background,
                             and created a website to communicate this information more readily.
                         </p>
 
@@ -922,7 +1041,7 @@
                     </div>
 
                     <div class="col-3 pe-0">
-                        <img class="img-fluid" src="images/Resume/badminton.jpg" >
+                        <img class="img-fluid" src="images/Resume/badminton.jpg">
                     </div>
 
                 </div>
@@ -931,7 +1050,8 @@
         </a>
 
         <!--Office Hours-->
-        <a href="https://git.doit.wisc.edu/cdis/cs/courses/cs506/sp2023/l2_33/office-hours-waiting-list" style="color: black">
+        <a href="https://git.doit.wisc.edu/cdis/cs/courses/cs506/sp2023/l2_33/office-hours-waiting-list"
+           style="color: black">
             <div class="container border-top border-dark">
                 <!--header of project-->
                 <div class="row mb-5">
@@ -940,17 +1060,19 @@
                     </div>
                     <div class="col-9 text-start">
 
-                        <h3 style="font-size: xx-large" class="mb-0">Office Hours Waitlist</h3>
+                        <h3 class="mb-0" style="font-size: xx-large">Office Hours Waitlist</h3>
 
                         <br>
 
                         <p>
-                            We created this application to help manage office hours queues, and cut down on waiting times.
+                            We created this application to help manage office hours queues, and cut down on waiting
+                            times.
                             I worked on this full stack application alongside 3 of my peers.
                         </p>
 
                         <p>
-                            Although a minimum viable product exists, unfortunately this project did not complete. However,
+                            Although a minimum viable product exists, unfortunately this project did not complete.
+                            However,
                             it was a useful learning opportunity for understanding full stack development.
                         </p>
 
@@ -972,12 +1094,13 @@
                 <div class="row mb-5">
                     <div class="col-9 text-start">
 
-                        <h3 style="font-size: xx-large" class="mb-0">Computer Graphics Investigation</h3>
+                        <h3 class="mb-0" style="font-size: xx-large">Computer Graphics Investigation</h3>
 
                         <br>
 
                         <p>
-                            These are a series of projects I worked on to pursue the Graphics sect of CS. I worked methodologically,
+                            These are a series of projects I worked on to pursue the Graphics sect of CS. I worked
+                            methodologically,
                             with each project increasing in complexity and tackling a new dimension (both
                             metaphorically, and in project 4 onwards literally) of graphics.
                         </p>
@@ -1008,12 +1131,13 @@
                     </div>
                     <div class="col-9 text-start">
 
-                        <h3 style="font-size: xx-large" class="mb-0">Sorting Visualizer</h3>
+                        <h3 class="mb-0" style="font-size: xx-large">Sorting Visualizer</h3>
 
                         <br>
 
                         <p>
-                            I wanted to get some practice using React, as well as refreshing my memory on important algorithms
+                            I wanted to get some practice using React, as well as refreshing my memory on important
+                            algorithms
                             and tackled both problems via this project.
                         </p>
 
@@ -1031,11 +1155,11 @@
     </div>
 
 
-
 </div>
 
 <!--leadership-->
-<div class="container-fluid animate__animated animate__fadeIn animate__delay-4s " id="leadership">
+<!--animate__animated animate__fadeIn animate__delay-5s-->
+<div class="container-fluid fade-in" id="leadership">
 
     <!--    header-->
     <div class="display-4 text-center mt-5">
@@ -1065,7 +1189,8 @@
             <div class="col-10 text-start">
                 <h2>Badminton Club Media and Communications Chair</h2>
                 <p>
-                    As the communications chair I was responsible for managing all the platforms of communication. I additionally
+                    As the communications chair I was responsible for managing all the platforms of communication. I
+                    additionally
                     created a website for the club which you can find linked underneath the projects section.
                 </p>
             </div>
@@ -1082,7 +1207,8 @@
             <div class="col-10 text-start">
                 <h2>UW-Madison Deans List</h2>
                 <p>
-                    I won the deans list academic designation for multiple semesters of my undergraduate academia. This is
+                    I won the deans list academic designation for multiple semesters of my undergraduate academia. This
+                    is
                     awarded to full-time students with exceptional GPA's.
                 </p>
             </div>
@@ -1093,12 +1219,13 @@
 
     </div>
 
-    <!--Deans list -->
+    <!--MDE SOD -->
     <div class="container">
         <div class="row">
             <div class="col-10 text-start">
                 <h2>Minnesota Department of Education - Scholars of Distinction: Meritorious</h2>
-                <a style="color: inherit" href="https://www.einnews.com/pr_news/642155285/minnesota-s-distinguished-high-school-students-honored-6-28-23#:~:text=Scholar%20of%20Distinction&text=To%20earn%20recognition%20in%20the,skills%20on%20a%20challenging%20project.">
+                <a href="https://www.einnews.com/pr_news/642155285/minnesota-s-distinguished-high-school-students-honored-6-28-23#:~:text=Scholar%20of%20Distinction&text=To%20earn%20recognition%20in%20the,skills%20on%20a%20challenging%20project."
+                   style="color: inherit">
                     <p>
                         To earn recognition in the Scholars of Distinction, a student must complete required work in
                         Minnesota's academic standards, demonstrate mastery of complex subject matter, and apply their
@@ -1113,10 +1240,28 @@
 
     </div>
 
+    <!--Pioneer Open -->
+    <div class="container">
+        <div class="row">
+            <div class="col-10 text-start">
+                <h2>First Place, Pioneer Open</h2>
+                <a href="https://www.einnews.com/pr_news/642155285/minnesota-s-distinguished-high-school-students-honored-6-28-23#:~:text=Scholar%20of%20Distinction&text=To%20earn%20recognition%20in%20the,skills%20on%20a%20challenging%20project."
+                   style="color: inherit">
+                    <p>
+                        I won first place at the Pioneer Open in Chicago, for Men's Doubles in Badminton.
+                        Although not strictly related to CS, it is an accomplishment I am proud of.
+                    </p>
+                </a>
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Random/Pioneer.png" style="max-height: 100px">
+            </div>
+        </div>
+
+    </div>
 
 
 </div>
-
 
 
 <hr>
@@ -1163,6 +1308,59 @@
             next.children(':first-child').clone().appendTo($(this));
         }
     });
+</script>
+
+<script>
+
+    // Function to check if an element is in the viewport
+    function isElementInViewport(el) {
+        let rect = el.getBoundingClientRect();
+        return (
+            rect.top >= -200 && // Adjust this value to set the buffer zone above the viewport
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)+200 &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle the scroll event
+    function handleScroll() {
+        let leadership = document.getElementById("leadership");
+        let experience = document.getElementById("experience");
+        let education = document.getElementById("education");
+        let research = document.getElementById("research");
+        let projects = document.getElementById("projects");
+
+
+
+
+        if (isElementInViewport(education)) {
+            education.style.opacity = 1;
+        }
+
+        if (isElementInViewport(experience)) {
+            experience.style.opacity = 1;
+        }
+
+        if (isElementInViewport(research)) {
+            research.style.opacity = 1;
+        }
+
+        if (isElementInViewport(projects)) {
+            projects.style.opacity = 1;
+        }
+
+        if (isElementInViewport(leadership)) {
+            leadership.style.opacity = 1;
+        }
+
+    }
+
+    // Attach the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("load", handleScroll); // Check on page load
+
+
 </script>
 
 
