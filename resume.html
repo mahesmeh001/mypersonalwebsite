@@ -88,7 +88,7 @@
 <nav class="navbar navbar-expand-lg sticky-top navbar-light px-4 px-lg-5" id="navbar"
      style="background-image: linear-gradient(
                 to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)
-        ), url('images/Resume/marble.JPG')">
+        ), url('images/Resume/marble.JPG'); top: 0">
     <a class="navbar-brand d-flex align-items-center m-fadeIn" href="index.html" id="resume">
         <img alt="logo" src="images/brown-favicon.png" style="height: 75px; width: 75px"/>
     </a>
@@ -1317,9 +1317,9 @@
     function isElementInViewport(el) {
         let rect = el.getBoundingClientRect();
         return (
-            rect.top >= -200 && // Adjust this value to set the buffer zone above the viewport
+            rect.top >= -400 && // Adjust this value to set the buffer zone above the viewport
             rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)+200 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)+400 &&
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
@@ -1363,6 +1363,28 @@
 
 
 </script>
+
+<!--custom script to collapse navbar menu-->
+<script>
+    $(document).ready(function () {
+        $(".nav-link").on('click', function (event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash;
+                });
+
+                $(".navbar-collapse").collapse('hide'); // Manually close the navigation menu
+            }
+        });
+    });
+</script>
+
 
 
 </html>
