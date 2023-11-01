@@ -969,7 +969,7 @@
             <!--#The Metamorphosis-->
             <button class="collapsible">The Metamorphosis by Franz Kafka</button>
             <div id="metamorphosis" class="collapsiblecontent">
-                <h3 style="margin-top: 15px">My Rating: 6/10</h3>
+                <h3 style="margin-top: 15px">My Rating: 3/10</h3>
 
                 <div class="w3-row">
                     <div class="w3-col w3-half">
@@ -991,7 +991,7 @@
             <!--#The Tell tale heart-->
             <button class="collapsible">The Tell Tale Heart by Edgar Allen Poe</button>
             <div id="telltaleheart" class="collapsiblecontent">
-                <h3 style="margin-top: 15px">My Rating: 4/10</h3>
+                <h3 style="margin-top: 15px">My Rating: 1/10</h3>
 
                 <div class="w3-row">
                     <div class="w3-col w3-half">
@@ -1118,20 +1118,21 @@
 <script src="assets/js/topbutton.js"></script>
 
 <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
+    var collapsibles = document.querySelectorAll('.collapsible');
 
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("aactive");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-                content.style.maxHeight = null;
+    collapsibles.forEach(function(collapsible) {
+        var content = collapsible.nextElementSibling;
+
+        collapsible.addEventListener('click', function() {
+            this.classList.toggle('open');
+            if (this.classList.contains('open')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
             } else {
-                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.maxHeight = null;
             }
         });
-    }
+    });
+
 </script>
 
 
