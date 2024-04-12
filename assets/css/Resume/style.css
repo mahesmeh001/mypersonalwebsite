@@ -835,6 +835,10 @@ body.is-preload #wrapper.fade-in:before {
     background-color: rgba(44, 249, 78, 0.12);
 }
 
+.six{
+    background-color: rgba(15, 0, 255, 0.12);
+}
+
 .five{
     background-color: rgba(157, 44, 249, 0.12);
 }
