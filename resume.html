@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehul's Resume</title>
 
     <!-- Customized Stylesheets -->
@@ -99,9 +100,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0 navbar-light">
-            <a class="nav-item nav-link" href="#research" id="nav-5">Research</a>
-            <a class="nav-item nav-link" href="#education" id="nav-2">Education</a>
             <a class="nav-item nav-link" href="#experience" id="nav-3">Experience</a>
+            <a class="nav-item nav-link" href="#education" id="nav-2">Education</a>
             <a class="nav-item nav-link" href="#projects" id="nav-4">Projects</a>
             <a class="nav-item nav-link" href="#leadership" id="nav-1">Leadership / Accolades</a>
 
@@ -152,18 +152,15 @@
 
 <hr>
 
-<!--TODO: add classes from recent semester-->
-
-<!--research-->
-<div class="container-fluid fade-in" id="research">
+<!--experience-->
+<div class="container-fluid animate__animated animate__fadeIn" id="experience">
 
     <!--    header-->
     <div class="display-4 text-center mt-5">
-        <p class="sub-title">Research</p>
+        <p class="sub-title">Experience</p>
     </div>
 
     <br>
-
 
     <!--Diversity Science Research Platform-->
     <div class="container">
@@ -173,16 +170,21 @@
                 <div class="row">
                     <div class="col-9">
                         <p class="mb-0" style="font-size: xx-large">Diversity Science Research Platform</p>
-                        <h5 class="mt-0">Under the <a href="https://collab.ischool.wisc.edu"
-                                                      style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px">Collaborative
-                            Computing Group</a> with Professor <a
-                                href="https://ischool.wisc.edu/staff/thebault-spieker-jacob/"
-                                style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px">Jacob
-                            Thebault-Spieker</a></h5>
+                        <h5 class="mt-0">Under Professor
+                            <a href="https://ischool.wisc.edu/staff/thebault-spieker-jacob/"
+                               style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px">
+                                Jacob Thebault-Spieker
+                            </a>
+                            with the
+                            <a href="https://collab.ischool.wisc.edu" style="color: inherit; text-decoration: underline;
+                             text-decoration-thickness: 1px">
+                                Collaborative Computing Group
+                            </a>
+                        </h5>
                     </div>
                     <div class="col text-end">
                         <p style="font-size: x-large">
-                            2022-Present
+                            2023-Present
                         </p>
                     </div>
                 </div>
@@ -196,13 +198,115 @@
         <!--description of role-->
         <div>
             <p>
-                This is a full stack project that aims to streamline the process of creating 5-star rating experiments
-                to
-                investigate disparities in gig work economies. It contributes to a long-term goal for social computing,
+                This platform streamlines the process of creating 5-star rating experiments
+                to investigate disparities in gig work economies. It contributes to a long-term goal for social computing,
                 embracing meta-analysis by providing a platform to generate studies.
             </p>
-            <p>
+            <ul>
+                <li>
+                    Independently developed a full-stack platform to streamline experiment creation for researchers, automating the process of creating and analyzing multiple experiments simultaneously to facilitate meta-analysis and bridge information gaps.
+                </li>
+                <li>
+                    Developed dynamic frontend pages and implemented scalable database structures to model the complexities of distinct experiments, stimuli, and participant responses.
+                </li>
+                <li>
+                    Used AWS’s Mechanical Turk APIs, EC2’s Virtual Machines, and Route 53.
+                </li>
+                <li>
+                    Migrated the database from SQLite to PostgreSQL after identifying shortcomings in the production environment.
+                </li>
+
+            </ul>
+
+            <em>
                 This project has received funding by the Institute for Diversity Science.
+            </em>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!--    optum-->
+    <div class="container">
+        <!--header of company-->
+        <div class="row mb-3">
+            <div class="col-10 text-start">
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-0" style="font-size: xx-large">Optum</p>
+                        <h5 class="mt-0">Technology Development Intern</h5>
+                    </div>
+                    <div class="col text-end">
+                        <p style="font-size: x-large">
+                            2022-2023
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Resume/optum-cropped.png" style="max-height: 100px">
+            </div>
+        </div>
+
+        <!--description of role-->
+        <div>
+            <p>
+                Automated reusable de-identifying processes for test data, eliminating the need for third party
+                software, such as informatica.
+                Tech stack included React, SpringBoot, Rally, Kubernetes, and Docker.
+            </p>
+            <p>
+                Automated backlog reporting data analysis for stakeholders. Tech stack included Java with Maven, Power
+                BI, and Sharepoint.
+            </p>
+            <p>
+                Created a website providing stakeholders with relevant information about tech products.
+            </p>
+            <p>
+                Assisted in creating an AI which helps diagnose patients with appropriate illnesses.
+            </p>
+            <p>
+                Overall Tech Stack: React, SpringBoot, Rally, Unix, Rally, Java, Maven, Power BI, Sharepoint,
+                Kubernetes, Docker
+            </p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!--protolabs-->
+    <div class="container">
+        <!--header of company-->
+        <div class="row mb-3">
+            <div class="col-10 text-start">
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-0" style="font-size: xx-large">Protolabs</p>
+                        <h5 class="mt-0">Injection Molding Operator</h5>
+                    </div>
+                    <div class="col text-end">
+                        <p style="font-size: x-large">
+                            2021
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Resume/protolabs.png" style="max-height: 100px">
+            </div>
+        </div>
+
+        <!--description of role-->
+        <div>
+            <p>
+                Finished parts for quality inspection and shipping
+            </p>
+            <p>
+                Communicated and problem solved handling issues and machine failures
             </p>
         </div>
 
@@ -254,7 +358,51 @@
 
     <br>
 
+    <!--STEM Builders-->
+    <div class="container">
+        <!--header of company-->
+        <div class="row mb-3">
+            <div class="col-10 text-start">
+                <div class="row">
+                    <div class="col-auto">
+                        <p class="mb-0" style="font-size: xx-large">STEM Builders Learning Center</p>
+                        <h5 class="mt-0">Instructor / Coach</h5>
+                    </div>
+                    <div class="col text-end">
+                        <p style="font-size: x-large">
+                            2018-2020
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2 text-end">
+                <img class="img-fluid" src="images/Resume/stem-builders.png" style="max-height: 100px">
+            </div>
+        </div>
+
+        <!--description of role-->
+        <div>
+            <p>
+                Taught high school students an introduction to object-oriented programming using Java.
+            </p>
+            <p>
+                Instructed middle school and high school students how to create mobile applications through MIT App
+                Inventor.
+            </p>
+            <p>
+                Coached middle school students with basic robotics through lego Mindstorm EV3.
+            </p>
+            <p>
+                Taught high school and elementary mathematics to students from all ages.
+            </p>
+
+        </div>
+
+    </div>
+
 </div>
+
 
 <!--education-->
 <div class="container-fluid fade-in" id="education">
@@ -753,150 +901,9 @@
 
 </div>
 
-<!--experience-->
-<div class="container-fluid fade-in" id="experience">
-
-    <!--    header-->
-    <div class="display-4 text-center mt-5">
-        <p class="sub-title">Experience</p>
-    </div>
-
-    <br>
-
-    <!--    optum-->
-    <div class="container">
-        <!--header of company-->
-        <div class="row mb-3">
-            <div class="col-10 text-start">
-                <div class="row">
-                    <div class="col">
-                        <p class="mb-0" style="font-size: xx-large">Optum</p>
-                        <h5 class="mt-0">Technology Development Intern</h5>
-                    </div>
-                    <div class="col text-end">
-                        <p style="font-size: x-large">
-                            2022-2023
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-2 text-end">
-                <img class="img-fluid" src="images/Resume/optum-cropped.png" style="max-height: 100px">
-            </div>
-        </div>
-
-        <!--description of role-->
-        <div>
-            <p>
-                Automated reusable de-identifying processes for test data, eliminating the need for third party
-                software, such as informatica.
-                Tech stack included React, SpringBoot, Rally, Kubernetes, and Docker.
-            </p>
-            <p>
-                Automated backlog reporting data analysis for stakeholders. Tech stack included Java with Maven, Power
-                BI, and Sharepoint.
-            </p>
-            <p>
-                Created a website providing stakeholders with relevant information about tech products.
-            </p>
-            <p>
-                Assisted in creating an AI which helps diagnose patients with appropriate illnesses.
-            </p>
-            <p>
-                Overall Tech Stack: React, SpringBoot, Rally, Unix, Rally, Java, Maven, Power BI, Sharepoint,
-                Kubernetes, Docker
-            </p>
-        </div>
-
-    </div>
-
-    <br>
-
-    <!--protolabs-->
-    <div class="container">
-        <!--header of company-->
-        <div class="row mb-3">
-            <div class="col-10 text-start">
-                <div class="row">
-                    <div class="col">
-                        <p class="mb-0" style="font-size: xx-large">Protolabs</p>
-                        <h5 class="mt-0">Injection Molding Operator</h5>
-                    </div>
-                    <div class="col text-end">
-                        <p style="font-size: x-large">
-                            2021
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-2 text-end">
-                <img class="img-fluid" src="images/Resume/protolabs.png" style="max-height: 100px">
-            </div>
-        </div>
-
-        <!--description of role-->
-        <div>
-            <p>
-                Finished thousands of parts for quality inspection and shipping
-            </p>
-            <p>
-                Communicated and problem solved handling issues and machine failures
-            </p>
-        </div>
-
-    </div>
-
-    <br>
-
-    <!--STEM Builders-->
-    <div class="container">
-        <!--header of company-->
-        <div class="row mb-3">
-            <div class="col-10 text-start">
-                <div class="row">
-                    <div class="col-auto">
-                        <p class="mb-0" style="font-size: xx-large">STEM Builders Learning Center</p>
-                        <h5 class="mt-0">Instructor / Coach</h5>
-                    </div>
-                    <div class="col text-end">
-                        <p style="font-size: x-large">
-                            2018-2020
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-2 text-end">
-                <img class="img-fluid" src="images/Resume/stem-builders.png" style="max-height: 100px">
-            </div>
-        </div>
-
-        <!--description of role-->
-        <div>
-            <p>
-                Taught high school students an introduction to object-oriented programming using Java.
-            </p>
-            <p>
-                Instructed middle school and high school students how to create mobile applications through MIT App
-                Inventor.
-            </p>
-            <p>
-                Coached middle school students with basic robotics through lego Mindstorm EV3.
-            </p>
-            <p>
-                Taught high school and elementary mathematics to students from all ages.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
 
 <!--projects-->
-<div class="container-fluid text-center fade-in" id="projects">
+<div class="container-fluid text-center " id="projects">
 
     <!--    header-->
     <div class="display-4 mt-5 mb-3">
@@ -1261,8 +1268,7 @@
 </div>
 
 <!--leadership-->
-<!--animate__animated animate__fadeIn animate__delay-5s-->
-<div class="container-fluid fade-in" id="leadership">
+<div class="container-fluid" id="leadership">
 
     <!--    header-->
     <div class="display-4 text-center mt-5">
