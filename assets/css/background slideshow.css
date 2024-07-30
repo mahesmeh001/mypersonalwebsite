@@ -1,5 +1,5 @@
-/*Dynamic Background?*/
-/*from https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/*/
+/* Dynamic Background? */
+/* from https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/*/
 .cb-slideshow,
 .cb-slideshow:after {
     position: fixed;
@@ -22,22 +22,11 @@
     background-repeat: none;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 30s linear infinite 0s;
+    animation: imageAnimation 30s linear infinite;
+
 }
-.cb-slideshow li span {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: transparent;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: none;
-    opacity: 0;
-    z-index: 0;
-    animation: imageAnimation 30s linear infinite 0s;
-}
+
+/* The fade-in time is controlled by JavaScript */
 .cb-slideshow li div {
     z-index: 1000;
     position: absolute;
@@ -47,73 +36,42 @@
     text-align: center;
     opacity: 0;
     color: #fff;
-    animation: titleAnimation 30s linear infinite 0s;
+    animation: titleAnimation 30s linear infinite;
 }
+
 .cb-slideshow li div h3 {
     font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
     font-size: 240px;
     padding: 0;
     line-height: 200px;
 }
-.cb-slideshow li:nth-child(1) span {
-    background-image: url("../../images/Landing/mehulcliff.JPG")
-}
-.cb-slideshow li:nth-child(2) span {
-    background-image: url("../../images/Landing/mehuGreecefancy.jpg");
-    animation-delay: 5s;
-}
-.cb-slideshow li:nth-child(3) span {
-    background-image: url("../../images/Landing/friendsstairs.jpg");
-    animation-delay: 10s;
-}
-.cb-slideshow li:nth-child(4) span {
-    background-image: url("../../images/Landing/mehulholi.jpg");
-    animation-delay: 15s;
-}
-.cb-slideshow li:nth-child(5) span {
-    background-image: url("../../images/Landing/mehultinu.JPG");
-    animation-delay: 20s;
-}
-.cb-slideshow li:nth-child(6) span {
-    background-image: url("../../images/Landing/mehulriasparty.JPG");
-    animation-delay: 25s;
-}
 
-.cb-slideshow li:nth-child(2) div {
-    animation-delay: 5s;
-}
-.cb-slideshow li:nth-child(3) div {
-    animation-delay: 10s;
-}
-.cb-slideshow li:nth-child(4) div {
-    animation-delay: 15s;
-}
-.cb-slideshow li:nth-child(5) div {
-    animation-delay: 20s;
-}
-.cb-slideshow li:nth-child(6) div {
-    animation-delay: 25s;
-}
+/* Updated keyframes for faster transitions */
 @keyframes imageAnimation {
     0% { opacity: 0; animation-timing-function: ease-in; }
-    8% { opacity: 1; animation-timing-function: ease-out; }
-    17% { opacity: 1 }
-    25% { opacity: 0 }
+    5% { opacity: 1; animation-timing-function: ease-out; }
+    15% { opacity: 1 }
+    20% { opacity: 1 }
     100% { opacity: 0 }
 }
+
 @keyframes titleAnimation {
     0% { opacity: 0 }
-    8% { opacity: 1 }
-    17% { opacity: 1 }
-    19% { opacity: 0 }
+    5% { opacity: 1 }
+    15% { opacity: 1 }
+    20% { opacity: 1 }
     100% { opacity: 0 }
 }
-.no-cssanimations .cb-slideshow li span{
+
+
+.no-cssanimations .cb-slideshow li span {
     opacity: 1;
 }
+
 @media screen and (max-width: 1140px) {
     .cb-slideshow li div h3 { font-size: 140px }
 }
+
 @media screen and (max-width: 600px) {
     .cb-slideshow li div h3 { font-size: 80px }
 }
