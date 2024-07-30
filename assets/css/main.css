@@ -5037,51 +5037,69 @@ body {
 
 
 /*collapsible*/
-/* Default styles for the collapsible button */
+
 .collapsible {
+	background-color: inherit;
+	color: #333;
+	cursor: pointer;
+	padding: 18px;
 	width: 100%;
+	height: auto;
 	border: none;
-	text-align: center; /* Center-align text */
+	text-align: left;
 	outline: none;
-	white-space: nowrap; /* Prevent line breaks in text */
-	overflow: hidden; /* Hide text that overflows */
-	text-overflow: ellipsis; /* Show ellipsis (...) for hidden text */
-	padding: 10px; /* Adjust padding as needed */
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	overflow: hidden; /* Ensure text wraps within the box */
+	white-space: normal; /* Allow text to wrap to the next line */
 }
 
-/* Styles for larger screens (adjust the min-width as needed) */
-@media (min-width: 769px) {
-	.collapsible {
-		text-align: center; /* Center-align text */
-		padding-left: 20px; /* Add padding to the left for the sign */
-	}
-
-	.collapsible:after {
-		content: '\002B'; /* Plus sign */
-		float: left; /* Left-align the plus sign */
-		margin-right: 5px; /* Add spacing between the sign and text */
-	}
-
-	.collapsible.open:after {
-		content: '\002D'; /* Minus sign */
-	}
+.collapsiblecontent {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: inherit;
+	margin-bottom: 1em;
 }
 
-.aactive, .collapsible:hover {
-	background-color: rgba(85, 85, 85, 0.25);
+.collapsiblecontent p {
+	margin: 10px 0;
 }
 
-/* Styles for smaller screens (adjust the max-width as needed) */
-@media (max-width: 768px) {
-	.collapsible:after {
-		content: '\002B'; /* Plus sign */
-		float: left; /* Left-align the plus sign */
-		margin-right: 5px; /* Add spacing between the sign and text */
-	}
-	.collapsible.open:after {
-		content: '\002D'; /* Minus sign */
-	}
+.collapsible.active, .collapsible:hover {
+	background-color: #ccc;
 }
+
+.collapsible:after {
+	content: '\002B';
+	color: #777;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.collapsible.active:after {
+	content: "\2212";
+}
+
+.w3-content h3 {
+	text-decoration: underline;
+	margin-bottom: 0px;
+}
+
+.center-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.w3-row .w3-col {
+	margin-bottom: 1em;
+}
+
 
 
 
