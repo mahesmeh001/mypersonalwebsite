@@ -2,7 +2,6 @@
 
 
 Bigger:
--Create "for recruiters" page for job related stuff
 -Create a photography page
     -2 galleries. 1 gallery for my personal pics. 1 gallery for my photographic pics
 -change intro pics and text to follow golden ratio/negative space/rule of thirds <- be more compelling
@@ -11,12 +10,10 @@ Bigger:
 
 
 Random page
--bhangra at the alamo
--jaggo night
+
 
 
 Music:
--add daft punk to artists
 
 
 Books:
@@ -35,16 +32,7 @@ Historical fic:
 
 
 
+
 archived ideas
 Create easter-egg pages with my personal poetry? (tell nobody)?
     Idea: have the first number be smaller or a different font or smth? Have hints for other easter eggs?
-
-
-
-reset hash with this:
-html:
-<a href="#1" onclick="resetHref();">go to Content 1</a>
-js:
-function resetHref() {
-    location.hash = '';
-}
