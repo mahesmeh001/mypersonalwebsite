@@ -2859,19 +2859,19 @@ textarea.form-control-lg {
 
 .btn-primary {
     color: #000;
-    background-color: darkred;
+    background-color: none;
     border-color: #141414
 }
 
 .btn-primary:hover {
-    color: #000;
-    background-color: red;
+    color: white;
+    background-color: black;
     border-color: #FFEECF
 }
 
 .btn-check:focus + .btn-primary, .btn-primary:focus {
-    color: #000;
-    background-color: indianred;
+    color: white;
+    background-color: black;
     border-color: darkred;
     /*box-shadow: 0 0 0 .25rem rgba(77, 119, 69, 0.5)*/
 }

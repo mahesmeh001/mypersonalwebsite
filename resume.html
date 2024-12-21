@@ -36,6 +36,12 @@
         background-repeat: repeat-y;
     }
 
+    p,ul,em {
+        font-family: "Calibri", sans-serif;
+        margin: 0;
+        font-weight: 100;
+    }
+
 
     @media (max-width: 768px) {
         .carousel-inner .carousel-item > div {
@@ -83,6 +89,11 @@
     }
 </style>
 
+<style>
+    /*h1 { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 25px; }*/
+</style>
+
+
 <body>
 
 
@@ -91,7 +102,7 @@
      style="background-image: linear-gradient(
                 to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)
         ), url('images/Resume/marble.JPG'); top: 0">
-    <a class="navbar-brand d-flex align-items-center m-fadeIn" href="index.html" id="resume">
+    <a class="navbar-brand d-flex align-items-center" href="index.html" id="resume">
         <img alt="logo" src="images/brown-favicon.png" style="height: 75px; width: 75px"/>
     </a>
 
@@ -102,7 +113,8 @@
         <div class="navbar-nav ms-auto p-4 p-lg-0 navbar-light">
             <a class="nav-item nav-link" href="#experience" id="nav-3">Experience</a>
             <a class="nav-item nav-link" href="#education" id="nav-2">Education</a>
-            <a class="nav-item nav-link" href="#projects" id="nav-4">Projects</a>
+            <a class="nav-item nav-link" href="#research" id="nav-4">Research</a>
+            <a class="nav-item nav-link" href="#projects" id="nav-5">Projects</a>
             <a class="nav-item nav-link" href="#leadership" id="nav-1">Leadership / Accolades</a>
 
         </div>
@@ -114,7 +126,7 @@
 <div class="container-fluid text-center mb-5" id="intro">
 
     <div class="display-1 text-center mt-5">
-        <p>Mehul Maheshwari</p>
+        <p style="font-family: 'montserratthin'">Mehul Maheshwari</p>
     </div>
 
     <div class="container">
@@ -153,12 +165,15 @@
 <hr>
 
 <!--experience-->
-<div class="container-fluid animate__animated animate__fadeIn" id="experience">
+<div class="container-fluid" id="experience">
 
     <!--    header-->
     <div class="display-4 text-center mt-5">
         <p class="sub-title">Experience</p>
     </div>
+
+
+<!--    TODO: Add nazanin with HCI + Ai and isadora with RL -->
 
     <br>
 
@@ -169,22 +184,20 @@
             <div class="col-10 text-start">
                 <div class="row">
                     <div class="col-9">
-                        <p class="mb-0" style="font-size: xx-large">Diversity Science Research Platform</p>
+                        <p class="mb-0" style="font-size: xx-large">Research Assistant @ <a href="https://collab.ischool.wisc.edu" style="color: black">Collaborative Computing Group</a></p>
                         <h5 class="mt-0">Under Professor
                             <a href="https://ischool.wisc.edu/staff/thebault-spieker-jacob/"
-                               style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px">
+                               style="color: inherit;
+                               /*text-decoration: underline; */
+                               text-decoration-thickness: 0px">
                                 Jacob Thebault-Spieker
                             </a>
-                            with the
-                            <a href="https://collab.ischool.wisc.edu" style="color: inherit; text-decoration: underline;
-                             text-decoration-thickness: 1px">
-                                Collaborative Computing Group
-                            </a>
+                            at the University of Wisconsin-Madison
                         </h5>
                     </div>
                     <div class="col text-end">
                         <p style="font-size: x-large">
-                            2023-Present
+                            2023-2024
                         </p>
                     </div>
                 </div>
@@ -204,10 +217,11 @@
             </p>
             <ul>
                 <li>
-                    Published:
+                    Published
                     <a href="images/Resume/Discerning Causes of Ratings Bias: A Platform for Bias Experimentation in Ratings-Based Reputation Systems.pdf">
                         Discerning Causes of Ratings Bias: A Platform for Bias Experimentation in Ratings-Based Reputation Systems
                     </a>
+                    as the <b>first author</b>.
                 </li>
 
                 <li>
@@ -234,15 +248,15 @@
 
     <br>
 
-    <!--    optum-->
+    <!--Optum-->
     <div class="container">
         <!--header of company-->
         <div class="row mb-3">
             <div class="col-10 text-start">
                 <div class="row">
                     <div class="col">
-                        <p class="mb-0" style="font-size: xx-large">Optum</p>
-                        <h5 class="mt-0">Technology Development Intern</h5>
+                        <p class="mb-0" style="font-size: xx-large">Technology Development Intern</p>
+                        <h5 class="mt-0">Optum</h5>
                     </div>
                     <div class="col text-end">
                         <p style="font-size: x-large">
@@ -260,20 +274,31 @@
         <!--description of role-->
         <div>
             <p>
-                Automated reusable de-identifying processes for test data, eliminating the need for third party
-                software, such as informatica.
-                Tech stack included React, SpringBoot, Rally, Kubernetes, and Docker.
+                Second Internship
             </p>
+            <ul>
+                <li>
+                        Automated reusable de-identifying processes for test data, eliminating the need for third party
+                        software, such as informatica.
+                        Tech stack included React, SpringBoot, Rally, Kubernetes, and Docker.
+                </li>
+                <li>
+                    Automated backlog reporting data analysis for stakeholders. Tech stack included Java with Maven, Power
+                    BI, and Sharepoint.
+                </li>
+            </ul>
+
             <p>
-                Automated backlog reporting data analysis for stakeholders. Tech stack included Java with Maven, Power
-                BI, and Sharepoint.
+                First Internship
             </p>
-            <p>
-                Created a website providing stakeholders with relevant information about tech products.
-            </p>
-            <p>
-                Assisted in creating an AI which helps diagnose patients with appropriate illnesses.
-            </p>
+            <ul>
+                <li>
+                    Created a website providing stakeholders with relevant information about tech products.
+                </li>
+                <li>
+                    Assisted in creating an AI which helps diagnose patients with appropriate illnesses.
+                </li>
+            </ul>
             <p>
                 Overall Tech Stack: React, SpringBoot, Rally, Unix, Rally, Java, Maven, Power BI, Sharepoint,
                 Kubernetes, Docker
@@ -291,8 +316,8 @@
             <div class="col-10 text-start">
                 <div class="row">
                     <div class="col">
-                        <p class="mb-0" style="font-size: xx-large">Protolabs</p>
-                        <h5 class="mt-0">Injection Molding Operator</h5>
+                        <p class="mb-0" style="font-size: xx-large">Injection Molding Operator</p>
+                        <h5 class="mt-0">Protolabs</h5>
                     </div>
                     <div class="col text-end">
                         <p style="font-size: x-large">
@@ -310,10 +335,10 @@
         <!--description of role-->
         <div>
             <p>
-                Finished parts for quality inspection and shipping
+                Experienced the struggle of being a factory worker.
             </p>
             <p>
-                Communicated and problem solved handling issues and machine failures
+                Communicated and problem solved handling issues and machine failures.
             </p>
         </div>
 
@@ -328,8 +353,7 @@
             <div class="col-10 text-start">
                 <div class="row">
                     <div class="col-9">
-                        <p class="mb-0" style="font-size: xx-large">Enhancing Spatial Perception and Presence in
-                            Immersive Virtual Environments</p>
+                        <p class="mb-0" style="font-size: xx-large">Research Assistant</p>
                         <h5 class="mt-0">Under Professor Victoria Interrante</h5>
                     </div>
                     <div class="col text-end">
@@ -372,8 +396,8 @@
             <div class="col-10 text-start">
                 <div class="row">
                     <div class="col-auto">
-                        <p class="mb-0" style="font-size: xx-large">STEM Builders Learning Center</p>
-                        <h5 class="mt-0">Instructor / Coach</h5>
+                        <p class="mb-0" style="font-size: xx-large">Instructor</p>
+                        <h5 class="mt-0">STEM Builders Learning Center</h5>
                     </div>
                     <div class="col text-end">
                         <p style="font-size: x-large">
@@ -412,7 +436,7 @@
 
 
 <!--education-->
-<div class="container-fluid fade-in" id="education">
+<div class="container-fluid" id="education">
 
     <!--    header-->
     <div class="display-4 text-center mt-5">
@@ -423,13 +447,80 @@
     <div class="container">
         <div class="row">
             <div class="col-10 text-start">
-                <h2>University of California - San Diego</h2>
-                <p>I will be starting a Master of Science program for Computer Science and Engineering at UC San Diego
-                    in 2024 Fall.</p>
+                <p class="mb-0" style="font-size: xx-large">University of California - San Diego</p>
+                <p>
+                    Pursuing a Master of Science in Computer Science and Engineering at UCSD.
+                </p>
             </div>
             <div class="col-2 text-center">
                 <img class="img-fluid" src="images/Resume/UCSanDiegoLogo-BlueGold.png" style="max-height: 100px">
             </div>
+        </div>
+
+        <!--classes grid-->
+        <div class="container overflow-hidden">
+
+            <div class="container overflow-hidden text-center">
+
+
+                <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse"
+                   href="#ucsdgrid" role="button">
+                    CS Graduate Courses
+                </a>
+
+                <!--grid of MATH 2 classes-->
+                <div class="row g-1 collapse" id="ucsdgrid">
+
+                    <div class="col-4">
+                        <div class="col mb-1">
+                            <div class=" p-3 border border-dark ">
+                                <h5 class="m-0">
+                                    Web Mining and Recommender Systems
+                                </h5>
+                                <p>
+                                    CSE 258
+                                </p>
+                                <p>
+                                    A graduate course devoted to current methods for recommender systems, data mining, and predictive analytics
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-4 mb-1">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="m-0">
+                                Natural Language Processing
+                            </h5>
+                            <p>
+                                CSE 256
+                            </p>
+                            <p>
+                                This course is comprehensive, covering state-of-the-art tools and techniques of NLP.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class=" p-3 border border-dark ">
+                            <h5 class="m-0">
+                                Design and Analysis of Algorithms
+                            </h5>
+                            <p>
+                                CSE 202
+                            </p>
+                            <p>
+                                The basic techniques for the design and analysis of algorithms. Divide-and-conquer, dynamic programming, data structures, graph search, algebraic problems, randomized algorithms, lower bounds, probabilistic analysis, parallel algorithms.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div> <!--end math 2 grid-->
+
+            </div>
+
         </div>
 
     </div>
@@ -441,8 +532,8 @@
     <div class="container">
         <div class="row">
             <div class="col-10 text-start">
-                <h2>University of Wisconsin-Madison</h2>
-                <p>Senior at the University of Wisconsin Madison pursuing a major in Computer Science B.S, minor in
+                <p class="mb-0" style="font-size: xx-large">University of Wisconsin-Madison</p>
+                <p>Completed a major in Computer Science B.S, minor in
                     Mathematics, and comprehensive Honors in the College of Letters and Science.</p>
             </div>
             <div class="col-2 text-center">
@@ -482,9 +573,7 @@
                 <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse"
                    href="#csGrid"
                    role="button">
-                    <p class="m-0">
-                        Computer Science Courses
-                    </p>
+                    Computer Science Courses
                 </a>
 
                 <!--grid of CS classes-->
@@ -654,9 +743,7 @@
                 <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse"
                    href="#mathGrid"
                    role="button">
-                    <p class="m-0">
-                        Mathematics / Other Courses
-                    </p>
+                    Mathematics / Other Courses
                 </a>
 
                 <!--grid of MATH/OTHER classes-->
@@ -812,7 +899,7 @@
     <div class="container">
         <div class="row">
             <div class="col-10 text-start">
-                <h2>University of Minnesota-Twin Cities</h2>
+                <p class="mb-0" style="font-size: xx-large">University of Minnesota-Twin Cities</p>
                 <p>
                     I was concurrently enrolled in the University of Minnesota Talented Youth Mathematics Program
                     throughout my high school.
@@ -829,7 +916,7 @@
             <div class="container overflow-hidden text-center">
 
 
-                <a aria-controls="" aria-expanded="false" class="btn btn-primary mb-2" data-toggle="collapse"
+                <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse"
                    href="#math2Grid" role="button">
                     Mathematics Courses
                 </a>
@@ -909,61 +996,207 @@
 </div>
 
 
+<!--research-->
+<div class="container-fluid" id="research">
+
+    <!--header-->
+    <div class="display-4 text-center mt-5">
+        <p class="sub-title">Research</p>
+    </div>
+
+    <div class="container">
+
+        <!--        aimbot -->
+        <div class="row">
+            <div>
+                <p style="font-size: x-large">
+                    AimBot: An investigation into external memory and advanced prompting for LLM agents
+                </p>
+                <p class="m-0">
+                    <b style="font-weight: bold">Mehul Maheshwari</b>, Sai Chaparala
+                </p>
+                <em>
+                    AWS x VCT Esports Manager Challenge, Dec. 2024
+                </em>
+                <p>
+                    <a href="images/Resume/aimbot.pdf">
+                        Paper
+                    </a>
+                    /
+                    <a href="https://devpost.com/software/aimbot">
+                        Website
+                    </a>
+                </p>
+                <p class="m-2">
+                    Increase baseline performance of Claude Sonnet 3.0 with Valorant player information retrieval by introducing external memory, and using advanced prompting techniques.
+                </p>
+
+            </div>
+        </div>
+        <br>
+
+
+        <!--Bias w JTS-->
+        <div class="row">
+            <div>
+                <p style="font-size: x-large">
+                    Discerning Causes of Ratings Bias: A Platform for Bias Experimentation in Ratings-Based Reputation Systems
+                </p>
+                <p class="m-0">
+                    <b style="font-weight: bold">Mehul Maheshwari</b>, Jacob Thebault-Spieker
+                </p>
+                <em>
+                    12th Association for the Advancement of Artificial Intelligence Conference on Human Computation and Crowdsourcing, Aug. 2024
+                </em>
+                <p>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=l7oHx7gAAAAJ&citation_for_view=l7oHx7gAAAAJ:u5HHmVD_uO8C">
+                        Paper
+                    </a>
+                </p>
+                <p class="m-2">
+                    We introduce a platform for streamlining the process of creating experiments in the space of five-star ratings. We aim to use this platform as a stepping stone to investigate which analytical dimensions cause and mitigate ratings bias.
+                </p>
+            </div>
+        </div>
+
+        <br>
+
+<!--        webreg proj-->
+        <div class="row">
+            <div>
+                <p style="font-size: x-large">
+                    Can Item Metadata Combat the Cold Start Problem?
+                </p>
+                <p class="m-0">
+                    <b style="font-weight: bold">Mehul Maheshwari</b>, Jerry Thomas, Adrian Ong, You Wu
+                </p>
+                <em>
+                    Web Mining and Recommender Systems Course Research Project, Dec. 2024
+                </em>
+                <p>
+                    <a href="images/Resume/Item Metadata for Cold Start.pdf">
+                        Paper
+                    </a>
+                </p>
+                <p class="m-2">
+                    Proposed new recommender systems beating existing baselines by taking advantage of metadata on the Steam User-Game dataset.
+                </p>
+
+            </div>
+        </div>
+
+        <br>
+
+        <!--ann proj-->
+        <div class="row">
+            <div>
+                <p style="font-size: x-large">
+                    Sign Language Learner
+                </p>
+                <p class="m-0">
+                    Brennen Hill, Joseph Mostika, Mehul Maheshwari
+                </p>
+                <em>
+                    Artificial Neural Networks Course Research Project, Jun. 2024
+                </em>
+                <p>
+                    <a href="https://drive.google.com/drive/folders/1LAUzLmcc1LdMjeCXg9JyPsuVfYSjNDPK">
+                        Paper & Code
+                    </a>
+                </p>
+                <p class="m-2">
+                    Beat existing baselines for classifying sign language by using transfer learning with ResNet50 architecture.
+                </p>
+
+            </div>
+        </div>
+
+        <br>
+
+        <!--cryptography with chaos-->
+        <div class="row">
+            <div>
+                <p style="font-size: x-large">
+                    Cryptography with Chaos
+                </p>
+                <p class="m-0">
+                    Mehul Maheshwari
+                </p>
+                <em>
+                    Numerical Analysis Course Research Project, Aug. 2023
+                </em>
+                <p>
+                    <a href="https://github.com/mahesmeh001/Cryptography-ODE/blob/master/Cryptography%20Research.pdf">
+                        Paper & Code
+                    </a>
+                </p>
+                <p class="m-2">
+                    Uses chaotic ODE's to solve the problem of deterministic PRNGs for encryption.
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+</div>
+
+
 <!--projects-->
 <div class="container-fluid text-center " id="projects">
 
     <!--    header-->
-    <div class="display-4 mt-5 mb-3">
-        <p class="sub-title mb-0 pb-0">Projects</p>
-        <h5 class="mt-2">You can find all of my projects in my Github, linked <a href="https://github.com/mahesmeh001">here</a>!
-        </h5>
+    <div class="display-4 text-center mt-5 mb-3">
+        <p class="sub-title">Projects</p>
     </div>
 
 
     <!--Carousel-->
     <div class="container text-center mb-3">
         <!--breakdown header-->
-        <div class=" text-center mt-5">
-            <p style="font-size: xx-large;">Featured Projects</p>
+        <div class=" text-center">
+            <h4 >Featured Projects</h4>
         </div>
 
         <div class="row mx-auto my-auto">
             <div class="carousel slide w-100" data-ride="carousel" id="recipeCarousel">
                 <div class="carousel-inner w-100" role="listbox">
 
+<!--                    <div class="carousel-item ">-->
+<!--                        <div class="col-md-4">-->
+<!--                            <a href="images/Resume/Discerning Causes of Ratings Bias: A Platform for Bias Experimentation in Ratings-Based Reputation Systems.pdf">-->
+<!--                                <div class="card card-body h-100 d-flex flex-column justify-content-center">-->
+<!--                                    <strong>-->
+<!--                                        Research Paper-->
+<!--                                    </strong>-->
+<!--                                    <h3>-->
+<!--                                        Discerning Causes of Ratings Bias: A Platform for Bias Experimentation in Ratings-Based Reputation Systems-->
+<!--                                    </h3>-->
+<!--                                </div>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="carousel-item">-->
+<!--                        <div class="col-md-4">-->
+<!--                            <a href="https://drive.google.com/drive/folders/1LAUzLmcc1LdMjeCXg9JyPsuVfYSjNDPK?usp=share_link">-->
+<!--                                <div class="card card-body">-->
+<!--                                    <h3>-->
+<!--                                        Sign Language Learner-->
+<!--                                    </h3>-->
+<!--                                    <img class="img-fluid" src="images/Resume/sign-language-learner.png">-->
+<!--                                </div>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
                     <div class="carousel-item active">
                         <div class="col-md-4">
-                            <a href="images/Resume/Discerning Causes of Ratings Bias: A Platform for Bias Experimentation in Ratings-Based Reputation Systems.pdf">
-                                <div class="card card-body h-100 d-flex flex-column justify-content-center">
-                                    <strong>
-                                        Research Paper
-                                    </strong>
-                                    <h3>
-                                        Discerning Causes of Ratings Bias: A Platform for Bias Experimentation in Ratings-Based Reputation Systems
-                                    </h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <a href="https://drive.google.com/drive/folders/1LAUzLmcc1LdMjeCXg9JyPsuVfYSjNDPK?usp=share_link">
-                                <div class="card card-body">
-                                    <h3>
-                                        Sign Language Learner
-                                    </h3>
-                                    <img class="img-fluid" src="images/Resume/sign-language-learner.png">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item ">
-                        <div class="col-md-4">
                             <a href="https://mahesmeh001.github.io/madtown-website/">
-                                <div class="card card-body rounded">
-                                    <h3>Madtown Website</h3>
+                                <div class="card card-body rounded ">
+                                    <p style="font-size: x-large">Madtown Website</p>
                                     <img class="img-fluid" src="images/Resume/madtown.jpg">
                                 </div>
                             </a>
@@ -974,7 +1207,7 @@
                         <div class="col-md-4">
                             <a href="https://github.com/hthakkar02/MemoryLane">
                                 <div class="card card-body">
-                                    <h3>Memory Lane</h3>
+                                    <p style="font-size: x-large">Memory Lane</p>
                                     <img class="img-fluid" src="images/Resume/memory-lane-homescreen-square.png"
                                          style="height: auto">
                                 </div>
@@ -986,31 +1219,31 @@
                         <div class="col-md-4">
                             <a href="https://mahesmeh001.github.io/mypersonalwebsite/index.html">
                                 <div class="card card-body">
-                                    <h3>My Personal Website</h3>
+                                    <p style="font-size: x-large">My Personal Website</p>
                                     <img class="img-fluid" src="images/Resume/personal-website.jpg">
                                 </div>
                             </a>
                         </div>
                     </div>
 
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <a href="https://github.com/mahesmeh001/Cryptography-ODE/blob/master/Cryptography%20Research.pdf">
-                                <div class="card card-body">
-                                    <h3>Cryptography with Chaos</h3>
-                                    <img class="img-fluid" src="images/Resume/crypto.png">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+<!--                    <div class="carousel-item">-->
+<!--                        <div class="col-md-4">-->
+<!--                            <a href="https://github.com/mahesmeh001/Cryptography-ODE/blob/master/Cryptography%20Research.pdf">-->
+<!--                                <div class="card card-body">-->
+<!--                                    <h3>Cryptography with Chaos</h3>-->
+<!--                                    <img class="img-fluid" src="images/Resume/crypto.png">-->
+<!--                                </div>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
                     <div class="carousel-item">
                         <div class="col-md-4">
                             <a href="https://mahesmeh001.github.io/Badminton_Club_Website/">
                                 <div class="card card-body">
-                                    <h3>
+                                    <p style="font-size: x-large">
                                         Badminton Club Website
-                                    </h3>
+                                    </p>
                                     <img class="img-fluid" src="images/Resume/badminton.jpg">
                                 </div>
                             </a>
@@ -1035,14 +1268,101 @@
 
     <a aria-controls="" aria-expanded="false" class="btn btn-primary m-2" data-toggle="collapse" href="#projBreakdown"
        role="button">
-        <p class="m-0" style="font-size: xx-large">
-            View Projects Breakdown
+        <p style="font-size: large">
+            View Comprehensive Breakdown
         </p>
     </a>
 
     <!--project breakdown-->
     <div class="container collapse" id="projBreakdown">
 
+        <!--AimBot-->
+        <a href="images/Resume/aimbot.pdf" style="color: black">
+            <div class="container border-top border-dark">
+                <!--header of project-->
+                <div class="row mb-5">
+                    <div class="col-12 text-start">
+
+                        <h3 class="mb-0" style="font-size: xx-large">
+                            AimBot: An investigation into external memory and advanced prompting for LLM agents
+                        </h3>
+                        <p>
+                            Mehul Maheshwari, Sai Chaparala
+                        </p>
+                        <p>
+                            Finalist in AWS X VCT Hackathon.
+                        </p>
+                        <p>Dec 2024</p>
+
+
+
+                        <br>
+
+                        <p>
+                            Large Language Models (LLMs) have trended towards increasing parameter sizes to improve their
+                            performance across a wide range of tasks. However, recent advances demonstrate that smallerscale models, when combined with knowledge
+                            bases (KBs) and effective prompting strategies,
+                            can achieve comparable results while being more
+                            efficient and interpretable (Borgeaud et al., 2022).
+                            This project investigates strategies for integrating
+                            KBs and optimized prompting techniques in generating high-quality, task-specific responses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+
+        <!--Recomender system -->
+        <a href="images/Resume/Item%20Metadata%20for%20Cold%20Start.pdf" style="color: black">
+            <div class="container border-top border-dark">
+                <!--header of project-->
+                <div class="row mb-5">
+                    <div class="col-12 text-start">
+
+                        <h3 class="mb-0" style="font-size: xx-large">
+                            Can Item Metadata Combat the Cold Start Problem?
+                        </h3>
+                        <p>
+                            <b style="font-weight: bold">Mehul Maheshwari</b>, Jerry Thomas, Adrian Ong, You Wu
+                        </p>
+                        <p>Dec 2024</p>
+
+                        <br>
+
+                        <p>
+                            Proposed new recommender systems beating existing baselines by taking advantage of metadata
+                            on the Steam User-Game dataset.
+                        </p>
+                        <br>
+                        <p>
+                            Abstract: The cold start problem in recommender systems arises when dealing with new items
+                            with no prior interaction history, making it challenging to generate accurate
+                            recommendations. This work ex- plores whether incorporating item metadata can effectively
+                            address this problem in game recommendations using user-game interactions on the Steam
+                            platform. We leverage game metadata (genres and price) alongside implicit feedback from user
+                            playtime data, comparing five different recommendation approaches: traditional Matrix
+                            Factorization (SVD), Factorization Machines (FM), hybrid methods combining SVD/FM with
+                            K-Nearest Neighbors (KNN), and a metadata-only approach using FM. An analysis of results
+                            show that the SVD baseline shows strong performance on existing games but degrades for new
+                            games, demonstrating the cold start problem. Surprisingly, incorporating metadata through
+                            FMs doesn’t improve performance, suggesting that with the Steam dataset’s scale (>5 million
+                            interactions), the collaborative filtering signal alone may be sufficiently strong. The
+                            hybrid method which incorporate game metadata (Method III) show significant improvements on
+                            items prone to cold start problems through extending their base counterparts, while the
+                            metadata-only approach (Method V) performs similarly to Method II and IV, indicating that in
+                            this context, item metadata provides limited additional signal beyond user-game in-
+                            teractions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
 
         <!--Discerning Bias-->
         <a href="images/Resume/Discerning Causes of Ratings Bias: A Platform for Bias Experimentation in Ratings-Based Reputation Systems.pdf" style="color: black">
@@ -1052,6 +1372,12 @@
                     <div class="col-12 text-start">
 
                         <h3 class="mb-0" style="font-size: xx-large">Discerning Causes of Ratings Bias: A Platform for Bias Experimentation in Ratings-Based Reputation Systems</h3>
+                        <p>
+                            Published in the 12th Association for the Advancement of Artificial Intelligence Conference on Human Computation and Crowdsourcing, Aug. 2024
+                        </p>
+                        <p>
+                            August 2023
+                        </p>
 
                         <br>
 
@@ -1370,9 +1696,10 @@
     <div class="container">
         <div class="row">
             <div class="col-10 text-start">
-                <h2>UW-Madison Comprehensive Honors in Computer Science</h2>
+                <p style="font-size: xx-large">UW-Madison Comprehensive Honors in Computer Science</p>
                 <p>
-                    The College of Letters and Science’s highest credential for bachelor’s degrees, combining successful completion of both Honors in the Liberal Arts and Honors in the Major.
+                    The College of Letters and Science’s highest credential for bachelor’s degrees, combining successful
+                    completion of both Honors in the Liberal Arts and Honors in the Major. Awarded to <b>top 1.5%</b> of my graduating class.
                 </p>
             </div>
             <div class="col-2 text-end">
@@ -1387,9 +1714,9 @@
     <div class="container">
         <div class="row">
             <div class="col-10 text-start">
-                <h2>Madtown Bhangra Marketing Chair</h2>
+                <p style="font-size: xx-large">Madtown Bhangra Marketing Chair</p>
                 <p>
-                    As the current marketing chair, I am responsible for Madtown branding, all social media, and
+                    Responsible for Madtown branding, all social media, and
                     designing and developing the madtown website which you can find linked in the projects section.
                 </p>
             </div>
@@ -1405,7 +1732,7 @@
     <div class="container">
         <div class="row">
             <div class="col-10 text-start">
-                <h2>Badminton Club Media and Communications Chair</h2>
+                <p style="font-size: xx-large">Badminton Club Media and Communications Chair</p>
                 <p>
                     As the communications chair I was responsible for managing all the platforms of communication. I
                     additionally
@@ -1423,7 +1750,7 @@
     <div class="container">
         <div class="row">
             <div class="col-10 text-start">
-                <h2>UW-Madison Deans List</h2>
+                <p style="font-size: xx-large">UW-Madison Deans List</p>
                 <p>
                     I won the deans list academic designation for multiple semesters of my undergraduate academia. This
                     is
@@ -1441,7 +1768,7 @@
     <div class="container">
         <div class="row">
             <div class="col-10 text-start">
-                <h2>Minnesota Department of Education - Scholars of Distinction: Meritorious</h2>
+                <p style="font-size: xx-large">Minnesota Department of Education - Scholars of Distinction: Meritorious</p>
                 <a href="https://www.einnews.com/pr_news/642155285/minnesota-s-distinguished-high-school-students-honored-6-28-23#:~:text=Scholar%20of%20Distinction&text=To%20earn%20recognition%20in%20the,skills%20on%20a%20challenging%20project."
                    style="color: inherit">
                     <p>
@@ -1462,7 +1789,7 @@
     <div class="container">
         <div class="row">
             <div class="col-10 text-start">
-                <h2>First Place, Pioneer Open</h2>
+                <p style="font-size: xx-large">First Place, Pioneer Open</p>
                 <a href="https://www.einnews.com/pr_news/642155285/minnesota-s-distinguished-high-school-students-honored-6-28-23#:~:text=Scholar%20of%20Distinction&text=To%20earn%20recognition%20in%20the,skills%20on%20a%20challenging%20project."
                    style="color: inherit">
                     <p>
