@@ -1,6 +1,3 @@
--figure out why navbar not working on mobile on resume page
-
-
 Bigger:
 -Create a photography page
     -2 galleries. 1 gallery for my personal pics. 1 gallery for my photographic pics
@@ -10,8 +7,6 @@ Bigger:
 -painting page?
 
 Random page
--reflect on badminton and add to website MN Open 2024 (quarter finals)
-
 
 
 Music:

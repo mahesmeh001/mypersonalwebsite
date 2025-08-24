@@ -14,6 +14,64 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/elementslideshow.css" />
 
+		<style>
+			/* Lazy loading styles */
+			.lazy-iframe {
+				width: 100%;
+				height: 280px;
+				border: none;
+				border-radius: 12px;
+				background: #f0f0f0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #666;
+				font-size: 14px;
+			}
+			
+			.lazy-iframe.loaded {
+				background: transparent;
+			}
+			
+			.lazy-iframe-placeholder {
+				width: 100%;
+				height: 280px;
+				border: none;
+				border-radius: 12px;
+				background: #f0f0f0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #666;
+				font-size: 14px;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+			
+			.lazy-iframe-placeholder:hover {
+				background: #e0e0e0;
+			}
+			
+			/* Optimize image loading */
+			img {
+				opacity: 0;
+				transition: opacity 0.3s ease-in-out;
+			}
+			
+			img.loaded {
+				opacity: 1;
+			}
+			
+			/* Header image should load immediately */
+			.image.main img {
+				opacity: 1;
+			}
+			
+			/* Active dot styling */
+			.dot.active, .dot2.active {
+				background-color: #8e5dea !important;
+			}
+		</style>
 	</head>
 
 	<!-- Google tag (gtag.js) -->
@@ -131,7 +189,7 @@
 
 							<div class="w3-content" id="amelia">
 								<p style="margin-bottom: 0"><b>Amelia, by Jubing Kristano</b></p>
-								<p>I used this piece to try and elevate my playing. For the first time I truly focused my intention on musicality rather than just playing the piece “correctly.” Hope you enjoy it!</p>
+								<p>I used this piece to try and elevate my playing. For the first time I truly focused my intention on musicality rather than just playing the piece "correctly." Hope you enjoy it!</p>
 								<p>Check out the story behind the song: <a href="https://www.jubing.net/story.html">here</a>.</p>
 								<div class="w3-center">
 									<iframe loading="lazy" height="280" style="width: 100%; max-width: 700px" src="https://www.youtube.com/embed/FuR_I8GY6GY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -142,8 +200,16 @@
 
 							<div class="w3-content" id="othercovers">
 								<p style="margin-bottom: 0"><b>My other guitar covers:</b></p>
-								<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-								<div class="elfsight-app-59a3257b-0839-4905-8c0f-b285df6de948"></div>
+								<p style="text-align: center; color: #666; font-style: italic;">Check out more of my guitar playing on my <a href="https://www.youtube.com/channel/UCHvmx1VeVALWVN1GQ9HvuEg">YouTube Channel</a></p>
+								
+								<!-- YouTube Playlist - Automatically shows all guitar covers -->
+								<div class="w3-center" style="margin-top: 20px;">
+									<iframe loading="lazy" height="400" style="width: 100%; max-width: 800px; border-radius: 12px;" src="https://www.youtube.com/embed/videoseries?list=PLNbGOg0d38FuYRX5pUla0r6h4-5rVhtWb" title="Mehul's Guitar Covers Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								
+								<p style="text-align: center; margin-top: 15px; font-size: 14px; color: #666;">
+									This playlist automatically updates with all my guitar covers. Click through to explore more!
+								</p>
 							</div>
 
 						</div>
@@ -189,19 +255,23 @@
 
 										<div class="mySlides">
 											<div class="numbertext">1 / 3</div>
-											<iframe loading="eager" onload="showSlides(1,1)" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1M1BghM4Gkvl3LCRPenNJ1?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+											<iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1M1BghM4Gkvl3LCRPenNJ1?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 											<div class="text" style="background-color: #612424">The ultimate chilling playlist when hanging out with friends.</div>
 										</div>
 
 										<div class="mySlides">
 											<div class="numbertext">2 / 3</div>
-											<iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1D4m8zAM7V6MRlwGYVVg6r?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+											<div class="lazy-iframe-placeholder" data-src="https://open.spotify.com/embed/playlist/1D4m8zAM7V6MRlwGYVVg6r?utm_source=generator" data-type="spotify" data-slide="2">
+												Click to load Spotify playlist
+											</div>
 											<div class="text" style="background-color: #6d561a">Super catchy, definitely a genre you should get into.</div>
 										</div>
 
 										<div class="mySlides">
 											<div class="numbertext">3 / 3</div>
-											<iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2v0qh5WKcleWiXoFVrQJPc?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+											<div class="lazy-iframe-placeholder" data-src="https://open.spotify.com/embed/playlist/2v0qh5WKcleWiXoFVrQJPc?utm_source=generator" data-type="spotify" data-slide="3">
+												Click to load Spotify playlist
+											</div>
 											<div class="text" style="background-color: #4e120c">Chill hindi vibes can never go wrong</div>
 										</div>
 
@@ -235,13 +305,15 @@
 
 									<div class="mySlides2 ">
 										<div class="numbertext">1 / 2</div>
-										<iframe loading="eager" onload="showSlides(1,2)" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/637HKfJWuumnuiUS6VBH6O?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+										<iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/637HKfJWuumnuiUS6VBH6O?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 										<div class="text" style="background-color: #455c77">Updated weekly, 20ish songs I'm listening to currently</div>
 									</div>
 
 									<div class="mySlides2 ">
 										<div class="numbertext">2 / 2</div>
-										<iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1EpDhrFZ2jvX0W?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+										<div class="lazy-iframe-placeholder" data-src="https://open.spotify.com/embed/playlist/37i9dQZF1EpDhrFZ2jvX0W?utm_source=generator" data-type="spotify" data-slide="2" data-group="2">
+											Click to load Spotify playlist
+										</div>
 										<div class="text" style="background-color: #a02570">My past favorites</div>
 									</div>
 
@@ -329,7 +401,7 @@
 								<div class="w3-row-padding">
 									<div class="w3-col w3-half w3-auto w3-margin-bottom">
 										<div id="RAM" class="w3-display-container">
-											<div class="align-center"><a href="https://open.spotify.com/album/4m2880jivSbbyEGAKfITCa?si=FnkmftlSRgGT-QUWSNIqVA">
+											<div class="align-center"><a href="https://open.spotify.com/embed/album/4m2880jivSbbyEGAKfITCa?si=FnkmftlSRgGT-QUWSNIqVA">
 												<img loading="lazy" src="images/Music/Random_Access_Memories.jpg" class="w3-hover-opacity" alt="random access memories" style="max-width:500px; width: 100%"/></a>
 												<p style="text-align: center">
 													Daft Punk's impact on digital sound, improvising, other artists, and music in general is hard to understate.
@@ -481,6 +553,144 @@
 		$('.lazyload-div').lazyload({load: load});
 		$('.lazyload-collapsible').lazyload({trigger: 'click'});
 
+	</script>
+
+	<!-- Performance optimization scripts -->
+	<script>
+		// Preserve scroll position
+		let scrollPosition = 0;
+		
+		// Save scroll position before page unload
+		window.addEventListener('beforeunload', function() {
+			sessionStorage.setItem('scrollPosition', window.pageYOffset);
+		});
+		
+		// Restore scroll position after page load
+		window.addEventListener('load', function() {
+			const savedPosition = sessionStorage.getItem('scrollPosition');
+			if (savedPosition) {
+				window.scrollTo(0, parseInt(savedPosition));
+				sessionStorage.removeItem('scrollPosition');
+			}
+		});
+		
+		// Lazy load iframes
+		document.addEventListener('DOMContentLoaded', function() {
+			const lazyIframes = document.querySelectorAll('.lazy-iframe-placeholder');
+			
+			lazyIframes.forEach(placeholder => {
+				placeholder.addEventListener('click', function() {
+					const src = this.getAttribute('data-src');
+					const type = this.getAttribute('data-type');
+					
+					if (type === 'script') {
+						// Load script
+						const script = document.createElement('script');
+						script.src = src;
+						script.defer = true;
+						document.head.appendChild(script);
+						
+						// Replace placeholder with content
+						this.innerHTML = '<div style="text-align: center; padding: 20px; color: #666;">Loading guitar covers widget...</div>';
+					} else {
+						// Create iframe
+						const iframe = document.createElement('iframe');
+						iframe.src = src;
+						iframe.className = 'lazy-iframe loaded';
+						iframe.style.width = '100%';
+						iframe.style.height = '380px';
+						iframe.style.border = 'none';
+						iframe.style.borderRadius = '12px';
+						iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+						
+						// Replace placeholder with iframe
+						this.parentNode.replaceChild(iframe, this);
+					}
+				});
+			});
+			
+			// Lazy load images (excluding header image)
+			const images = document.querySelectorAll('img[loading="lazy"]:not(.image.main img)');
+			const imageObserver = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const img = entry.target;
+						img.classList.add('loaded');
+						observer.unobserve(img);
+					}
+				});
+			});
+			
+			images.forEach(img => imageObserver.observe(img));
+		});
+		
+		// Optimize slideshow loading
+		let currentSlideIndex = 1;
+		let currentGroup = 1;
+		
+		function showSlides(n, group) {
+			// Handle slide wrapping
+			const totalSlides = group === 1 ? 3 : 2;
+			if (n > totalSlides) n = 1;
+			if (n < 1) n = totalSlides;
+			
+			currentSlideIndex = n;
+			currentGroup = group;
+			
+			// Hide all slides
+			const slides = group === 1 ? document.querySelectorAll('.mySlides') : document.querySelectorAll('.mySlides2');
+			slides.forEach((slide, index) => {
+				slide.style.display = 'none';
+			});
+			
+			// Show current slide
+			const currentSlide = slides[n - 1];
+			if (currentSlide) {
+				currentSlide.style.display = 'block';
+				
+				// Load iframe if it's a placeholder and hasn't been loaded yet
+				const placeholder = currentSlide.querySelector('.lazy-iframe-placeholder');
+				if (placeholder && !placeholder.classList.contains('loaded')) {
+					placeholder.click();
+				}
+			}
+			
+			// Update dot indicators
+			const dots = group === 1 ? document.querySelectorAll('.dot') : document.querySelectorAll('.dot2');
+			dots.forEach((dot, index) => {
+				dot.classList.remove('active');
+			});
+			if (dots[n - 1]) {
+				dots[n - 1].classList.add('active');
+			}
+		}
+		
+		function plusSlides(n, group) {
+			showSlides(currentSlideIndex + n, group);
+		}
+		
+		function currentSlide(n, group) {
+			showSlides(n, group);
+		}
+		
+		// Initialize slideshows
+		document.addEventListener('DOMContentLoaded', function() {
+			// Mark first slides as already loaded
+			const firstSlides = document.querySelectorAll('.mySlides:first-child, .mySlides2:first-child');
+			firstSlides.forEach(slide => {
+				slide.classList.add('loaded');
+			});
+			
+			// Ensure header image is visible immediately
+			const headerImage = document.querySelector('.image.main img');
+			if (headerImage) {
+				headerImage.classList.add('loaded');
+			}
+			
+			// Initialize slideshows to show first slide
+			showSlides(1, 1);
+			showSlides(1, 2);
+		});
 	</script>
 
 
