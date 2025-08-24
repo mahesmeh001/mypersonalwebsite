@@ -17,6 +17,25 @@
     </noscript>
     <link href="assets/css/topbutton.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Performance optimizations -->
+    <style>
+        /* Optimize image rendering */
+        img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        
+        /* Smooth scrolling optimization */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Optimize animations */
+        .collapsiblecontent {
+            will-change: max-height;
+        }
+    </style>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -77,7 +96,7 @@
             <header class="major">
                 <h1>Books</h1>
                 <div class="image main"><img alt="books" class="img-fluid" src="images/Books/books.jpg"
-                                             style="max-height: 500px; width: auto; margin-left: auto; margin-right: auto"/>
+                                             style="max-height: 500px; width: auto; margin-left: auto; margin-right: auto" loading="eager"/>
                 </div>
 
                 <!--Table of Contents-->
@@ -141,23 +160,23 @@
                 <p style="text-align: center">Set in the past with lessons for the future.</p>
             </div>
 
-            <div class="w3-row w3-row-padding w3-center" id="hisficbanner">
-                <div class="w3-col" style="width: 25%">
-                    <div><img alt="invisible man" src="images/Books/invisibleman.jpg"
-                              style="width: 100%; max-width: 200px"></div>
+                            <div class="w3-row w3-row-padding w3-center" id="hisficbanner">
+                    <div class="w3-col" style="width: 25%">
+                        <div><img alt="invisible man" src="images/Books/invisibleman.jpg"
+                                  style="width: 100%; max-width: 200px" loading="lazy"></div>
+                    </div>
+                    <div class="w3-col" style="width: 25%">
+                        <div><img alt="kite runner" src="images/Books/thekiterunner.jpg"
+                                  style="width: 100%; max-width: 200px" loading="lazy"></div>
+                    </div>
+                    <div class="w3-col" style="width: 25%">
+                        <div><img alt="achilles" src="images/Books/songofachilles.jpg"
+                                  style="width: 100%; max-width: 200px" loading="lazy"></div>
+                    </div>
+                    <div class="w3-col" style="width: 25%">
+                        <div><img alt="circe" src="images/Books/circe.jpg" style="width: 100%; max-width: 200px" loading="lazy"></div>
+                    </div>
                 </div>
-                <div class="w3-col" style="width: 25%">
-                    <div><img alt="kite runner" src="images/Books/thekiterunner.jpg"
-                              style="width: 100%; max-width: 200px"></div>
-                </div>
-                <div class="w3-col" style="width: 25%">
-                    <div><img alt="achilles" src="images/Books/songofachilles.jpg"
-                              style="width: 100%; max-width: 200px"></div>
-                </div>
-                <div class="w3-col" style="width: 25%">
-                    <div><img alt="circe" src="images/Books/circe.jpg" style="width: 100%; max-width: 200px"></div>
-                </div>
-            </div>
 
 
             <div class="w3-content" style="max-width:1564px">
@@ -176,7 +195,7 @@
                         <div class="w3-col w3-half">
                             <div class="w3-center">
                                 <img alt="Circe" class="w3-image" height="600" src="images/Books/mountains.jpg"
-                                     width="400">
+                                     width="400" loading="lazy">
                             </div>
                         </div>
                         <div class="w3-col w3-half" style="padding-left: 2%">
@@ -560,16 +579,16 @@
 
             <div class="w3-row w3-row-padding w3-center" id="litficbanner">
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/doriangray.jpg" alt="The Picture of Dorian Gray book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/doriangray.jpg" alt="The Picture of Dorian Gray book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/theministry.jpg" alt="The Ministry of Utmost Happiness book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/theministry.jpg" alt="The Ministry of Utmost Happiness book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/nolongerhuman.jpg" alt="No Longer Human book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/nolongerhuman.jpg" alt="No Longer Human book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img id="onearthImage" src="images/Books/onearth.jpg" alt="On Earth We're Briefly Gorgeous book cover" style="width: 100%; max-width: 200px">
+                    <div><img id="onearthImage" src="images/Books/onearth.jpg" alt="On Earth We're Briefly Gorgeous book cover" style="width: 100%; max-width: 200px" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -961,17 +980,17 @@
 
             <div class="w3-row w3-row-padding w3-center" id="sifibanner">
                 <div class="w3-col w3-third" style="width: 25%">
-                    <div><img src="images/Books/Fahrenheit451.jpg" alt="Fahrenheit 451 book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/Fahrenheit451.jpg" alt="Fahrenheit 451 book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/1984.jpg" alt="1984 book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/1984.jpg" alt="1984 book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/thefeed.jpg" alt="The Feed book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/thefeed.jpg" alt="The Feed book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
                     <div><img src="images/Books/doandriodsdreamofelectricsheep.jpg"
-                              alt="Do Androids Dream of Electric Sheep book cover" style="width: 100%; max-width: 200px"></div>
+                              alt="Do Androids Dream of Electric Sheep book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
             </div>
 
@@ -1159,16 +1178,16 @@
 
             <div class="w3-row w3-row-padding w3-center" id="shortstoriesbanner">
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/ifyouseeme.jpg" alt="If You See Me, Don't Say Hi book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/ifyouseeme.jpg" alt="If You See Me, Don't Say Hi book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/exileandthekingdom.jpg" alt="Exile and the Kingdom book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/exileandthekingdom.jpg" alt="Exile and the Kingdom book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/omelas.jpg" alt="The Ones Who Walk Away From Omelas book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/omelas.jpg" alt="The Ones Who Walk Away From Omelas book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/themetamorphosis.jpg" alt="The Metamorphosis book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/themetamorphosis.jpg" alt="The Metamorphosis book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
             </div>
 
@@ -1388,16 +1407,16 @@
 
             <div class="w3-row w3-row-padding w3-center" id="nonficbanner">
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/zerotrimester.jpg" alt="The Zero Trimester book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/zerotrimester.jpg" alt="The Zero Trimester book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/justgetonthepill.jpg" alt="Just Get on the Pill book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/justgetonthepill.jpg" alt="Just Get on the Pill book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/reprodonres.jpg" alt="Reproduction on the Reservation book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/reprodonres.jpg" alt="Reproduction on the Reservation book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/transmed.jpg" alt="Trans Medicine book cover" style="width: 100%; max-width: 200px"></div>
+                    <div><img src="images/Books/transmed.jpg" alt="Trans Medicine book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
             </div>
 
@@ -1699,6 +1718,55 @@
         });
     });
 
+</script>
+
+<!-- Performance optimization script -->
+<script>
+    // Intersection Observer for better lazy loading
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        img.classList.remove('lazy');
+                    }
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        // Observe all lazy images
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+
+    // Preload critical images
+    function preloadCriticalImages() {
+        const criticalImages = [
+            'images/Books/books.jpg', // Main hero image
+            'images/Books/invisibleman.jpg', // First visible book cover
+            'images/Books/thekiterunner.jpg'
+        ];
+        
+        criticalImages.forEach(src => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = src;
+            document.head.appendChild(link);
+        });
+    }
+
+    // Run preloading when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', preloadCriticalImages);
+    } else {
+        preloadCriticalImages();
+    }
 </script>
 
 </body>
