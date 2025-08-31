@@ -1785,32 +1785,6 @@
 
 <!-- Pop-up functionality -->
 <script>
-    // Custom smooth scroll function
-    function smoothScrollTo(element, duration = 800) {
-        const targetPosition = element.offsetTop;
-        const startPosition = window.pageYOffset;
-        const distance = targetPosition - startPosition;
-        let startTime = null;
-        
-        function ease(t, b, c, d) {
-            // Easing function for smooth animation
-            t /= d / 2;
-            if (t < 1) return c / 2 * t * t + b;
-            t--;
-            return -c / 2 * (t * (t - 2) - 1) + b;
-        }
-        
-        function animation(currentTime) {
-            if (startTime === null) startTime = currentTime;
-            const timeElapsed = currentTime - startTime;
-            const run = ease(timeElapsed, startPosition, distance, duration);
-            window.scrollTo(0, run);
-            if (timeElapsed < duration) requestAnimationFrame(animation);
-        }
-        
-        requestAnimationFrame(animation);
-    }
-    
     // Check if user has visited before
     if (!localStorage.getItem('booksPageVisited')) {
         // Show banner after 1.5 seconds
@@ -1824,19 +1798,10 @@
             const ministrySection = document.getElementById('theministry');
             
             if (ministrySection) {
-                // Detect Safari and use appropriate scroll method
-                const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-                
-                if (isSafari) {
-                    // Use custom smooth scroll for Safari
-                    smoothScrollTo(ministrySection, 800);
-                } else {
-                    // Use native smooth scroll for Chrome and other browsers
-                    ministrySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                // Use native smooth scroll for all browsers
+                ministrySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 
                 // Delay the auto-toggle to match scroll duration
-                const scrollDelay = isSafari ? 800 : 800; // Both get 800ms for now
                 setTimeout(function() {
                     // Auto-toggle the collapsible content to open
                     const ministryButton = document.querySelector('button[onclick*="theministry"], button:has(#theministry)');
@@ -1855,7 +1820,7 @@
                             }
                         }
                     }
-                }, scrollDelay);
+                }, 800);
             }
             // Slide banner out and mark as visited
             document.getElementById('popupBanner').style.right = '-350px';
