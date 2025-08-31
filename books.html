@@ -55,6 +55,17 @@
 
 <body class="is-preload">
 
+<!-- Right-side Banner Pop-up -->
+<div id="popupBanner" style="position: fixed; top: 20px; right: -350px; width: 320px; background: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); z-index: 1000; transition: right 0.3s ease; padding: 1.5rem; border: 1px solid rgba(0, 0, 0, 0.1);">
+    <button id="popupClose" style="position: absolute; top: 8px; right: 8px; background: transparent !important; border: 0 !important; outline: none !important; color: red !important; font-size: 18px; cursor: pointer; padding: 0 !important; width: 20px; height: 20px; line-height: 1; font-weight: bold; box-shadow: none !important;">×</button>
+    <h4 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.1rem;">Jump to my latest review!</h4>
+    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">The Ministry of Utmost Happiness</p>
+    <div style="display: flex; gap: 0.5rem;">
+        <button id="popupYes" style="background: #ffc130; color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1;">Yes</button>
+        <button id="popupNo" style="background: rgba(0, 0, 0, 0.1); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1;">No</button>
+    </div>
+</div>
+
 <!-- Wrapper -->
 <div id="wrapper">
     <a id="button" style="background-color: #ffc130; color: #fdf6e5"></a>
@@ -1769,6 +1780,41 @@
         document.addEventListener('DOMContentLoaded', preloadCriticalImages);
     } else {
         preloadCriticalImages();
+    }
+</script>
+
+<!-- Pop-up functionality -->
+<script>
+    // Check if user has visited before
+    if (!localStorage.getItem('booksPageVisited')) {
+        // Show banner after 1.5 seconds
+        setTimeout(function() {
+            document.getElementById('popupBanner').style.right = '20px';
+        }, 1500);
+        
+        // Handle Yes button click
+        document.getElementById('popupYes').addEventListener('click', function() {
+            // Scroll to The Ministry review using its ID
+            const ministrySection = document.getElementById('theministry');
+            if (ministrySection) {
+                ministrySection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            // Slide banner out and mark as visited
+            document.getElementById('popupBanner').style.right = '-350px';
+            localStorage.setItem('booksPageVisited', 'true');
+        });
+        
+        // Handle No button click
+        document.getElementById('popupNo').addEventListener('click', function() {
+            document.getElementById('popupBanner').style.right = '-350px';
+            localStorage.setItem('booksPageVisited', 'true');
+        });
+        
+        // Handle close button click
+        document.getElementById('popupClose').addEventListener('click', function() {
+            document.getElementById('popupBanner').style.right = '-350px';
+            localStorage.setItem('booksPageVisited', 'true');
+        });
     }
 </script>
 
