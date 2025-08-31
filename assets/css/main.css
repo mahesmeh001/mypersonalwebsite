@@ -5059,7 +5059,7 @@ body {
 	padding: 0 18px;
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.2s ease-out;
+	transition: max-height 0.6s ease-out;
 	background-color: inherit;
 	margin-bottom: 1em;
 }
@@ -5135,5 +5135,5 @@ body {
 	*/
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.2s ease-out;
+	transition: max-height 0.6s ease-out;
 }
