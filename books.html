@@ -1785,8 +1785,11 @@
 
 <!-- Pop-up functionality -->
 <script>
-    // Check if user has visited before
-    if (!localStorage.getItem('booksPageVisited')) {
+    // Check if user has seen this specific book review
+    const currentBook = 'theministry'; // Change this when you add new reviews
+    const seenBooks = JSON.parse(localStorage.getItem('seenBooks') || '[]');
+    
+    if (!seenBooks.includes(currentBook)) {
         // Show banner after 1.5 seconds
         setTimeout(function() {
             document.getElementById('popupBanner').style.right = '20px';
@@ -1822,21 +1825,24 @@
                     }
                 }, 800);
             }
-            // Slide banner out and mark as visited
+            // Slide banner out and mark this book as seen
             document.getElementById('popupBanner').style.right = '-350px';
-            localStorage.setItem('booksPageVisited', 'true');
+            seenBooks.push(currentBook);
+            localStorage.setItem('seenBooks', JSON.stringify(seenBooks));
         });
         
         // Handle No button click
         document.getElementById('popupNo').addEventListener('click', function() {
             document.getElementById('popupBanner').style.right = '-350px';
-            localStorage.setItem('booksPageVisited', 'true');
+            seenBooks.push(currentBook);
+            localStorage.setItem('seenBooks', JSON.stringify(seenBooks));
         });
         
         // Handle close button click
         document.getElementById('popupClose').addEventListener('click', function() {
             document.getElementById('popupBanner').style.right = '-350px';
-            localStorage.setItem('booksPageVisited', 'true');
+            seenBooks.push(currentBook);
+            localStorage.setItem('seenBooks', JSON.stringify(seenBooks));
         });
     }
 </script>
