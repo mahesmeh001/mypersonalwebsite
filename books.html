@@ -52,6 +52,52 @@
     gtag('config', 'G-XBFRQTPP7V');
 </script>
 
+<!-- Score Slider Function -->
+<script>
+    function createScoreSlider(scores, overall, color) {
+        let html = `
+            <!-- Score Sliders -->
+            <div style="margin: 20px 0; padding: 15px; background-color: rgba(255,215,131,0.1); border-radius: 8px;">
+        `;
+        
+        // Generate sliders for each category
+        for (const [category, score] of Object.entries(scores)) {
+            html += `
+                <div style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <span>${category}</span>
+                        <span style="color: #666;">${score}/10</span>
+                    </div>
+                    <div style="background-color: #e0e0e0; border-radius: 10px; height: 12px; overflow: hidden;">
+                        <div style="background-color: ${color}; height: 100%; width: ${score * 10}%; transition: width 0.3s ease;"></div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Add Overall section with shimmer - calculate percentage from overall score
+        html += `
+                <div style="margin-bottom: 4px; border-top: 2px solid ${color}; padding-top: 8px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <span style="font-weight: 700; font-size: 1.05em;">Overall</span>
+                        <span style="color: #333; font-weight: 700;">${overall}/10</span>
+                    </div>
+                    <div style="background-color: #e0e0e0; border-radius: 10px; height: 14px; overflow: hidden;">
+                        <div style="height: 100%; width: ${overall * 10}%; transition: width 0.3s ease; background: linear-gradient(90deg, ${color} 0%, #ff9f40 50%, ${color} 100%); background-size: 20px 100%; animation: shimmer 5s ease-in-out infinite;"></div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @keyframes shimmer {
+                    0%, 100% { background-position: 0% 50%; opacity: 1; }
+                    50% { background-position: 100% 50%; opacity: 0.9; }
+                }
+            </style>
+        `;
+        
+        return html;
+    }
+</script>
 
 <body class="is-preload">
 
@@ -59,7 +105,7 @@
 <div id="popupBanner" style="position: fixed; top: 20px; right: -350px; width: 320px; background: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); z-index: 1000; transition: right 0.3s ease; padding: 1.5rem; border: 1px solid rgba(0, 0, 0, 0.1);">
     <button id="popupClose" style="position: absolute; top: 8px; right: 8px; background: transparent !important; border: 0 !important; outline: none !important; color: red !important; font-size: 18px; cursor: pointer; padding: 0 !important; width: 20px; height: 20px; line-height: 1; font-weight: bold; box-shadow: none !important;">×</button>
     <h4 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.1rem;">Jump to my latest review!</h4>
-    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">Flowers for Algernon</p>
+    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">Brave New World</p>
     <div style="display: flex; gap: 0.5rem;">
         <button id="popupYes" style="background: rgba(255,215,131,0.8); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">Yes</button>
         <button id="popupNo" style="background: rgba(0, 0, 0, 0.1); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">No</button>
@@ -132,10 +178,10 @@
                             </i></p></div>
                             <div><a href="#scifi"> <b>Science-Fiction</b></a></div>
                             <div><p style="font-size: small; color: grey; text-align: center; margin-bottom: 1px"><i>
-                                <a href="#flowers">Flowers for Algernon</a>
+                                <a href="#bravenewworld">Brave New World</a>
+                                • <a href="#flowers">Flowers for Algernon</a>
                                 • <a href="#fahrenheit451">Fahrenheit 451</a>
                                 • <a href="#1984">1984</a>
-                                • <a href="#thefeed">The Feed</a>
                                 • <a href="#andriods">Do Andriod Dream of Electric Sheep?</a>
                             </i></p></div>
                             <div><a href="#shortstories"><b>Short Stories</b> </a></div>
@@ -999,6 +1045,9 @@
 
             <div class="w3-row w3-row-padding w3-center" id="sifibanner">
                 <div class="w3-col w3-third" style="width: 25%">
+                    <div><img src="images/Books/bravenewworld.jpg" alt="Brave New World book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
+                </div>
+                <div class="w3-col" style="width: 25%">
                     <div><img src="images/Books/flowers.jpg" alt="Flowers for Algernon book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
@@ -1007,11 +1056,150 @@
                 <div class="w3-col" style="width: 25%">
                     <div><img src="images/Books/1984.jpg" alt="1984 book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
-                <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/thefeed.jpg" alt="The Feed book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
-                </div>
             </div>
 
+
+            <!--Brave New World-->
+            <button class="collapsible">Brave New World by Aldous Huxley</button>
+            <div class="collapsiblecontent" id="bravenewworld">
+                <div class="row">
+                    <div class="col text-start"><h3 style="margin-top: 15px">My Rating: 8.75/10</h3>
+                    </div>
+                    <div class="col text-end"><p><i>Read in Oct 2025</i></p>
+                    </div>
+                </div>
+
+                <!-- Score Sliders -->
+                <div id="bravenewworld-scores"></div>
+                <script>
+                    var scores = {
+                        'Readability': 6,
+                        'Thematic Depth': 10,
+                        'Narrative': 8,
+                        'Characters': 8,
+                        'Resonance': 7
+                    };
+                    var overall = 8.75;
+                    var color = '#ed8723';
+                    
+                    document.getElementById('bravenewworld-scores').innerHTML = createScoreSlider(scores, overall, color);
+                </script>
+
+                <div class="w3-row">
+                    <div class="w3-col w3-half">
+                        <div class="w3-center">
+                            <img alt="Brave New World" class="w3-image" height="600" src="images/Books/bravenewworld.jpg"
+                                 width="400" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="w3-col w3-half" style="padding-left: 2%">
+                        <div class="">
+                            <p>
+                                I've often said that the most beautiful writing speaks profoundly through simplicity, with writing so simple anyone could understand. This book is not simple. It does, however, speak profoundly. Within this Brave New World, layers upon layers of complex emotions, ideas, and milieus unfold. The novel paints a vivid picture of its dystopian life, and touches on various facets of life within. I enjoyed this approach because it encourages you to think on various themes before they are explicitly addressed in the climax. To me, a novel that makes you think and reflect is a great one – and this one does that in spades.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        That said, I did have some issues with the read. At times I felt the author's messaging was overly direct. For example, to showcase hedonism, there is an overt focus on sexual behavior. While I understand the narrative purpose, I would have appreciated additional ways to convey the same point and felt the obsession limited the scope of the novel. Additionally, while the concept behind the opening was brilliant, its execution was hard to follow. I found myself pushing through the beginning to stay engaged, which is not the strongest way to start a novel.
+                    </p>
+                </div>
+
+                <div>
+                    <blockquote style="border-left-color: #ed8723">
+                        "What's the point of truth or beauty or knowledge when anthrax bombs are popping all around you?"
+                    </blockquote>
+                    <p>
+                        The key struggle of the book, as expanded upon in the exploration section.
+                    </p>
+                    <blockquote style="border-left-color: #ed8723">
+                        (of philosophers) "a man who dreams of less than there is in heaven and earth"
+                    </blockquote>
+                    <p>
+                        Originally from Hamlet, a quote that illustrates that there is far more in the world than that which humans can reason about, and that to be confined to philosophy is to unduly limit your imagination.
+                    </p>
+                    <blockquote style="border-left-color: #ed8723">
+                        "No offense is so heinous as unorthodoxy of behavior. Muder kills only the individual."
+                    </blockquote>
+                    <p>
+                        This line demonstrates a fear of ruling power: not violence, but disobedience. Those who don't conform to the system breed the incentive to challenge it. For those in power, the slightest deviation is dangerous because it reminds others alternatives exist. Control is preserved not by preventing bad things, but by preventing change.
+                    </p>
+                    <blockquote style="border-left-color: #ed8723">
+                        "God isn't compatible with…universal happiness"<br><br>
+                        "for this religious sentiment is of its nature so pure, so delightful to the soul that experiences it, that it makes up to us for all our other losses"
+                    </blockquote>
+                    <p>
+                        Quite interesting because of the illustration of how religion is meaningful because of loss. Defined by a world of impermanence and suffering, God provides a constant refuge. Of course, the problem is that if there is no suffering, God doesn't provide any salvation.
+                    </p>
+                </div>
+
+
+                <br>
+
+                <div class="" id="bravenewworld-exploration">
+
+                    <h3>
+                        The Central Struggle of the Brave New World
+                    </h3>
+                    <p>
+                        The central struggle of this society is clear: stability and contentment vs. a full, volatile range of human emotion. Which one is better? 
+                    </p>
+                    <p>
+                        If your life is already pretty good, the promise of constant happiness might feel like a prison. You'd fight for, as the novel puts it, "the right to be unhappy." But if your world is falling apart and the, "anthrax bombs are popping all around you" — then stability starts to look like salvation.
+                    </p>
+                    <p>
+                        Ultimately, you start to think about the bigger question: <i>What gives life meaning if nothing goes wrong?</i>
+                    </p>
+                    <p>
+                        If we remove fear, grief, longing, disappointment — do we also erase the joy that only exists because those feelings exist?
+                    </p>
+                    <p>
+                        Meaning might come from the very fact that life is unstable, that happiness is something earned and uneven. When comfort is guaranteed, the soul goes missing. But then again, maybe I can only say that because there's rice on the table.
+                    </p>
+                    <p>
+                        This debate is not a novel one, and literature across history touches on similar ideas:
+                    </p>
+                    <ul>
+                        <li>Stoicism's pursuit of ataraxia (serene steadiness)</li>
+                        <li>Romanticism's celebration of passion and pain</li>
+                        <li>Existentialism's focus on the meaning of the emotional burden of being human</li>
+                        <li>Various mythological texts focus on freedom from the human experience (Buddhism, Hinduism, etc…)</li>
+                    </ul>
+                    <p>
+                        Brave new world is one imagined look at what happens in a world where the comfort is guaranteed, but the 'human experience' is clipped.
+                    </p>
+
+                </div>
+
+                <br>
+
+                <div class="" id="bravenewworld-exploration2">
+
+                    <h3>
+                        Self Perception vs Reality (Spoilers)
+                    </h3>
+                    <p>
+                        Another central theme is the divide between who we think we are and who we reveal ourselves to be. Throughout the novel, notable characters project an idealized self image – righteous, pure, or principled – yet crumble the moment desire challenges that image.
+                    </p>
+                    <p>
+                        John and Bernard both want to be perceived in a specific way. John wants to see himself as a beacon of righteousness, and Bernard wants others to see him as someone significant. 
+                    </p>
+                    <p>
+                        However, as push comes to shove, they both fail to live up to their own ideals. John cannot contain his id, and Bernard's illusion of importance gets shattered. In turn, the shame of that failure devastates them. John kills himself, and Bernard nearly gets there, had it not been for Helmholtz.
+                    </p>
+                    <p>
+                        Helmholtz, in stark contrast, is uninterested in crafting a persona. He knows what it is he wants, and acts on it without self-mythologizing. While there is a place for introspection that his character misses, his clarity of motivation makes him the only one capable of consistent bravery in the face of opposition. We see this throughout the novel:
+                    </p>
+                    <ul>
+                        <li>He openly rejects the shallow work expected of him, pursuing real creativity even when it threatens his status, unlike Marx who conforms to whoever is in power</li>
+                        <li>He doesn't back down in the face of authority, unlike Marx who collapses the moment he's challenged</li>
+                        <li>He chooses exile to a harsh island — not for comfort, but for the intellectual freedom that struggle makes possible</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <br>
 
             <!--Flowers for Algernon-->
             <button class="collapsible">Flowers for Algernon by Daniel Keyes</button>
@@ -1171,52 +1359,6 @@
                         expressed
                         by exactly one word, with its meaning rigidly defined and all its subsidiary meanings rubbed out
                         and forgotten.
-                    </blockquote>
-
-                </div>
-            </div>
-
-            <br>
-
-            <!--The Feed-->
-            <button class="collapsible">The Feed by M.T. Anderson</button>
-            <div class="collapsiblecontent" id="thefeed">
-                <h3 style="margin-top: 15px">My Rating: 6/10</h3>
-
-                <div class="w3-row">
-                    <div class="w3-row">
-                        <div class="w3-col w3-half">
-                            <div class="w3-center">
-                                <img alt="The Feed" class="w3-image" height="600"
-                                     src="images/Books/thefeed.jpg" width="400">
-                            </div>
-                        </div>
-                        <div class="w3-col w3-half" style="padding-left: 2%">
-                            <div class="">
-                                <p>
-                                    The Feed is an advanced form of intranet combined with every social media
-                                    imaginable, packaged into a chip implanted in the brain. Sounds cool at first, but
-                                    then
-                                    come the implications.
-                                    This sci-fi novel seems like something which might actually happen in our near
-                                    future, and has to do
-                                    a lot with consumerism, modernization, and deeper human connection. The plot of this
-                                    book was very creative yet
-                                    realistic, it created a future I could imagine ourselves being in. The writing style
-                                    shadowed
-                                    the rapid pace of the feed: information coming at you very fast, and in very
-                                    digestible ways.
-                                    For the most part I enjoyed reading the book, but the main character continuously
-                                    pissed me off. I also had qualms with the writing; even though it is done
-                                    stylistically, I found
-                                    the train of thought sentencing rather annoying.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <blockquote style="border-left-color: #dc3f26">I'm not going to let them catalog me. I'm going to
-                        become invisible.
                     </blockquote>
 
                 </div>
@@ -1852,7 +1994,8 @@
     function preloadCriticalImages() {
         const criticalImages = [
             'images/Books/books.jpg', // Main hero image
-            'images/Books/invisibleman.jpg', // First visible book cover
+            'images/Books/bravenewworld.jpg', // First visible book cover
+            'images/Books/invisibleman.jpg',
             'images/Books/thekiterunner.jpg'
         ];
         
@@ -1875,36 +2018,47 @@
 
 <!-- Pop-up functionality -->
 <script>
+    // TEMPORARY OVERRIDE: Set to true to always simulate clicking 'yes' on refresh
+    // Set to false or delete this line to restore normal popup behavior
+    const AUTO_TRIGGER_POPUP = false;
+    
     // Check if user has seen this specific book review
-    const currentBook = 'flowers'; // Change this when you add new reviews
+    const currentBook = 'bravenewworld'; // Change this when you add new reviews
     const seenBooks = JSON.parse(localStorage.getItem('seenBooks') || '[]');
     
-    if (!seenBooks.includes(currentBook)) {
+    if (!seenBooks.includes(currentBook) || AUTO_TRIGGER_POPUP) {
         // Show banner after 1.5 seconds
         setTimeout(function() {
             document.getElementById('popupBanner').style.right = '20px';
+            
+            // TEMPORARY OVERRIDE: Auto-click yes after 0.5 seconds
+            if (AUTO_TRIGGER_POPUP) {
+                setTimeout(function() {
+                    document.getElementById('popupYes').click();
+                }, 500);
+            }
         }, 1500);
         
         // Handle Yes button click
         document.getElementById('popupYes').addEventListener('click', function() {
-            // Scroll to Flowers for Algernon review using its ID
-            const flowersSection = document.getElementById('flowers');
+            // Scroll to Brave New World review using its ID
+            const braveNewWorldSection = document.getElementById('bravenewworld');
             
-            if (flowersSection) {
+            if (braveNewWorldSection) {
                 // Use native smooth scroll for all browsers
-                flowersSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                braveNewWorldSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 
                 // Delay the auto-toggle to match scroll duration
                 setTimeout(function() {
                     // Auto-toggle the collapsible content to open
-                    const flowersButton = document.querySelector('button[onclick*="flowers"], button:has(#flowers)');
-                    if (!flowersButton) {
-                        // Find the button by looking for the one that comes before the flowers section
+                    const braveNewWorldButton = document.querySelector('button[onclick*="bravenewworld"], button:has(#bravenewworld)');
+                    if (!braveNewWorldButton) {
+                        // Find the button by looking for the one that comes before the brave new world section
                         const allButtons = document.querySelectorAll('.collapsible');
                         for (let i = 0; i < allButtons.length; i++) {
-                            if (allButtons[i].nextElementSibling === flowersSection) {
+                            if (allButtons[i].nextElementSibling === braveNewWorldSection) {
                                 const button = allButtons[i];
-                                const content = flowersSection;
+                                const content = braveNewWorldSection;
                                 
                                 // Open the collapsible content
                                 button.classList.add('open', 'active');
@@ -1917,22 +2071,31 @@
             }
             // Slide banner out and mark this book as seen
             document.getElementById('popupBanner').style.right = '-350px';
-            seenBooks.push(currentBook);
-            localStorage.setItem('seenBooks', JSON.stringify(seenBooks));
+            // TEMPORARY OVERRIDE: Don't mark as seen when AUTO_TRIGGER_POPUP is true
+            if (!AUTO_TRIGGER_POPUP && !seenBooks.includes(currentBook)) {
+                seenBooks.push(currentBook);
+                localStorage.setItem('seenBooks', JSON.stringify(seenBooks));
+            }
         });
         
         // Handle No button click
         document.getElementById('popupNo').addEventListener('click', function() {
             document.getElementById('popupBanner').style.right = '-350px';
-            seenBooks.push(currentBook);
-            localStorage.setItem('seenBooks', JSON.stringify(seenBooks));
+            // TEMPORARY OVERRIDE: Don't mark as seen when AUTO_TRIGGER_POPUP is true
+            if (!AUTO_TRIGGER_POPUP && !seenBooks.includes(currentBook)) {
+                seenBooks.push(currentBook);
+                localStorage.setItem('seenBooks', JSON.stringify(seenBooks));
+            }
         });
         
         // Handle close button click
         document.getElementById('popupClose').addEventListener('click', function() {
             document.getElementById('popupBanner').style.right = '-350px';
-            seenBooks.push(currentBook);
-            localStorage.setItem('seenBooks', JSON.stringify(seenBooks));
+            // TEMPORARY OVERRIDE: Don't mark as seen when AUTO_TRIGGER_POPUP is true
+            if (!AUTO_TRIGGER_POPUP && !seenBooks.includes(currentBook)) {
+                seenBooks.push(currentBook);
+                localStorage.setItem('seenBooks', JSON.stringify(seenBooks));
+            }
         });
     }
 </script>
