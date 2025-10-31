@@ -1274,11 +1274,27 @@
             <button class="collapsible">Flowers for Algernon by Daniel Keyes</button>
             <div class="collapsiblecontent" id="flowers">
                 <div class="row">
-                    <div class="col text-start"><h3 style="margin-top: 15px">My Rating: 8/10</h3>
+                    <div class="col text-start"><h3 style="margin-top: 15px">My Rating: 7/10</h3>
                     </div>
                     <div class="col text-end"><p><i>Read in Sep 2025</i></p>
                     </div>
                 </div>
+
+                <!-- Score Sliders -->
+                <div id="flowers-scores"></div>
+                <script>
+                    var scores = {
+                        'Readability': 10,
+                        'Thematic Depth': 4,
+                        'Narrative': 9,
+                        'Characters': 7,
+                        'Pathos': 9
+                    };
+                    var overall = 7;
+                    var color = '#ed8723';
+                    
+                    document.getElementById('flowers-scores').innerHTML = createScoreSlider(scores, overall, color, -25);
+                </script>
 
                 <div class="w3-row">
                     <div class="w3-col w3-half">
@@ -1303,6 +1319,18 @@
                     <p>
                         Overall, it's a perfect book if you want an easier read that still makes you think—without drowning you in thoughts.
                     </p>
+                </div>
+
+                <p>
+                    <strong>Edit:</strong> After giving it a few months and having read a few more novels, the lack of resonating themes in this novel really sticks out to me. I feel that underlying motifs were not powerful enough to really encourage the kind of introspection I've come to expect from novels of caliber. Therefore I'm revising my rating from 8 to 7.
+                </p>
+
+                <br>
+
+                <div class="" id="flowers-quotes">
+                    <h3>
+                        Quotes
+                    </h3>
                 </div>
 
                 <div>

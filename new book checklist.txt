@@ -1,0 +1,4 @@
+- update the table of Contents
+- update the banner
+- update the autoscroll pop-up
+- using 'create score slider' function? 
