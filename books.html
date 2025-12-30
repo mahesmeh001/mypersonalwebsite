@@ -171,7 +171,7 @@
 <div id="popupBanner" style="position: fixed; top: 20px; right: -350px; width: 320px; background: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); z-index: 1000; transition: right 0.3s ease; padding: 1.5rem; border: 1px solid rgba(0, 0, 0, 0.1);">
     <button id="popupClose" style="position: absolute; top: 8px; right: 8px; background: transparent !important; border: 0 !important; outline: none !important; color: red !important; font-size: 18px; cursor: pointer; padding: 0 !important; width: 20px; height: 20px; line-height: 1; font-weight: bold; box-shadow: none !important;">×</button>
     <h4 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.1rem;">Jump to my latest review!</h4>
-    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">Brave New World</p>
+    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">Klara and the Sun</p>
     <div style="display: flex; gap: 0.5rem;">
         <button id="popupYes" style="background: rgba(255,215,131,0.8); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">Yes</button>
         <button id="popupNo" style="background: rgba(0, 0, 0, 0.1); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">No</button>
@@ -244,7 +244,8 @@
                             </i></p></div>
                             <div><a href="#scifi"> <b>Science-Fiction</b></a></div>
                             <div><p style="font-size: small; color: grey; text-align: center; margin-bottom: 1px"><i>
-                                <a href="#bravenewworld">Brave New World</a>
+                                <a href="#klaraandthesun">Klara and the Sun</a>
+                                • <a href="#bravenewworld">Brave New World</a>
                                 • <a href="#flowers">Flowers for Algernon</a>
                                 • <a href="#fahrenheit451">Fahrenheit 451</a>
                                 • <a href="#book-1984">1984</a>
@@ -1111,6 +1112,9 @@
 
             <div class="w3-row w3-row-padding w3-center" id="sifibanner">
                 <div class="w3-col w3-third" style="width: 25%">
+                    <div><img src="images/Books/klara_and_the_sun.jpg" alt="Klara and the Sun book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
+                </div>
+                <div class="w3-col" style="width: 25%">
                     <div><img src="images/Books/bravenewworld.jpg" alt="Brave New World book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
@@ -1119,11 +1123,91 @@
                 <div class="w3-col" style="width: 25%">
                     <div><img src="images/Books/Fahrenheit451.jpg" alt="Fahrenheit 451 book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
-                <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/1984.jpg" alt="1984 book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
-                </div>
             </div>
 
+
+            <!--Klara and the Sun-->
+            <button class="collapsible">Klara and the Sun by Kazuo Ishiguro</button>
+            <div class="collapsiblecontent" id="klaraandthesun">
+                <div class="row">
+                    <div class="col text-start"><h3 style="margin-top: 15px">My Rating: 8/10</h3>
+                    </div>
+                    <div class="col text-end"><p><i>Read in Dec 2025</i></p>
+                    </div>
+                </div>
+
+                <!-- Score Sliders -->
+                <div id="klaraandthesun-scores"></div>
+                <script>
+                    var scores = {
+                        'Prose': 10,
+                        'Relatability': 5,
+                        'Narrative Depth': 7,
+                        'Ease of reading': 9
+                    };
+                    var overall = 8;
+                    var color = '#ffd275';
+                    
+                    document.getElementById('klaraandthesun-scores').innerHTML = createScoreSlider(scores, overall, color, -25);
+                </script>
+
+                <div class="w3-row">
+                    <div class="w3-col w3-half">
+                        <div class="w3-center">
+                            <img alt="Klara and the Sun" class="w3-image" height="600" src="images/Books/klara_and_the_sun.jpg"
+                                 width="400" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="w3-col w3-half" style="padding-left: 2%">
+                        <div class="">
+                            <p>
+                                With beautiful prose that is simple yet elegant, this book wonderfully contrasts our android main character with our preconceptions of humanity, challenging us to think on exactly what it is that makes one human right from the start.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        While raising the question "Can human nature be learned?", the novel symbolically explores intrinsically human motifs such as hope and empathy. Ishiguro describes human experiences with quiet grace–my favorite being the sun's pattern providing nourishment. Ultimately, it concludes in a way that almost feels anodyne, yet hard to disagree with.
+                    </p>
+                    <p>
+                        Even though the book touches on a touchy subject, it feels oddly non-controversial. I can't imagine anyone disgruntled by the depictions of self, human nature, or society. I felt as if the book only took one stance that was 'fresh', even while exploring uncharted sci-fi territory. The rest, while beautifully crafted, felt surprisingly familiar.
+                    </p>
+                    <p>
+                        I still think it's a lovely book, just one whose elegance outshined its ambition.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>
+                        Quotes
+                    </h3>
+                    <blockquote style="border-left-color: #ffd275">
+                        "Sometimes,' she said, 'at special moments like that, people feel a pain alongside their happiness."
+                    </blockquote>
+                    <blockquote style="border-left-color: #ffd275">
+                        "people often felt the need to prepare a side of themselves to display to passers-by – as they might in a store window – and that such a display needn't be taken so seriously"
+                    </blockquote>
+                    <blockquote style="border-left-color: #ffd275">
+                        "Of course, a human heart is bound to be complex. But it must be limited."
+                    </blockquote>
+                </div>
+
+                <br>
+
+                <div class="">
+                    <h3>
+                        My Takeaways
+                    </h3>
+                    <ul>
+                        <li>The soul is often thought of as residing within the body, but it may also be influenced by the outside, by those close to you and those you surround yourself with.</li>
+                        <li>Taking help from others can push you beyond your individual limits</li>
+                        <li>People wear many different faces, and it may be the summation of all those that represent the individual.</li>
+                        <li>Hope is powerful, both for good and bad.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <br>
 
             <!--Brave New World-->
             <button class="collapsible">Brave New World by Aldous Huxley</button>
@@ -2117,7 +2201,7 @@
 <script>
     // TEMPORARY OVERRIDE: Set to true to always simulate clicking 'yes' on refresh
     // Set to false or delete this line to restore normal popup behavior
-    const AUTO_TRIGGER_POPUP = false;
+    const AUTO_TRIGGER_POPUP = true;
     
     // Check if user has seen this specific book review
     const currentBook = 'bravenewworld'; // Change this when you add new reviews
@@ -2138,24 +2222,24 @@
         
         // Handle Yes button click
         document.getElementById('popupYes').addEventListener('click', function() {
-            // Scroll to Brave New World review using its ID
-            const braveNewWorldSection = document.getElementById('bravenewworld');
+            // Scroll to Klara and the Sun review using its ID
+            const bookSection = document.getElementById('klaraandthesun');
             
-            if (braveNewWorldSection) {
+            if (bookSection) {
                 // Use native smooth scroll for all browsers
-                braveNewWorldSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                bookSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 
                 // Delay the auto-toggle to match scroll duration
                 setTimeout(function() {
                     // Auto-toggle the collapsible content to open
-                    const braveNewWorldButton = document.querySelector('button[onclick*="bravenewworld"], button:has(#bravenewworld)');
-                    if (!braveNewWorldButton) {
-                        // Find the button by looking for the one that comes before the brave new world section
+                    const bookButton = document.querySelector('button[onclick*="klaraandthesun"], button:has(#klaraandthesun)');
+                    if (!bookButton) {
+                        // Find the button by looking for the one that comes before the klara section
                         const allButtons = document.querySelectorAll('.collapsible');
                         for (let i = 0; i < allButtons.length; i++) {
-                            if (allButtons[i].nextElementSibling === braveNewWorldSection) {
+                            if (allButtons[i].nextElementSibling === bookSection) {
                                 const button = allButtons[i];
-                                const content = braveNewWorldSection;
+                                const content = bookSection;
                                 
                                 // Open the collapsible content
                                 button.classList.add('open', 'active');
