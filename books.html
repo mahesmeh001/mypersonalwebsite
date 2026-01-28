@@ -171,7 +171,7 @@
 <div id="popupBanner" style="position: fixed; top: 20px; right: -350px; width: 320px; background: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); z-index: 1000; transition: right 0.3s ease; padding: 1.5rem; border: 1px solid rgba(0, 0, 0, 0.1);">
     <button id="popupClose" style="position: absolute; top: 8px; right: 8px; background: transparent !important; border: 0 !important; outline: none !important; color: red !important; font-size: 18px; cursor: pointer; padding: 0 !important; width: 20px; height: 20px; line-height: 1; font-weight: bold; box-shadow: none !important;">×</button>
     <h4 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.1rem;">Jump to my latest review!</h4>
-    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">Klara and the Sun</p>
+    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">Juneteenth</p>
     <div style="display: flex; gap: 0.5rem;">
         <button id="popupYes" style="background: rgba(255,215,131,0.8); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">Yes</button>
         <button id="popupNo" style="background: rgba(0, 0, 0, 0.1); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">No</button>
@@ -232,6 +232,7 @@
                                 <a href="#mountains">And the Mountains Echoed</a>
                                 • <a href="#invisibleman">Invisible Man</a>
                                 • <a href="#kiterunner">The Kite Runner</a>
+                                • <a href="#juneteenth">Juneteenth</a>
                                 • <a href="#achilles">The Song of Achilles</a>
                                 • <a href="#circe">Circe</a>
                             </i></p></div>
@@ -295,11 +296,12 @@
                                   style="width: 100%; max-width: 200px" loading="lazy"></div>
                     </div>
                     <div class="w3-col" style="width: 25%">
-                        <div><img alt="achilles" src="images/Books/songofachilles.jpg"
+                        <div><img alt="juneteenth" src="images/Books/juneteenth.jpg"
                                   style="width: 100%; max-width: 200px" loading="lazy"></div>
                     </div>
                     <div class="w3-col" style="width: 25%">
-                        <div><img alt="circe" src="images/Books/circe.jpg" style="width: 100%; max-width: 200px" loading="lazy"></div>
+                        <div><img alt="achilles" src="images/Books/songofachilles.jpg"
+                                  style="width: 100%; max-width: 200px" loading="lazy"></div>
                     </div>
                 </div>
 
@@ -559,6 +561,42 @@
                                         then, figure out what you can change in what you are doing now.
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <!--Juneteenth-->
+                <button class="collapsible">Juneteenth by Ralph Ellison</button>
+                <div class="collapsiblecontent" id="juneteenth">
+                    <div class="row">
+                        <div class="col text-start"><h3 style="margin-top: 15px">My Rating: 2/10 [DNF, read about one-third]</h3>
+                        </div>
+                        <div class="col text-end"><p><i>Read in Nov 2025</i></p>
+                        </div>
+                    </div>
+
+                    <div class="w3-row">
+                        <div class="w3-col w3-half">
+                            <div class="w3-center">
+                                <img alt="Juneteenth" class="w3-image" height="600"
+                                     src="images/Books/juneteenth.jpg" width="400">
+                            </div>
+                        </div>
+                        <div class="w3-col w3-half" style="padding-left: 2%">
+                            <div class="">
+                                <p>
+                                    Unfortunately, I found Juneteenth to be overly verbose. Ellison's stylistic flourishes are a double-edged sword: they can immerse the reader in emotion and scene in a way few other styles can, yet they are difficult to balance without becoming distracting. Rather than illuminating the narrative, the excessive descriptions often obscured the scenes, leaving me struggling to visualize what was being conveyed. Personally, I don't want to have to reread a series of sentences multiple times to grasp its meaning.
+                                </p>
+                                <p>
+                                    This was especially disappointing because Ellison's Invisible Man remains my favorite novel to date. The contrast between the two works is like day and night.
+                                </p>
+                                <p>
+                                    It's important to acknowledge the context of this book's publication. Juneteenth was released posthumously, condensed from more than 2,000 pages of material by Ellison's friend, editor, and critic John Callahan. When we consider this, the unevenness and difficulty in reading make more sense. I feel that this work—if it can be called a novel—required serious revision before it was ready for publication, a task sadly impossible after Ellison's passing.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -2222,8 +2260,8 @@
         
         // Handle Yes button click
         document.getElementById('popupYes').addEventListener('click', function() {
-            // Scroll to Klara and the Sun review using its ID
-            const bookSection = document.getElementById('klaraandthesun');
+            // Scroll to book section using its ID
+            const bookSection = document.getElementById('juneteenth');
             
             if (bookSection) {
                 // Use native smooth scroll for all browsers
@@ -2232,9 +2270,9 @@
                 // Delay the auto-toggle to match scroll duration
                 setTimeout(function() {
                     // Auto-toggle the collapsible content to open
-                    const bookButton = document.querySelector('button[onclick*="klaraandthesun"], button:has(#klaraandthesun)');
+                    const bookButton = document.querySelector('button[onclick*="juneteenth"], button:has(#juneteenth)');
                     if (!bookButton) {
-                        // Find the button by looking for the one that comes before the klara section
+                        // Find the button by looking for the one that comes before the book section
                         const allButtons = document.querySelectorAll('.collapsible');
                         for (let i = 0; i < allButtons.length; i++) {
                             if (allButtons[i].nextElementSibling === bookSection) {
