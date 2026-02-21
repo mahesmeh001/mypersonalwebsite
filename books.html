@@ -171,7 +171,7 @@
 <div id="popupBanner" style="position: fixed; top: 20px; right: -350px; width: 320px; background: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); z-index: 1000; transition: right 0.3s ease; padding: 1.5rem; border: 1px solid rgba(0, 0, 0, 0.1);">
     <button id="popupClose" style="position: absolute; top: 8px; right: 8px; background: transparent !important; border: 0 !important; outline: none !important; color: red !important; font-size: 18px; cursor: pointer; padding: 0 !important; width: 20px; height: 20px; line-height: 1; font-weight: bold; box-shadow: none !important;">×</button>
     <h4 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.1rem;">Jump to my latest review!</h4>
-    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">Juneteenth</p>
+    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">The Symposium</p>
     <div style="display: flex; gap: 0.5rem;">
         <button id="popupYes" style="background: rgba(255,215,131,0.8); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">Yes</button>
         <button id="popupNo" style="background: rgba(0, 0, 0, 0.1); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">No</button>
@@ -260,6 +260,10 @@
                                 • <a href="#metamorphosis">The Metamorphosis</a>
                                 • <a href="#telltaleheart">The Tell Tale Heart</a>
                                 • <a href="#galatea">Galatea</a>
+                            </i></p></div>
+                            <div><a href="#philosophy"><b>Philosophy</b></a></div>
+                            <div><p style="font-size: small; color: grey; text-align: center; margin-bottom: 1px"><i>
+                                <a href="#thesymposium">The Symposium</a>
                             </i></p></div>
                             <div><a href="#nonfic"> <b>Non-Fiction</b></a></div>
                             <div><p style="font-size: small; color: grey; text-align: center; margin-bottom: 1px"><i>
@@ -1862,6 +1866,95 @@
         <!--TODO - new section called fantasy?-->
 
 
+        <!--Philosophy-->
+        <div id="philosophy" style="border-color: #262626">
+
+            <div class="w3-center">
+                <h2 style="text-decoration: underline">Philosophy</h2>
+            </div>
+
+            <div class="w3-row w3-row-padding w3-center" id="philosophybanner">
+                <div class="w3-col" style="width: 25%">
+                    <div><img src="images/Books/the-symposium.jpg" alt="The Symposium book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
+                </div>
+            </div>
+
+            <!--The Symposium-->
+            <button class="collapsible">The Symposium by Plato</button>
+            <div class="collapsiblecontent" id="thesymposium">
+                <div class="row">
+                    <div class="col text-start"><h3 style="margin-top: 15px">My Rating: 2/10</h3>
+                    </div>
+                    <div class="col text-end"><p><i>Read in Feb 2026</i></p>
+                    </div>
+                </div>
+
+                <!-- Score Sliders -->
+                <div id="thesymposium-scores"></div>
+                <script>
+                    var scores = {
+                        'Prose': 3,
+                        'Relatability': 1,
+                        'Narrative Depth': 3,
+                        'Ease of reading': 4
+                    };
+                    var overall = 2;
+                    var color = '#8b956b';
+
+                    document.getElementById('thesymposium-scores').innerHTML = createScoreSlider(scores, overall, color, -25);
+                </script>
+
+                <div class="w3-row">
+                    <div class="w3-col w3-half">
+                        <div class="w3-center">
+                            <img alt="The Symposium" class="w3-image" height="600" src="images/Books/the-symposium.jpg"
+                                 width="400" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="w3-col w3-half" style="padding-left: 2%">
+                        <div class="">
+                            <p>
+                                Maybe I went in far too enthusiastically, but I was quite disappointed by The Symposium. I was expecting rich philosophical inquiry from hailed geniuses but instead encountered speakers who simulate its form while bypassing its method.
+                            </p>
+                            <p>
+                                Take for example, this quote which adequately demonstrates the types of arguments made in the novel:
+                            </p>
+                            <blockquote style="border-left-color: #8b956b">
+                                "Do you think Achilles would have added his death to that of Patroculous…if [he] had not thought that the memory of their courage would last forever?"
+                            </blockquote>
+                            <p>
+                                In this section, Diotima is explaining how all mortals are chasing immortality, which is equivalent to chasing love.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        This claim reduces the characters and relationship of Patroculos and Achilles to a single motive – the pursuit of immortality. It undermines all opposed viewpoints, and in doing so replaces the complexity of the subject with a neat little box, ignoring everything that doesn't fit. Just like Diotima, the speakers in this novel replace investigation with explanation, defining rather than exploring. Ironically, the book presents such discourse as 'insight' when the heart of what makes a good conversation is diametrically opposed.
+                    </p>
+                    <p>
+                        That being said it's not all bad–Agathon's tall tale was pretty interesting and the ideas from his story form the basis for the modern day 'soulmate'. However, instead of tickling the mind, this book is more useful in presenting a snapshot of ancient Greek life. Ultimately I always felt as if the book was on the cusp of being insightful without ever getting there.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>
+                        Quotes
+                    </h3>
+                    <blockquote style="border-left-color: #8b956b">
+                        "A bad man is…[one] who loves the body rather than the mind. He is not constant, because he loves something that is not constant." - Pausanias
+                    </blockquote>
+                    <blockquote style="border-left-color: #8b956b">
+                        (of delusion) "her feet are sensitive; to the ground. She never draws close, but walks on the heads of men" - Agathon
+                    </blockquote>
+                </div>
+
+
+            </div>
+
+            <br>
+
+        </div> <!-- End Philosophy -->
+
+
         <!--Nonfiction-->
         <div id="nonfic" style="border-color: #262626">
             <div class="w3-center">
@@ -2242,7 +2335,7 @@
     const AUTO_TRIGGER_POPUP = false;
     
     // Check if user has seen this specific book review
-    const currentBook = 'bravenewworld'; // Change this when you add new reviews
+    const currentBook = 'thesymposium'; // Change this when you add new reviews
     const seenBooks = JSON.parse(localStorage.getItem('seenBooks') || '[]');
     
     if (!seenBooks.includes(currentBook) || AUTO_TRIGGER_POPUP) {
@@ -2261,7 +2354,7 @@
         // Handle Yes button click
         document.getElementById('popupYes').addEventListener('click', function() {
             // Scroll to book section using its ID
-            const bookSection = document.getElementById('juneteenth');
+            const bookSection = document.getElementById('thesymposium');
             
             if (bookSection) {
                 // Use native smooth scroll for all browsers
