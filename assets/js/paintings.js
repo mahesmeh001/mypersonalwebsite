@@ -4,7 +4,7 @@
   if (!gallery || !lightbox || typeof PAINTINGS === "undefined") return;
 
   const paintings = PAINTINGS.filter(function (p) {
-    return p.scale !== 0;
+    return p.scale !== 0 && !p.draft;
   });
   let currentIndex = 0;
 
