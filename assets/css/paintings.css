@@ -1,0 +1,245 @@
+/* Paintings gallery + lightbox */
+
+.painting-grid {
+  --grid-cols: 3;
+  --gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  align-items: flex-start;
+}
+
+.painting-card {
+  --scale: 10;
+  --base-col: calc((100% - (var(--grid-cols) - 1) * var(--gap)) / var(--grid-cols));
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: var(--site-bg-soft);
+  cursor: pointer;
+  border-radius: var(--site-radius);
+  overflow: hidden;
+  width: calc(var(--scale) / 10 * var(--base-col));
+  max-width: 100%;
+}
+
+.painting-card:focus-visible {
+  outline: 2px solid var(--site-accent);
+  outline-offset: 3px;
+}
+
+.painting-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.35s ease;
+}
+
+.painting-card:hover img,
+.painting-card:focus-visible img {
+  transform: scale(1.03);
+}
+
+.painting-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(to top, rgba(26, 24, 22, 0.72) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.painting-card:hover .painting-card-overlay,
+.painting-card:focus-visible .painting-card-overlay {
+  opacity: 1;
+}
+
+.painting-card-overlay h3 {
+  margin: 0 0 0.2rem;
+  font-family: var(--site-font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.painting-card-overlay p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+#painting-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 14, 13, 0.94);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+#painting-lightbox.is-open {
+  display: flex;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox-inner {
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -0.5rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  z-index: 2;
+}
+
+.lightbox-close:hover {
+  color: #fff;
+}
+
+.lightbox-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 72vh;
+  width: 100%;
+}
+
+.lightbox-image-wrap img {
+  max-width: 100%;
+  max-height: 72vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--site-radius);
+}
+
+.lightbox-info {
+  margin-top: 1.25rem;
+  text-align: center;
+  color: #f5f0eb;
+  max-width: 36rem;
+}
+
+.lightbox-info h2 {
+  font-family: var(--site-font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.lightbox-meta {
+  font-size: 0.95rem;
+  color: rgba(245, 240, 235, 0.75);
+  margin: 0 0 0.75rem;
+}
+
+.lightbox-description,
+.lightbox-notes {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(245, 240, 235, 0.85);
+  margin: 0.5rem 0 0;
+}
+
+.lightbox-notes {
+  font-size: 0.88rem;
+  color: rgba(245, 240, 235, 0.6);
+  font-style: italic;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.lightbox-prev {
+  left: -1rem;
+}
+
+.lightbox-next {
+  right: -1rem;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .painting-grid {
+    --grid-cols: 2;
+    --gap: 1.25rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .painting-grid {
+    --grid-cols: 2;
+    --gap: 1rem;
+  }
+
+  .painting-card-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(26, 24, 22, 0.55) 0%, transparent 40%);
+  }
+
+  .lightbox-prev {
+    left: 0.25rem;
+  }
+
+  .lightbox-next {
+    right: 0.25rem;
+  }
+
+  .lightbox-nav {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.2rem;
+  }
+}
