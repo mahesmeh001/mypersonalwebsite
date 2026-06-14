@@ -1,10 +1,220 @@
 /* Paintings gallery + lightbox */
 
+body.site-page--paintings {
+  --page-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  position: relative;
+  isolation: isolate;
+}
+
+body.site-page--paintings::before,
+body.site-page--paintings::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body.site-page--paintings::before {
+  z-index: -2;
+  background:
+    radial-gradient(ellipse 85% 55% at 18% 12%, rgba(201, 123, 99, 0.07) 0%, transparent 68%),
+    radial-gradient(ellipse 70% 50% at 82% 28%, rgba(201, 123, 99, 0.05) 0%, transparent 62%),
+    radial-gradient(ellipse 90% 65% at 50% 100%, rgba(201, 123, 99, 0.04) 0%, transparent 70%),
+    linear-gradient(175deg, rgba(240, 221, 212, 0.35) 0%, rgba(250, 246, 241, 0) 45%);
+}
+
+body.site-page--paintings::after {
+  z-index: -1;
+  opacity: 0.22;
+  background-image: var(--page-texture);
+  background-size: 220px 220px;
+  mix-blend-mode: multiply;
+}
+
+body.site-page--paintings .site-header {
+  background:
+    radial-gradient(ellipse 70% 140% at 8% 50%, rgba(201, 123, 99, 0.14) 0%, transparent 72%),
+    radial-gradient(ellipse 55% 120% at 92% 50%, rgba(201, 123, 99, 0.1) 0%, transparent 68%),
+    linear-gradient(180deg, rgba(245, 235, 228, 0.98) 0%, rgba(250, 246, 241, 0.96) 100%);
+  border-bottom: 1px solid rgba(201, 123, 99, 0.42);
+  box-shadow:
+    0 1px 0 rgba(240, 221, 212, 0.95),
+    0 8px 24px rgba(44, 40, 37, 0.08),
+    0 2px 6px rgba(201, 123, 99, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+body.site-page--paintings .site-nav-toggle {
+  border-color: rgba(201, 123, 99, 0.28);
+  background: rgba(240, 221, 212, 0.45);
+}
+
+.painting-filters {
+  margin-bottom: 1.5rem;
+}
+
+.painting-filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.painting-filter-dropdown {
+  position: relative;
+}
+
+.painting-filter-trigger {
+  appearance: none;
+  border: 1px solid rgba(201, 123, 99, 0.28);
+  border-radius: 999px;
+  background: rgba(250, 246, 241, 0.92);
+  color: var(--site-text);
+  font-family: var(--site-font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.painting-filter-trigger:hover,
+.painting-filter-trigger[aria-expanded="true"] {
+  background: rgba(240, 221, 212, 0.75);
+  border-color: rgba(201, 123, 99, 0.42);
+  box-shadow: 0 2px 8px rgba(201, 123, 99, 0.1);
+}
+
+.painting-filter-trigger:focus-visible {
+  outline: 2px solid var(--site-accent);
+  outline-offset: 2px;
+}
+
+.painting-filter-menu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  z-index: 20;
+  min-width: 9.5rem;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  border: 1px solid rgba(201, 123, 99, 0.22);
+  border-radius: 12px;
+  background: rgba(250, 246, 241, 0.98);
+  box-shadow: 0 8px 24px rgba(44, 40, 37, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.painting-filter-menu[hidden] {
+  display: none;
+}
+
+.painting-filter-option {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--site-text);
+  font-family: var(--site-font-body);
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 0.45rem 0.65rem;
+  cursor: pointer;
+}
+
+.painting-filter-option:hover,
+.painting-filter-option:focus-visible {
+  background: rgba(240, 221, 212, 0.7);
+  outline: none;
+}
+
+.painting-filter-menu-empty {
+  padding: 0.45rem 0.65rem;
+  color: var(--site-text-muted);
+  font-size: 0.86rem;
+}
+
+.painting-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding-top: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.painting-filter-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(201, 123, 99, 0.28);
+  border-radius: 999px;
+  background: rgba(240, 221, 212, 0.55);
+  color: var(--site-text);
+  font-family: var(--site-font-body);
+  font-size: 0.86rem;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.painting-filter-chip:hover,
+.painting-filter-chip:focus-visible {
+  background: rgba(240, 221, 212, 0.85);
+  border-color: rgba(201, 123, 99, 0.42);
+  outline: none;
+}
+
+.painting-filter-chip:focus-visible {
+  box-shadow: 0 0 0 2px rgba(201, 123, 99, 0.25);
+}
+
+.painting-filter-chip-remove {
+  position: absolute;
+  top: -0.38rem;
+  right: -0.38rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid rgba(201, 123, 99, 0.28);
+  border-radius: 50%;
+  background: rgba(250, 246, 241, 0.98);
+  color: var(--site-text-muted);
+  font-size: 0.78rem;
+  line-height: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.painting-filter-chip:hover .painting-filter-chip-remove,
+.painting-filter-chip:focus-visible .painting-filter-chip-remove {
+  opacity: 1;
+}
+
+.painting-filter-chip:hover .painting-filter-chip-remove {
+  color: var(--site-text);
+  background: rgba(240, 221, 212, 0.98);
+}
+
+.painting-grid-empty {
+  margin: 1rem 0 0;
+  color: var(--site-text-muted);
+  font-size: 0.95rem;
+}
+
 .painting-grid {
   --grid-cols: 3;
   --gap-x: 1.25rem;
   --gap-y: 1.25rem;
   position: relative;
+}
+
+.painting-grid.is-filter-layout-animating {
+  transition: height 0.48s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .painting-card {
@@ -19,6 +229,23 @@
   border-radius: var(--site-radius);
   overflow: hidden;
   max-width: 100%;
+  transform: translate3d(0, 0, 0);
+}
+
+.painting-card.is-filter-exiting {
+  transition: opacity 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.painting-card.is-filter-entering {
+  opacity: 0;
+}
+
+.painting-card.is-filter-animating {
+  will-change: transform, opacity;
+  transition:
+    transform 0.48s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.48s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .painting-card:focus-visible {
@@ -213,6 +440,15 @@ body.lightbox-open {
     --grid-cols: 2;
     --gap-x: 1rem;
     --gap-y: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body.site-page--paintings .site-nav {
+    background:
+      radial-gradient(ellipse 80% 120% at 15% 0%, rgba(201, 123, 99, 0.12) 0%, transparent 70%),
+      linear-gradient(180deg, rgba(245, 235, 228, 0.97) 0%, rgba(250, 246, 241, 0.95) 100%);
+    border-bottom-color: rgba(201, 123, 99, 0.22);
   }
 }
 

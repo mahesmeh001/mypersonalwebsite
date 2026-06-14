@@ -54,6 +54,26 @@
       </p>
     </header>
 
+    <div class="painting-filters" id="painting-filters">
+      <div class="painting-filters-bar">
+        <div class="painting-filter-dropdown">
+          <button
+            type="button"
+            class="painting-filter-trigger"
+            id="filter-trigger"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-controls="filter-menu"
+          >
+            Filter
+          </button>
+          <ul class="painting-filter-menu" id="filter-menu" role="listbox" hidden></ul>
+        </div>
+        <div class="painting-filter-chips" id="filter-chips" aria-live="polite"></div>
+      </div>
+      <p class="painting-grid-empty" id="gallery-empty" hidden>No paintings match these filters.</p>
+    </div>
+
     <div id="gallery" class="painting-grid" aria-label="Painting gallery"></div>
 
     <section class="site-section" id="contact">
@@ -96,28 +116,30 @@
 
   <script>
     // size: "small" | "medium" | "large". priority: higher = placed earlier (loosely).
+    // category: array of medium tags, e.g. ["watercolor"], ["acrylic"], ["oil"].
     // draft: true hides from gallery.
     const PAINTINGS = [
-      { title: "Sunset",                       image: "images/Paintings/painting_sunset.jpeg",                 size: "large",  priority: 20, draft: false },
-      { title: "Cafe Flowers",                 image: "images/Paintings/painting_cafe_flowers.jpeg",           size: "small",  priority: 18, draft: false },
-      { title: "Devil's Lake",                 image: "images/Paintings/painting_devils_lake.jpeg",            size: "large",  priority: 18, draft: false },
-      { title: "Greece",                       image: "images/Paintings/painting_greece.jpeg",                 size: "medium", priority: 12, draft: false },
-      { title: "Turtle",                       image: "images/Paintings/painting_turtle.JPG",                  size: "small",  priority: 12, draft: false },
-      { title: "Gateway Hills",                image: "images/Paintings/gateway-hills.jpeg",                   size: "medium", priority: 10, draft: false },
-      { title: "Lavendar Field",               image: "images/Paintings/lavendar-field.jpeg",                  size: "medium", priority: 10, draft: false },
-      { title: "SF Houses",                    image: "images/Paintings/sf-houses.jpeg",                       size: "medium", priority: 10, draft: false },
-      { title: "UCSD Tree",                    image: "images/Paintings/ucsd-tree.jpeg",                       size: "small",  priority: 10, draft: true },
-      { title: "SD Beaches",                   image: "images/Paintings/sd-beaches.jpeg",                      size: "medium", priority: 10, draft: false },
-      { title: "Abstract Flowers",             image: "images/Paintings/abstract-flowers.jpeg",                size: "small",  priority: 9,  draft: true },
-      { title: "Minimal Flower Field",         image: "images/Paintings/minimal-flower-field.jpeg",            size: "small",  priority: 8,  draft: false },
-      { title: "Redwood Trees Forest Minimal", image: "images/Paintings/redwood-trees-forest-minimal.jpeg",    size: "small",  priority: 8,  draft: false },
-      { title: "River Tutorial",               image: "images/Paintings/river-tutorial.jpeg",                  size: "small",  priority: 6,  draft: true },
-      { title: "Tutorial Boat on Coast",       image: "images/Paintings/tutorial-boat-on-coast.jpeg",          size: "medium", priority: 6,  draft: false },
-      { title: "Tutorial Tree on Lake",        image: "images/Paintings/tutorial-tree-on-lake.jpeg",           size: "small",  priority: 6,  draft: true },
-      { title: "Balboa Buildings",             image: "images/Paintings/draft-balboa-buildings.jpeg",          size: "medium", priority: 10, draft: true },
-      { title: "Rainy Cars",                   image: "images/Paintings/draft-rainy-cars.jpeg",                size: "medium", priority: 10, draft: true },
-      { title: "UCSD Bike",                    image: "images/Paintings/draft-ucsd-bike.jpeg",                 size: "medium", priority: 10, draft: true },
-      { title: "UCSD Trees",                   image: "images/Paintings/draft-ucsd-trees.jpeg",                size: "medium", priority: 10, draft: true }
+      { title: "Point Reyes",                  image: "images/Paintings/point-reyes.JPG",                      size: "large",  priority: 22, category: ["acrylic"],    draft: false },
+      { title: "Sunset",                       image: "images/Paintings/painting_sunset.jpeg",                 size: "large",  priority: 20, category: ["acrylic"],    draft: false },
+      { title: "Cafe Flowers",                 image: "images/Paintings/painting_cafe_flowers.jpeg",           size: "small",  priority: 8,  category: ["acrylic"],    draft: false },
+      { title: "Devil's Lake",                 image: "images/Paintings/painting_devils_lake.jpeg",            size: "large",  priority: 18, category: ["acrylic"],    draft: false },
+      { title: "Greece",                       image: "images/Paintings/painting_greece.jpeg",                 size: "medium", priority: 12, category: ["acrylic"],    draft: false },
+      { title: "Turtle",                       image: "images/Paintings/painting_turtle.JPG",                  size: "small",  priority: 7,  category: ["oil"],        draft: false },
+      { title: "Gateway Hills",                image: "images/Paintings/gateway-hills.jpeg",                   size: "medium", priority: 16, category: ["watercolor"], draft: false },
+      { title: "Lavendar Field",               image: "images/Paintings/lavendar-field.jpeg",                  size: "medium", priority: 10, category: ["watercolor"], draft: false },
+      { title: "SF Houses",                    image: "images/Paintings/sf-houses.jpeg",                       size: "medium", priority: 10, category: ["watercolor"], draft: false },
+      { title: "UCSD Tree",                    image: "images/Paintings/ucsd-tree.jpeg",                       size: "small",  priority: 10, category: ["acrylic"],    draft: true },
+      { title: "SD Beaches",                   image: "images/Paintings/sd-beaches.jpeg",                      size: "medium", priority: 10, category: ["watercolor"], draft: false },
+      { title: "Abstract Flowers",             image: "images/Paintings/abstract-flowers.jpeg",                size: "small",  priority: 9,  category: ["acrylic"],    draft: true },
+      { title: "Minimal Flower Field",         image: "images/Paintings/minimal-flower-field.jpeg",            size: "small",  priority: 8,  category: ["watercolor"], draft: false },
+      { title: "Redwood Trees Forest Minimal", image: "images/Paintings/redwood-trees-forest-minimal.jpeg",    size: "small",  priority: 8,  category: ["watercolor"], draft: false },
+      { title: "River Tutorial",               image: "images/Paintings/river-tutorial.jpeg",                  size: "small",  priority: 6,  category: ["acrylic"],    draft: true },
+      { title: "Tutorial Boat on Coast",       image: "images/Paintings/tutorial-boat-on-coast.jpeg",          size: "medium", priority: 6,  category: ["watercolor"], draft: false },
+      { title: "Tutorial Tree on Lake",        image: "images/Paintings/tutorial-tree-on-lake.jpeg",           size: "small",  priority: 6,  category: ["acrylic"],    draft: true },
+      { title: "Balboa Buildings",             image: "images/Paintings/draft-balboa-buildings.jpeg",          size: "medium", priority: 10, category: ["acrylic"],    draft: true },
+      { title: "Rainy Cars",                   image: "images/Paintings/draft-rainy-cars.jpeg",                size: "medium", priority: 10, category: ["acrylic"],    draft: true },
+      { title: "UCSD Bike",                    image: "images/Paintings/draft-ucsd-bike.jpeg",                 size: "medium", priority: 10, category: ["acrylic"],    draft: true },
+      { title: "UCSD Trees",                   image: "images/Paintings/draft-ucsd-trees.jpeg",                size: "medium", priority: 10, category: ["acrylic"],    draft: true }
     ];
   </script>
   <script src="assets/js/site-nav.js"></script>
