@@ -2,17 +2,15 @@
 
 .painting-grid {
   --grid-cols: 3;
-  --gap: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap);
-  align-items: flex-start;
+  --gap-x: 1.25rem;
+  --gap-y: 1.25rem;
+  position: relative;
 }
 
 .painting-card {
-  --scale: 10;
-  --base-col: calc((100% - (var(--grid-cols) - 1) * var(--gap)) / var(--grid-cols));
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   margin: 0;
   padding: 0;
   border: none;
@@ -20,7 +18,6 @@
   cursor: pointer;
   border-radius: var(--site-radius);
   overflow: hidden;
-  width: calc(var(--scale) / 10 * var(--base-col));
   max-width: 100%;
 }
 
@@ -214,14 +211,16 @@ body.lightbox-open {
 @media (max-width: 900px) {
   .painting-grid {
     --grid-cols: 2;
-    --gap: 1.25rem;
+    --gap-x: 1rem;
+    --gap-y: 1rem;
   }
 }
 
 @media (max-width: 540px) {
   .painting-grid {
     --grid-cols: 2;
-    --gap: 1rem;
+    --gap-x: 0.875rem;
+    --gap-y: 0.875rem;
   }
 
   .painting-card-overlay {
