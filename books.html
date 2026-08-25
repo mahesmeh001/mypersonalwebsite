@@ -10,7 +10,6 @@
     <link href="assets/css/Resume/bootstrap.min.css" rel="stylesheet">
 
     <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
-    <link href="assets/css/overlapfavs.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <noscript>
         <link href="assets/css/noscript.css" rel="stylesheet">
@@ -57,6 +56,27 @@
         }
         .collapsiblecontent .w3-row > .w3-row:has(> .w3-col.w3-half .w3-image)::after {
             content: none;
+        }
+
+        /* rating rows (rating + read date): normalize the gap below to match
+           the 1.5rem a bare rating h3 gets, instead of whatever the flex
+           columns swallow */
+        .collapsiblecontent > .row {
+            margin-bottom: 1.5rem;
+        }
+        .collapsiblecontent > .row h3,
+        .collapsiblecontent > .row p {
+            margin-bottom: 0;
+        }
+        /* rating headings are not section headings: Historical Fiction wraps
+           its reviews in .w3-content, whose "h3 { underline; margin 0 }" rule
+           was catching the ratings and crushing the gap below them */
+        .collapsiblecontent > h3 {
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+        }
+        .collapsiblecontent > .row h3 {
+            text-decoration: none;
         }
 
         /* keep a quote's border attached to its text when it sits beside the
@@ -283,14 +303,14 @@
                                 • <a href="#onearth">On Earth We're Briefly Gorgeous</a>
                                 • <a href="#wood">Norwegian Wood</a>
                             </i></p></div>
-                            <div><a href="#scifi"> <b>Science-Fiction</b></a></div>
+                            <div><a href="#scifi"> <b>Science Fiction</b></a></div>
                             <div><p style="font-size: small; color: grey; text-align: center; margin-bottom: 1px"><i>
                                 <a href="#klaraandthesun">Klara and the Sun</a>
                                 • <a href="#bravenewworld">Brave New World</a>
                                 • <a href="#flowers">Flowers for Algernon</a>
                                 • <a href="#fahrenheit451">Fahrenheit 451</a>
                                 • <a href="#book-1984">1984</a>
-                                • <a href="#andriods">Do Andriod Dream of Electric Sheep?</a>
+                                • <a href="#andriods">Do Androids Dream of Electric Sheep?</a>
                             </i></p></div>
                             <div><a href="#shortstories"><b>Short Stories</b> </a></div>
                             <div><p style="font-size: small; color: grey; text-align: center; margin-bottom: 1px"><i>
@@ -1168,7 +1188,7 @@
             <br>
 
             <!--On Earth We're Briefly Gorgeous-->
-            <button class="collapsible" id="onearthButton">On Earth We're Briefly Gorgeous</button>
+            <button class="collapsible" id="onearthButton">On Earth We're Briefly Gorgeous by Ocean Vuong</button>
             <div class="collapsiblecontent" id="onearth">
                 <h3 style="margin-top: 15px">My Rating: 6/10</h3>
 
@@ -1219,7 +1239,7 @@
             <br>
 
             <!--Norwegian Wood-->
-            <button class="collapsible">Norwegian Wood</button>
+            <button class="collapsible">Norwegian Wood by Haruki Murakami</button>
             <div class="collapsiblecontent" id="wood">
                 <h3 style="margin-top: 15px">My Rating: 7.5/10 (it's complicated)</h3>
 
@@ -1480,7 +1500,7 @@
                     </p>
                     </blockquote>
                     <blockquote style="border-left-color: #b24545">
-                        "No offense is so heinous as unorthodoxy of behavior. Muder kills only the individual."
+                        "No offense is so heinous as unorthodoxy of behavior. Murder kills only the individual."
                         <p class="quote-note">
                         This line demonstrates a fear of ruling power: not violence, but disobedience. Those who don't conform to the system breed the incentive to challenge it. For those in power, the slightest deviation is dangerous because it reminds others alternatives exist. Control is preserved not by preventing bad things, but by preventing change.
                     </p>
@@ -1756,8 +1776,8 @@
 
             <br>
 
-            <!--Do Andriods Dream of Electric Sheep-->
-            <button class="collapsible">Do Andriod Dream of Electric Sheep?</button>
+            <!--Do Androids Dream of Electric Sheep-->
+            <button class="collapsible">Do Androids Dream of Electric Sheep? by Philip K. Dick</button>
             <div class="collapsiblecontent" id="andriods">
                 <h3 style="margin-top: 15px">My Rating: 7/10</h3>
 
@@ -1765,7 +1785,7 @@
                     <div class="w3-row">
                         <div class="w3-col w3-half">
                             <div class="w3-center">
-                                <img alt="andriods cover" class="w3-image" height="600"
+                                <img alt="Do Androids Dream of Electric Sheep?" class="w3-image" height="600"
                                      src="images/Books/doandriodsdreamofelectricsheep.jpg" width="400">
                             </div>
                         </div>
@@ -1905,7 +1925,7 @@
             <br>
 
             <!--#Omelas-->
-            <button class="collapsible">The Ones Who Walk Away From Omelas</button>
+            <button class="collapsible">The Ones Who Walk Away From Omelas by Ursula K. Le Guin</button>
             <div class="collapsiblecontent" id="omelas">
                 <h3 style="margin-top: 15px">My Rating: 10/10</h3>
 
@@ -2145,7 +2165,7 @@
 
 
             <!--The Zero Trimester-->
-            <button class="collapsible">The Zero Trimester</button>
+            <button class="collapsible">The Zero Trimester by Miranda R. Waggoner</button>
             <div class="collapsiblecontent" id="zerotrim">
                 <div class="w3-row">
                     <div class="w3-row">
@@ -2207,7 +2227,7 @@
             <br>
 
             <!--Just Get on the Pill-->
-            <button class="collapsible">Just Get on the Pill</button>
+            <button class="collapsible">Just Get on the Pill by Krystale E. Littlejohn</button>
             <div class="collapsiblecontent" id="pill">
                 <div class="w3-row">
 
@@ -2240,7 +2260,7 @@
             <br>
 
             <!--Reproduction on the reservation-->
-            <button class="collapsible">Reproduction on the Reservation</button>
+            <button class="collapsible">Reproduction on the Reservation by Brianna Theobald</button>
             <div class="collapsiblecontent" id="repoductionreservation">
                 <div class="w3-row">
 
@@ -2475,7 +2495,7 @@
     function preloadCriticalImages() {
         const criticalImages = [
             'images/Books/books.jpg', // Main hero image
-            'images/Books/bravenewworld.jpg', // First visible book cover
+            'images/Books/bravenewworld.jpg',
             'images/Books/invisibleman.jpg',
             'images/Books/thekiterunner.jpg'
         ];
@@ -2531,21 +2551,13 @@
                 
                 // Delay the auto-toggle to match scroll duration
                 setTimeout(function() {
-                    // Auto-toggle the collapsible content to open
-                    const bookButton = document.querySelector('button[onclick*="juneteenth"], button:has(#juneteenth)');
-                    if (!bookButton) {
-                        // Find the button by looking for the one that comes before the book section
-                        const allButtons = document.querySelectorAll('.collapsible');
-                        for (let i = 0; i < allButtons.length; i++) {
-                            if (allButtons[i].nextElementSibling === bookSection) {
-                                const button = allButtons[i];
-                                const content = bookSection;
-                                
-                                // Open the collapsible content
-                                button.classList.add('open', 'active');
-                                content.style.maxHeight = content.scrollHeight + 'px';
-                                break;
-                            }
+                    // Find the button that comes before the book section and open it
+                    const allButtons = document.querySelectorAll('.collapsible');
+                    for (let i = 0; i < allButtons.length; i++) {
+                        if (allButtons[i].nextElementSibling === bookSection) {
+                            allButtons[i].classList.add('open', 'active');
+                            bookSection.style.maxHeight = bookSection.scrollHeight + 'px';
+                            break;
                         }
                     }
                 }, 800);
