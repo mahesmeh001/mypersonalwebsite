@@ -1,18 +1,20 @@
 /* Warm Human Contemporary — shared site shell */
 
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Source+Sans+3:wght@400;600;700;900&display=swap");
 
 :root {
-  --site-bg: #faf6f1;
-  --site-bg-soft: #f5ede6;
+  /* paintings' own tint, in the family of Books' cream / Music's lavender */
+  --site-bg: #fdf2e9;
+  --site-bg-soft: #f7e7d8;
   --site-text: #2c2825;
   --site-text-muted: #6b6560;
   --site-accent: #c97b63;
   --site-accent-soft: #f0ddd4;
   --site-border: #e8ddd4;
   --site-radius: 6px;
-  --site-font-display: "Fraunces", Georgia, serif;
-  --site-font-body: "Source Sans 3", system-ui, sans-serif;
+  /* site pairing: heavy uppercase sans display, Merriweather body */
+  --site-font-display: "Source Sans 3", "Source Sans Pro", Helvetica, sans-serif;
+  --site-font-body: "Merriweather", Georgia, serif;
   --site-nav-height: 3.5rem;
   --site-max-width: 1100px;
   --site-prose-width: 42rem;
@@ -34,8 +36,9 @@ body.site-page {
   background: var(--site-bg);
   color: var(--site-text);
   font-family: var(--site-font-body);
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 body.site-page--paintings {
@@ -54,18 +57,22 @@ body.site-page--paintings {
   gap: 1rem;
   height: var(--site-nav-height);
   padding: 0 1.25rem;
-  background: rgba(250, 246, 241, 0.92);
+  background: rgba(253, 242, 233, 0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--site-border);
 }
 
 .site-logo {
   font-family: var(--site-font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 900;
   color: var(--site-text);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  border: solid 2px currentColor;
+  padding: 0.35rem 0.45rem 0.35rem 0.7rem;
+  line-height: 1;
 }
 
 .site-logo:hover {
@@ -101,8 +108,11 @@ body.site-page--paintings {
 .site-nav-list a {
   color: var(--site-text-muted);
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-family: var(--site-font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   padding: 0.2rem 0;
   border-bottom: 2px solid transparent;
   transition: color 0.15s, border-color 0.15s;
@@ -132,10 +142,11 @@ body.site-page--paintings {
 
 .site-page-header h1 {
   font-family: var(--site-font-display);
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  font-weight: 600;
+  font-size: clamp(1.9rem, 4.5vw, 2.5rem);
+  font-weight: 900;
   line-height: 1.15;
-  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
   margin: 0 0 1rem;
   color: var(--site-text);
 }
@@ -155,8 +166,10 @@ body.site-page--paintings {
 
 .site-section h2 {
   font-family: var(--site-font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
   margin: 0 0 0.75rem;
 }
 
