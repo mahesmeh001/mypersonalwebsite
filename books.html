@@ -36,6 +36,35 @@
             will-change: max-height;
         }
 
+        /* Review text flows around the floated cover: when the intro paragraph is
+           short, following paragraphs continue alongside the book, then widen to
+           full width past the image. */
+        .collapsiblecontent .w3-row:has(> .w3-col.w3-half .w3-image) > .w3-col.w3-half:has(.w3-image) {
+            float: left;
+            width: 50%;
+            margin-bottom: 1rem;
+        }
+        /* dissolve the text column (and its inner wrapper) so its paragraphs
+           join the row's flow and wrap around the cover */
+        .collapsiblecontent .w3-row:has(> .w3-col.w3-half .w3-image) > .w3-col.w3-half:not(:has(.w3-image)),
+        .collapsiblecontent .w3-row:has(> .w3-col.w3-half .w3-image) > .w3-col.w3-half:not(:has(.w3-image)) > div {
+            display: contents;
+        }
+        /* some reviews wrap the cover pair in a nested w3-row; dissolve it (and
+           its clearfix) so trailing quotes/paragraphs can flow up beside the cover */
+        .collapsiblecontent .w3-row > .w3-row:has(> .w3-col.w3-half .w3-image) {
+            display: contents;
+        }
+        .collapsiblecontent .w3-row > .w3-row:has(> .w3-col.w3-half .w3-image)::after {
+            content: none;
+        }
+
+        /* keep a quote's border attached to its text when it sits beside the
+           floated cover (otherwise the border strands at the row's left edge) */
+        .collapsiblecontent blockquote {
+            overflow: hidden;
+        }
+
         /* Commentary attached below a quote, inside its blockquote */
         blockquote .quote-note {
             font-style: normal;
@@ -252,6 +281,7 @@
                                 • <a href="#theministry">The Ministry of Utmost Happiness</a>
                                 • <a href="#nolongerhuman">No Longer Human</a>
                                 • <a href="#onearth">On Earth We're Briefly Gorgeous</a>
+                                • <a href="#wood">Norwegian Wood</a>
                             </i></p></div>
                             <div><a href="#scifi"> <b>Science-Fiction</b></a></div>
                             <div><p style="font-size: small; color: grey; text-align: center; margin-bottom: 1px"><i>
@@ -335,7 +365,7 @@
                     <div class="w3-row">
                         <div class="w3-col w3-half">
                             <div class="w3-center">
-                                <img alt="Circe" class="w3-image" height="600" src="images/Books/mountains.jpg"
+                                <img alt="And the Mountains Echoed" class="w3-image" height="600" src="images/Books/mountains.jpg"
                                      width="400" loading="lazy">
                             </div>
                         </div>
@@ -396,7 +426,7 @@
 
                     <div class="w3-content">
                         <div class="row">
-                            <h3>My Key Takeaways</h3>
+                            <h3>Key Takeaways</h3>
                             <div style="padding-left: 7%">
                                 <ul>
                                     <li>
@@ -486,7 +516,7 @@
                     <br>
 
                     <div class="w3-content">
-                        <h3>My Key Takeaways</h3>
+                        <h3>Key Takeaways</h3>
                         <div class="row" style="padding-left: 7%">
                             <ul>
                                 <li>Never forget your "why"--the driving force of your actions. This is important both
@@ -555,7 +585,7 @@
 
                     <div class="w3-content">
                         <div class="row">
-                            <h3>My Key Takeaways</h3>
+                            <h3>Key Takeaways</h3>
                             <div style="padding-left: 7%">
                                 <ul>
                                     <li>Unless you face your demons, your fears will be realized. Not only will
@@ -627,7 +657,7 @@
                     <div class="w3-row">
                         <div class="w3-col w3-half">
                             <div class="w3-center">
-                                <img alt="Invisible Man" class="w3-image" height="600"
+                                <img alt="The Song of Achilles" class="w3-image" height="600"
                                      src="images/Books/songofachilles.jpg"
                                      width="400">
                             </div>
@@ -654,7 +684,7 @@
 
                     <div class="w3-content">
                         <div class="row">
-                            <h3>My Key Takeaways</h3>
+                            <h3>Key Takeaways</h3>
                             <div style="padding-left: 7%">
                                 <ul>
                                     <li>
@@ -719,7 +749,7 @@
 
                     <div class="w3-content">
                         <div class="row">
-                            <h3>My Key Takeaways</h3>
+                            <h3>Key Takeaways</h3>
                             <div style="padding-left: 7%">
                                 <ul>
                                     <li>
@@ -821,7 +851,7 @@
 
                 <div class="w3-content" id="runandhide-takeaways">
                     <div class="row">
-                        <h3>My Key Takeaways</h3>
+                        <h3>Key Takeaways</h3>
                         <div style="padding-left: 7%">
                             <ul>
                                 <li>
@@ -1106,7 +1136,7 @@
                 <br>
 
                 <div class="w3-content">
-                    <h3>My Key Takeaways</h3>
+                    <h3>Key Takeaways</h3>
                     <div class="row">
                         <div style="padding-left: 7%">
                             <ul>
@@ -1274,6 +1304,10 @@
                     </blockquote>
 
                 </div>
+            </div>
+
+            <br>
+
         </div> <!-- End Lit Fic -->
 
         <!-- Science Fiction -->
@@ -1370,7 +1404,7 @@
 
                 <div class="">
                     <h3>
-                        My Takeaways
+                        Key Takeaways
                     </h3>
                     <ul>
                         <li>The soul is often thought of as residing within the body, but it may also be influenced by the outside, by those close to you and those you surround yourself with.</li>
@@ -1948,7 +1982,7 @@
                 <div class="w3-row">
                     <div class="w3-col w3-half">
                         <div class="w3-center">
-                            <img alt="If You See Me, Don't Say Hi" class="w3-image" height="600"
+                            <img alt="Galatea" class="w3-image" height="600"
                                  src="images/Books/galatea.jpg" width="400">
                         </div>
                     </div>
