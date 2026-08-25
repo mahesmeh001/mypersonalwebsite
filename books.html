@@ -35,6 +35,14 @@
         .collapsiblecontent {
             will-change: max-height;
         }
+
+        /* Commentary attached below a quote, inside its blockquote */
+        blockquote .quote-note {
+            font-style: normal;
+            color: #666;
+            font-size: 0.9em;
+            margin: 0.75rem 0 0 0;
+        }
     </style>
 </head>
 
@@ -171,7 +179,7 @@
 <div id="popupBanner" style="position: fixed; top: 20px; right: -350px; width: 320px; background: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); z-index: 1000; transition: right 0.3s ease; padding: 1.5rem; border: 1px solid rgba(0, 0, 0, 0.1);">
     <button id="popupClose" style="position: absolute; top: 8px; right: 8px; background: transparent !important; border: 0 !important; outline: none !important; color: red !important; font-size: 18px; cursor: pointer; padding: 0 !important; width: 20px; height: 20px; line-height: 1; font-weight: bold; box-shadow: none !important;">×</button>
     <h4 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.1rem;">Jump to my latest review!</h4>
-    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">The Symposium</p>
+    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">Run and Hide</p>
     <div style="display: flex; gap: 0.5rem;">
         <button id="popupYes" style="background: rgba(255,215,131,0.8); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">Yes</button>
         <button id="popupNo" style="background: rgba(0, 0, 0, 0.1); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">No</button>
@@ -239,7 +247,8 @@
                             </i></p></div>
                             <div><a href="#litfic"><b>Literary Fiction</b> </a></div>
                             <div><p style="font-size: small; color: grey; text-align: center; margin-bottom: 1px"><i>
-                                <a href="#doriangray">The Picture of Dorian Gray</a>
+                                <a href="#runandhide">Run and Hide</a>
+                                • <a href="#doriangray">The Picture of Dorian Gray</a>
                                 • <a href="#theministry">The Ministry of Utmost Happiness</a>
                                 • <a href="#nolongerhuman">No Longer Human</a>
                                 • <a href="#onearth">On Earth We're Briefly Gorgeous</a>
@@ -363,12 +372,12 @@
                     <div>
                         <blockquote style="border-left-color: #ed8723">
                             Out beyond the ideas of rightdoing and wrongdoing there is a field. I’ll meet you there.
-                        </blockquote>
-                        <p>
+                            <p class="quote-note">
                             Rightdoing and wrongdoing are subjective, and defined by your unique life experiences. That
                             which
                             seems right to you might be diametrically opposed by another. And that is okay.
                         </p>
+                        </blockquote>
                         <blockquote style="border-left-color: #ed8723">
                             ...people have it mostly backwards. They think they live by what they want. But really what
                             guides them is what they’re afraid of. What they don't want.
@@ -693,14 +702,14 @@
 
                     <blockquote style="border-left-color: #ed8723">
                         Beneath the smooth, familiar face of things is another that waits to tear the world in two.
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         When unsure about one's intentions, ask yourself why someone is doing what they are doing, and
                         when you have an answer, think about whether that makes sense. You can almost guarantee that
                         there
                         is more than what meets the eye if it doesn't.
 
                     </p>
+                    </blockquote>
                     <blockquote style="border-left-color: #ed8723">
                         “None shrank and simpered as you did, and yet the great Helios stepped on you all
                         the faster, because you were already crouched”
@@ -750,7 +759,7 @@
                     <div><img src="images/Books/doriangray.jpg" alt="The Picture of Dorian Gray book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
-                    <div><img src="images/Books/theministry.jpg" alt="The Ministry of Utmost Happiness book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
+                    <div><img src="images/Books/run-and-hide.jpg" alt="Run and Hide book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
                 </div>
                 <div class="w3-col" style="width: 25%">
                     <div><img src="images/Books/nolongerhuman.jpg" alt="No Longer Human book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
@@ -760,6 +769,129 @@
                     </div>
                 </div>
             </div>
+
+            <!--Run and Hide-->
+            <button class="collapsible">Run and Hide by Pankaj Mishra</button>
+            <div class="collapsiblecontent" id="runandhide">
+                <div class="row">
+                    <div class="col text-start"><h3 style="margin-top: 15px">My Rating: 4/10</h3>
+                    </div>
+                    <div class="col text-end"><p><i>Read in Aug 2026</i></p>
+                    </div>
+                </div>
+
+                <!-- Score Sliders -->
+                <div id="runandhide-scores"></div>
+                <script>
+                    var scores = {
+                        'Prose': 2,
+                        'Narrative Depth': 10,
+                        'Plot': 3
+                    };
+                    var overall = 4;
+                    var color = '#e8461e';
+
+                    document.getElementById('runandhide-scores').innerHTML = createScoreSlider(scores, overall, color, -25);
+                </script>
+
+                <div class="w3-row">
+                    <div class="w3-col w3-half">
+                        <div class="w3-center">
+                            <img alt="Run and Hide" class="w3-image" height="600" src="images/Books/run-and-hide.jpg"
+                                 width="400" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="w3-col w3-half" style="padding-left: 2%">
+                        <div class="">
+                            <p>
+                                The book's central focus is on desire, delusion, and regret. Having them makes you human. Your ability to deal with them shapes the kind of life you will live. And to adequately address them, one must first be able to reconcile their past. Arun, our main character, is fatally flawed in this regard, running and hiding from the forces that shaped who he is.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        The book is written as a letter/memoir addressed simultaneously to the central love interest and to himself. It features Arun's unique perspective on his upbringing and a series of events that ties together him and the main supporting characters. The book touches on very interesting motifs <a href="#runandhide-takeaways" style="color: grey; text-decoration: underline;">key takeaways section</a>, and regardless of who you are, you'll walk away with food for thought. But it is extremely loaded. The writing reminds me a lot of Arundhati Roy's style–nearly every sentence could be the inspiration for its own book. By increasing the saturation of every line, the overall impact of any line loses its intensity.
+                    </p>
+                    <p>
+                        I didn't quite like how at the end, Buddhism was placed as the panacea to the struggles he faced. The story nicely contrasted this <a href="#runandhide-buddhism-quote" style="color: grey; text-decoration: underline;">quote</a> in the closing few pages, and I'm all for the principles, but having a sage bring enlightenment seemed a bit cheesy.
+                    </p>
+                    <p>
+                        Ultimately it was an okay read. It definitely made me think, but the story is just not that compelling. The writing style made it difficult for me to get through, but if you enjoy that kind of loaded prose, I can see this being a much more rewarding read.
+                    </p>
+                </div>
+
+                <div class="w3-content" id="runandhide-takeaways">
+                    <div class="row">
+                        <h3>My Key Takeaways</h3>
+                        <div style="padding-left: 7%">
+                            <ul>
+                                <li>
+                                    Desire, delusion, and regret make us human, and there is no escaping them. If you can adequately handle them, you'll be okay. But if you can't reconcile with your past, you have little chance of doing so—and you'll end up like Arun, forever running and hiding.
+                                </li>
+                                <li>
+                                    Everyone wants what they don't have. It doesn't matter where you stand in life; desire simply changes its object.
+                                </li>
+                                <li>
+                                    Sympathy alone is not enough. To make a meaningful change, you need to have skin in the game; you need to be personally invested.
+                                </li>
+                                <li>
+                                    Those who are well defined maintain their shape even in shifting environments.
+                                </li>
+                                <li>
+                                    The knowledge that what you have is bad, but that somebody else has it worse, can keep you locked into where you are. You become afraid to pick your head up—to become the nail that sticks out—because you might be the one that gets hammered down. And so you endure, sustained by the promise that one day things will be better. But there is something darker in that endurance too: the sadistic desire to inflict upon others what was inflicted upon you. "Tolerating oppression by oppressing someone else."
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div id="runandhide-quotes">
+                    <h3>
+                        Quotes
+                    </h3>
+                    <blockquote style="border-left-color: #e8461e">
+                        "…we rarely seize the power to confront or change our fate, and although we console ourselves that we can always run and hide, there is no real escape from that farrago of cravings, delusions and regrets we call the self and the trail of devastation this nothing leaves behind"
+                        <p class="quote-note">
+                            The book in a nutshell. Definitely a bummer, especially since changing our fate does not rid us of the key issues of cravings, delusions and regrets. Seems like the only option is to accept and get good at dealing with it. Buddhism seems like the only escape, but that too can only happen under special conditions.
+                        </p>
+                    </blockquote>
+                    <blockquote id="runandhide-buddhism-quote" style="border-left-color: #e8461e">
+                        "..and even this attentiveness to oneself, this search for hidden inner depths and mystery is false and deceptive"
+                        <p class="quote-note">
+                            Because real freedom is from desire itself. This critique comes from Arun about his pursuit of Buddhism, which demonstrates the irony of 'wanting' to attain enlightenment.
+                        </p>
+                    </blockquote>
+                    <blockquote style="border-left-color: #e8461e">
+                        "…men we would have taken for hustlers had we not realized that self preservation rather than modesty was the American, and increasingly Indian and global, way."
+                        <p class="quote-note">
+                            A description of people like me basically. Makes you realize we're much the same, just in a different place under a different circumstance.
+                        </p>
+                    </blockquote>
+                    <blockquote style="border-left-color: #e8461e">
+                        "I had been thinking of how unchangeably our grandmothers and mother lived and died in the shadows of other lives; how unbroken was the trance of servitude in which they transmitted their own feeling of smallness in a big, indifferent world to their daughters"
+                        <p class="quote-note">
+                            Kind of speaks for itself, I think. That's why it's important to question why.
+                        </p>
+                    </blockquote>
+                    <blockquote style="border-left-color: #e8461e">
+                        "Their parents and grandparents had made private escapes from …history… Two decades of upward mobility had convinced them that history, still destructively raging in Africa and Asia, had ended there. They couldn't but be confounded by its violent re-eruption in the heart of the modern West"<br><br>
+                        "how violence is inherently tied into human nature and society, and any escape from it is but a temporary palliative"
+                    </blockquote>
+                    <blockquote style="border-left-color: #e8461e">
+                        "moments that detach themselves from the noise of time"
+                    </blockquote>
+                    <blockquote style="border-left-color: #e8461e">
+                        "I lull myself into oblivion every night by imagining my body sinking into the sea, by imagining a netherworld where I can live without a corporeal cover, without the strain of presenting to others a body and a face."
+                        <p class="quote-note">
+                            The key thing about Arun. Seems like he longs to be free of the mortal constraints of desire, delusion and regret.
+                        </p>
+                    </blockquote>
+                </div>
+
+            </div>
+
+            <br>
 
             <!--The Picture of Dorian Gray-->
             <button class="collapsible">The Picture of Dorian Gray by Oscar Wilde</button>
@@ -811,17 +943,17 @@
                     
                     <blockquote style="border-left-color: #000000">
                         "Even the cardinal virtues cannot atone for half-cold entrees" - Lord Henry
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         The idea behind this quote is that how you affect other people matters more to them than how you carry yourself, or your character. Or in other words, manners over morals. It's certainaly not a pleasant thought, but does provide food for thought (pun intended).
                     </p>
+                    </blockquote>
                     
                     <blockquote style="border-left-color: #000000">
                         "One should absorb the colors of life, but one should never remember its details." - Lord Henry
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         As is the trademark of Lord Henry, he's graced us with another rather disagreeable quote, yet it raises an interesting question: Does life's beauty come from the details? I think so, but it's not that clear. 
                     </p>
+                    </blockquote>
                     
                     <blockquote style="border-left-color: #000000">
                         "Why is it that I cannot feel this tragedy as much as I want to?" - Dorian Gray
@@ -833,10 +965,10 @@
                     
                     <blockquote style="border-left-color: #000000">
                         "Nothing can cure the soul but the senses, just as nothing can cure the senses but the soul." - Lord Henry
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         A good one to think about.
                     </p>
+                    </blockquote>
                 </div>
 
             </div>
@@ -895,17 +1027,17 @@
                 <div>
                     <blockquote style="border-left-color: #046e7e">
                         "Yes of course she knew there was a word for people like him..two words actually..but two words do not make a language."
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         Excellent way of demonstrating that labels are not representations of the individual, and that people are quick to assign labels and forget about the details / implications.
                     </p>
+                    </blockquote>
                     
                     <blockquote style="border-left-color: #046e7e">
                         "Love, after all, is the ingredient that separates a sacrifice from ordinary, everyday butchery."
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         Highlights how love acts as a double edged sword. On one hand it can give meaning, and on the other hand it can be illusory. 
                     </p>
+                    </blockquote>
                 </div>
 
             </div>
@@ -949,17 +1081,16 @@
                 <div>
                     <blockquote style="border-left-color: #fb8890">“What is the antonym of crime?…I feel you can
                         tell everything about a man just from his answer to this one question”
-                    </blockquote>
-                    <p>I thought this was an interesting idea because once you dive past the threshold of what is
+                        <p class="quote-note">I thought this was an interesting idea because once you dive past the threshold of what is
                         and isn’t accepted by society and focus more on what you think within, the answer
                         to this question can help you make sense of what drives you (and/or another). For example,
                         most people at first glance would respond to this question with something such as “the law”,
                         however, a more intrapersonal answer could be “selflessness” or “integrity”. Simply answering
                         in such a sense reveals a surprising much about ones self identity. </p>
+                    </blockquote>
 
                     <blockquote style="border-left-color: #fb8890">"What is society but an individual?"
-                    </blockquote>
-                    <p>It would seem norms are the way they are because our societies deem them to be so. Osamu
+                        <p class="quote-note">It would seem norms are the way they are because our societies deem them to be so. Osamu
                         challenges this conception by questioning what a society really is. ’Society’ is not a tangible
                         thing.
                         ‘Society’ is not capable of doing. It is individuals within a society who choose to act in
@@ -969,6 +1100,7 @@
                         every individual must choose to act before actually doing so. In questioning what society really
                         is,
                         Osamu redirects attention and—by consequence of doing so—power, to the individual. </p>
+                    </blockquote>
                 </div>
 
                 <br>
@@ -1045,11 +1177,11 @@
                         from war--but I was wrong, Ma. we were born from beauty"
                     </blockquote>
                     <blockquote style="border-left-color: #d8a556">"The cruelest walls are made of glass"
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         The worst boundaries are those you can see the other side of, yet all the while are entrapped
                         by.
                     </p>
+                    </blockquote>
 
                 </div>
             </div>
@@ -1303,29 +1435,29 @@
                     </h3>
                     <blockquote style="border-left-color: #b24545">
                         "What's the point of truth or beauty or knowledge when anthrax bombs are popping all around you?"
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         The key struggle of the book, as expanded upon in the exploration section.
                     </p>
+                    </blockquote>
                     <blockquote style="border-left-color: #b24545">
                         (of philosophers) "a man who dreams of less than there is in heaven and earth"
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         Originally from Hamlet, a quote that illustrates that there is far more in the world than that which humans can reason about, and that to be confined to philosophy is to unduly limit your imagination.
                     </p>
+                    </blockquote>
                     <blockquote style="border-left-color: #b24545">
                         "No offense is so heinous as unorthodoxy of behavior. Muder kills only the individual."
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         This line demonstrates a fear of ruling power: not violence, but disobedience. Those who don't conform to the system breed the incentive to challenge it. For those in power, the slightest deviation is dangerous because it reminds others alternatives exist. Control is preserved not by preventing bad things, but by preventing change.
                     </p>
+                    </blockquote>
                     <blockquote style="border-left-color: #b24545">
                         "God isn't compatible with…universal happiness"<br><br>
                         "for this religious sentiment is of its nature so pure, so delightful to the soul that experiences it, that it makes up to us for all our other losses"
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         Quite interesting because of the illustration of how religion is meaningful because of loss. Defined by a world of impermanence and suffering, God provides a constant refuge. Of course, the problem is that if there is no suffering, God doesn't provide any salvation.
                     </p>
+                    </blockquote>
                 </div>
 
 
@@ -1463,22 +1595,22 @@
                 <div>
                     <blockquote style="border-left-color: #ed8723">
                         "Although we know the end of the maze holds death…, I see now that the path I choose through that maze makes me what I am. I am not only a thing, but also a way of being — one of many ways — and knowing the paths I have followed and the ones left to take will help me understand what I am becoming"
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         The path you choose through the maze shapes who you are, but it doesn't determine the next turn. The key is not completing the maze, but taking a path that allows you to be yourself.
                     </p>
+                    </blockquote>
                     <blockquote style="border-left-color: #ed8723">
                         "I don't know what's worse: to not know what you are and be happy, or to become what you've always wanted to be and feel alone."
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         This quote captures a central tension of the novel—the trade-off between ignorance and knowledge, and, by analogy, between simple happiness and complex understanding.
                     </p>
+                    </blockquote>
                     <blockquote style="border-left-color: #ed8723">
                         "One of the important reasons for going to college..is to learn that the things you've believed in all your life aren't true, and that nothing is what it appears to be"
-                    </blockquote>
-                    <p>
+                        <p class="quote-note">
                         I wonder if that's still true today, or if college has become a more standardized experience—one that shields people from the world rather than preparing them for it.
                     </p>
+                    </blockquote>
                     <blockquote style="border-left-color: #ed8723">
                         "If they gave him enough time — if they didn't rush him or push him too fast — he would get it. But nobody has time."
                     </blockquote>
@@ -1920,10 +2052,10 @@
                             </p>
                             <blockquote style="border-left-color: #8b956b">
                                 "Do you think Achilles would have added his death to that of Patroculous…if [he] had not thought that the memory of their courage would last forever?"
-                            </blockquote>
-                            <p>
+                                <p class="quote-note">
                                 In this section, Diotima is explaining how all mortals are chasing immortality, which is equivalent to chasing love.
                             </p>
+                            </blockquote>
                         </div>
                     </div>
                     <p>
@@ -2264,7 +2396,11 @@
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                const offset = -300; // Adjust this value to set the scroll offset
+                // -300 suits TOC jumps to sections/reviews; targets nested inside an
+                // open review (quotes, takeaways) need only a small breathing offset
+                const container = targetElement.closest('.collapsiblecontent');
+                const isInsideReview = container && container !== targetElement;
+                const offset = isInsideReview ? -80 : -300;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
 
                 window.scrollTo({
@@ -2334,7 +2470,7 @@
     const AUTO_TRIGGER_POPUP = false;
     
     // Check if user has seen this specific book review
-    const currentBook = 'thesymposium'; // Change this when you add new reviews
+    const currentBook = 'runandhide'; // Change this when you add new reviews
     const seenBooks = JSON.parse(localStorage.getItem('seenBooks') || '[]');
     
     if (!seenBooks.includes(currentBook) || AUTO_TRIGGER_POPUP) {
@@ -2353,7 +2489,7 @@
         // Handle Yes button click
         document.getElementById('popupYes').addEventListener('click', function() {
             // Scroll to book section using its ID
-            const bookSection = document.getElementById('thesymposium');
+            const bookSection = document.getElementById('runandhide');
             
             if (bookSection) {
                 // Use native smooth scroll for all browsers
