@@ -327,16 +327,17 @@ body.lightbox-open {
 }
 
 .lightbox-close {
+  /* share the right arrow's column, hugging the image's top-right corner */
   position: absolute;
   top: -0.5rem;
-  right: 0;
+  right: -3rem;
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85) !important;
   font-size: 2rem;
   line-height: 1;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
+  padding: 0 0.75rem;
   z-index: 2;
 }
 
@@ -345,11 +346,12 @@ body.lightbox-open {
 }
 
 .lightbox-image-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* shrink-wrap the image so the controls anchor to its real bounds */
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
   max-height: 72vh;
-  width: 100%;
+  margin: 0 auto;
 }
 
 .lightbox-image-wrap img {
@@ -369,6 +371,7 @@ body.lightbox-open {
 }
 
 .lightbox-info h2 {
+  color: #f5f0eb;
   font-family: var(--site-font-display);
   font-size: 1.5rem;
   font-weight: 600;
@@ -399,30 +402,51 @@ body.lightbox-open {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
-  font-size: 1.4rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.85) !important;
+  width: auto;
+  height: auto;
+  font-size: 2.5rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 0.75rem;
   transition: background 0.15s;
 }
 
 .lightbox-nav:hover {
-  background: rgba(255, 255, 255, 0.18);
+  color: #fff !important;
 }
 
 .lightbox-prev {
-  left: -1rem;
+  left: -3rem;
 }
 
 .lightbox-next {
-  right: -1rem;
+  right: -3rem;
+}
+
+/* when the image runs close to the viewport edge, tuck the controls onto it */
+@media (max-width: 1100px) {
+  .lightbox-prev {
+    left: 0.25rem;
+  }
+
+  .lightbox-next {
+    right: 0.25rem;
+  }
+
+  .lightbox-close {
+    top: 0.25rem;
+    right: 0.25rem;
+  }
+
+  .lightbox-nav,
+  .lightbox-close {
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+  }
 }
 
 .lightbox-counter {
@@ -472,9 +496,50 @@ body.lightbox-open {
     right: 0.25rem;
   }
 
+  .lightbox-close {
+    right: 0.25rem;
+  }
+
   .lightbox-nav {
     width: 2.25rem;
     height: 2.25rem;
     font-size: 1.2rem;
   }
+}
+
+/* main.css draws a divider above every #main child — not wanted above the gallery.
+   Match the intro .post's horizontal padding so the filter aligns with the text. */
+body.site-page--paintings #main > .site-main {
+  border-top: 0;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+@media screen and (max-width: 1280px) {
+  body.site-page--paintings #main > .site-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  body.site-page--paintings #main > .site-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Massively (main.css) button chrome leaks onto the gallery's <button>s — reset it */
+body.site-page--paintings .painting-card,
+body.site-page--paintings .painting-filter-trigger,
+body.site-page--paintings .painting-filter-menu button,
+body.site-page--paintings .painting-filter-chips button,
+body.site-page--paintings .lightbox-close,
+body.site-page--paintings .lightbox-nav {
+  height: auto;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: normal;
+  box-shadow: none;
 }

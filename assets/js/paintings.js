@@ -385,9 +385,14 @@
     return pruned;
   }
 
+  // Filling the row's width beats keeping a card at its nominal size:
+  // a card may shrink/stretch this far beyond its size range to close a row.
+  const FILL_SHRINK = 0.85;
+  const FILL_STRETCH = 1.5;
+
   function comparePlacement(a, b) {
-    if (a.score !== b.score) return a.score - b.score;
-    if (a.y !== b.y) return a.y - b.y;
+    if (a.y !== b.y) return a.y - b.y; // fill the top of the gallery first
+    if (a.score !== b.score) return a.score - b.score; // then prefer flush width fill
     if (a.x !== b.x) return a.x - b.x;
     return b.width - a.width;
   }
@@ -397,14 +402,28 @@
     return card.offsetHeight;
   }
 
+  function fillCandidateFor(free, range, config) {
+    const minW = range.min * config.containerWidth * FILL_SHRINK;
+    const maxW = range.max * config.containerWidth * FILL_STRETCH;
+    if (free.w >= minW && free.w <= maxW) {
+      return { fraction: free.w / config.containerWidth, width: Math.floor(free.w) };
+    }
+    return null;
+  }
+
   function findBestPlacement(entry, freeRects, placedRects, config) {
     let best = null;
     const card = entry.card;
+    const range = config.sizeRanges[entry.sizeKey];
+    const discrete = candidateWidths(entry.sizeKey, config);
 
-    candidateWidths(entry.sizeKey, config).forEach(function (candidate) {
-      const height = measureCardHeight(card, candidate.width);
+    freeRects.forEach(function (free) {
+      const candidates = discrete.slice();
+      const fill = fillCandidateFor(free, range, config);
+      if (fill) candidates.push(fill);
 
-      freeRects.forEach(function (free) {
+      candidates.forEach(function (candidate) {
+        const height = measureCardHeight(card, candidate.width);
         const candidateRect = {
           x: free.x,
           y: free.y,
@@ -417,17 +436,13 @@
           return;
         }
 
-        const leftoverW = free.w - candidate.width;
-        const leftoverH = free.h - height;
-        const score = Math.min(leftoverW, leftoverH);
-
         const placement = {
           x: free.x,
           y: free.y,
           w: candidate.width,
           h: height,
           width: candidate.width,
-          score: score,
+          score: free.w - candidate.width,
         };
 
         if (!best || comparePlacement(placement, best) < 0) {
