@@ -116,6 +116,103 @@
             margin: 2rem 0 0.75rem 0;
         }
 
+        /* at-a-glance verdict box under a review's scores */
+        .collapsiblecontent .verdict {
+            margin: 0 0 2rem 0;
+            padding: 1rem 1.25rem;
+            background-color: rgba(255, 215, 131, 0.1);
+            border-left: 4px solid;
+            border-radius: 0 8px 8px 0;
+        }
+        .collapsiblecontent .verdict p {
+            margin: 0 0 0.5rem 0;
+            line-height: 1.7;
+        }
+        .collapsiblecontent .verdict p:last-child {
+            margin-bottom: 0;
+        }
+        .collapsiblecontent .verdict .verdict-title {
+            font-size: 0.75em;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        /* opening paragraph of a review, set slightly larger as a lede */
+        .collapsiblecontent p.lede {
+            font-size: 1.12em;
+            line-height: 2;
+        }
+
+        /* inline "read more" toggle: a sentence that reveals an optional
+           passage right below it (e.g. the example behind a claim) */
+        .inline-expand {
+            cursor: pointer;
+            text-decoration: underline dotted;
+            text-decoration-color: #708050;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 0.3em;
+        }
+        .inline-expand::after {
+            content: "\25B8";
+            display: inline-block;
+            margin-left: 0.4em;
+            color: #708050;
+            transition: transform 0.2s ease;
+        }
+        .inline-expand[aria-expanded="true"]::after {
+            transform: rotate(90deg);
+        }
+        .inline-expand:hover,
+        .inline-expand:focus-visible {
+            color: #4b5636;
+            outline: none;
+        }
+        .inline-expand-content {
+            display: none;
+        }
+        .inline-expand-content.open {
+            display: block;
+            animation: inline-expand-in 0.3s ease;
+        }
+        @keyframes inline-expand-in {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: none; }
+        }
+
+        /* article-style pull quotes set between paragraphs as pauses */
+        .collapsiblecontent .pull-quote {
+            margin: 2.5rem auto;
+            max-width: 38rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(112, 128, 80, 0.45);
+            border-bottom: 1px solid rgba(112, 128, 80, 0.45);
+            text-align: center;
+        }
+        .collapsiblecontent .pull-quote blockquote {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #4b5636;
+        }
+        @media (max-width: 600px) {
+            .collapsiblecontent .pull-quote {
+                margin: 2rem auto;
+                padding: 1.1rem 0;
+            }
+            .collapsiblecontent .pull-quote blockquote {
+                font-size: 0.95em;
+                line-height: 1.6;
+            }
+        }
+        .collapsiblecontent .pull-quote figcaption {
+            margin-top: 0.9rem;
+            font-size: 0.85em;
+            color: #666;
+        }
+
         /* Commentary attached below a quote, inside its blockquote */
         blockquote .quote-note {
             font-style: normal;
@@ -2124,6 +2221,11 @@
                     document.getElementById('shortnessoflife-scores').innerHTML = createScoreSlider(scores, overall, color, -25);
                 </script>
 
+                <div class="verdict" style="border-left-color: #708050">
+                    <p class="verdict-title" style="color: #708050">The Verdict</p>
+                    <p>Reading it made me want to get up and go do something, even though I don't agree with a lot of what he says. For me, the value came from disagreeing with him.</p>
+                </div>
+
                 <div class="w3-row">
                     <div class="w3-col w3-half">
                         <div class="w3-center">
@@ -2133,25 +2235,46 @@
                     </div>
                     <div class="w3-col w3-half" style="padding-left: 2%">
                         <div class="">
-                            <p>
-                                <b>I don't agree with a lot of what Seneca says in this book.</b> He seems to constantly be on the verge of making a point I might agree with, only to take it way too far or contradict himself entirely. His personality comes through very strongly, and I can tell I definitely would not have liked this guy in real life.
+                            <p class="lede">
+                                <b>I don't agree with a lot of what Seneca says in this book.</b> He seems to constantly be on the verge of making a point I might agree with, only to take it way too far or contradict himself entirely.
                             </p>
                             <p>
-                                And yet, I have to give credit where credit is due: <b>reading the book makes you want to get up and go do something.</b> I think a good book is one that affects you personally, and despite all my disagreements with Seneca, this one did. But really, I don't like a lot of his takes.
+                                His personality comes through very strongly, and I can tell I definitely would not have liked this guy in real life.
+                            </p>
+                            <p>
+                                And yet, I have to give credit where credit is due: <b>reading the book makes you want to get up and go do something.</b>
+                            </p>
+                            <p>
+                                I think a good book is one that affects you personally, and despite all my disagreements with Seneca, this one did.
+                            </p>
+                            <p>
+                                <span class="inline-expand" role="button" tabindex="0" aria-expanded="false" aria-controls="shortnessoflife-augustus">But really, I don't like a lot of his takes.</span>
                             </p>
                         </div>
                     </div>
-                    <p>
-                        For example, consider his discussion of Augustus. Seneca describes one of the most powerful men in Rome as <i>miserable because he spent his life living for everyone else</i>, wishing he could escape and live peacefully as a normal person. At first, this sounds reasonable. But the more I think about it, the less convincing it becomes. Living for others isn't necessarily terrible—acts of service can be incredibly gratifying. And who's to say Augustus would actually have been happier if he got his wish? It seems just as (if not more) defensible to say that the fantasy of a peaceful life is more satisfying than reality would have been. I think a better take is that <b>people tend to crave what they don't have.</b>
-                    </p>
+                    <div class="inline-expand-content" id="shortnessoflife-augustus">
+                        <p>
+                            For example, consider his discussion of Augustus. Seneca describes one of the most powerful men in Rome as <i>miserable because he spent his life living for everyone else</i>, wishing he could escape and live peacefully as a normal person. At first, this sounds reasonable.
+                        </p>
+                        <p>
+                            But the more I think about it, the less convincing it becomes. Living for others isn't necessarily terrible—acts of service can be incredibly gratifying. And who's to say Augustus would actually have been happier if he got his wish? It seems just as (if not more) defensible to say that the fantasy of a peaceful life is more satisfying than reality would have been. I think a better take is that <b>people tend to crave what they don't have.</b>
+                        </p>
+                    </div>
                     <p>
                         More broadly, Seneca is very good at telling you what not to do, but less good at explaining what you should actually do.
                     </p>
                     <p>
                         Still, the main point sticks: <b>life is not actually short; we simply waste most of it.</b> Time is the most valuable commodity, and Seneca absolutely roasts people for squandering it. If you've been feeling like your time is slipping away, this is probably a pretty good book to read.
                     </p>
+                    <figure class="pull-quote">
+                        <blockquote>“A grey haired wrinkled man has not necessarily lived long. More accurately, he has existed for long”</blockquote>
+                        <figcaption>the idea is that living is active, and you have to devote time to it. Unless you do that you haven’t ‘lived’. Kind of similar to how wisdom =/= old age</figcaption>
+                    </figure>
                     <p>
-                        Unfortunately, it definitely degrades the more you read. After about chapter 10, it starts to feel less like an argument and more like a series of increasingly crazy rants. My guy really loses the plot.
+                        Unfortunately, it definitely degrades the more you read. After about chapter 10, it starts to feel less like an argument and more like a series of increasingly crazy rants.
+                    </p>
+                    <p>
+                        My guy really loses the plot.
                     </p>
                 </div>
 
@@ -2170,18 +2293,6 @@
                         “No one truly turns to examine his past, unless he is prepared to submit his acts to the courtroom of his conscience, which can never be fooled”
                     </blockquote>
                     <blockquote style="border-left-color: #708050">
-                        “In protecting wealth men are tight fisted, but when it comes to time, in the case of the one thing in which it is wise to be parsimonious, they are actually generous to a fault”
-                    </blockquote>
-                    <blockquote style="border-left-color: #708050">
-                        “A grey haired wrinkled man has not necessarily lived long. More accurately, he has existed for long”
-                        <p class="quote-note">
-                            the idea is that living is active, and you have to devote time to it. Unless you do that you haven’t ‘lived’. Kind of similar to how wisdom =/= old age
-                        </p>
-                    </blockquote>
-                    <blockquote style="border-left-color: #708050">
-                        “No single worthwhile goal can be successfully pursued by a man who is occupied with many tasks…because the mind, when its focus is split, absorbs little depth and rejects everything that is, so to speak, jammed into it”
-                    </blockquote>
-                    <blockquote style="border-left-color: #708050">
                         “Casualties of vices rarely return to their former selves…like the waters of the ocean which continue to churn after a squall has passed, their lives remain in constrain turmoil”
                     </blockquote>
                 </div>
@@ -2196,12 +2307,18 @@
                     <p>
                         Seneca's central argument is that life is not actually short; we simply waste most of it. People will be very frugal with tangible things, but give out time far too willingly, which is shocking considering that's a "trespass on one's very existence."
                     </p>
+                    <figure class="pull-quote">
+                        <blockquote>“In protecting wealth men are tight fisted, but when it comes to time, in the case of the one thing in which it is wise to be parsimonious, they are actually generous to a fault”</blockquote>
+                    </figure>
                     <p>
                         His main example is the "busy" man, defined not by having too much to do, but by never stopping to examine whether those activities are actually worth doing. Consequently, his life flashes by and he's left feeling that life is fleeting.
                     </p>
                     <p>
                         Seneca contrasts this with the person who maintains a relationship with their own conscience: someone who can reflect on their past, understand the path they are currently on, and deliberately decide what they want from the future. I like his point that being constantly occupied can become yet another way of wasting your life.
                     </p>
+                    <figure class="pull-quote">
+                        <blockquote>“No single worthwhile goal can be successfully pursued by a man who is occupied with many tasks…because the mind, when its focus is split, absorbs little depth and rejects everything that is, so to speak, jammed into it”</blockquote>
+                    </figure>
                     <p>
                         This is also why Seneca treats putting things off until retirement as such a huge fault, because any moment could be your last. The broader point is that you should live with an awareness of your mortality rather than treating your time as an unlimited resource.
                     </p>
@@ -2216,13 +2333,22 @@
                         The problem is, he treats this hierarchy as self-evident. He's overconfident that the philosophical life is the good life, and spends considerably less time making the case for why his conception of a worthwhile life should take precedence over other ways of living.
                     </p>
                     <p>
-                        You can see this in how he talks about it. The philosopher alone, he says, is unfettered by the confines of humanity and lives forever, like a god, which is an extremely self-important thing to say. By chapter 12 he's become a bit of a stick in the mud, writing off people lost in leisure as already half dead and incapable of mastering their time, before moving on to a rant about historical trivia.
+                        You can see this in how he talks about it.
+                    </p>
+                    <figure class="pull-quote">
+                        <blockquote>“The philosopher alone is unfettered by the confines of humanity and lives forever, like a god”</blockquote>
+                    </figure>
+                    <p>
+                        That's an extremely self-important thing to say. By chapter 12 he's become a bit of a stick in the mud, writing off people lost in leisure as already half dead and incapable of mastering their time, before moving on to a rant about historical trivia.
                     </p>
                     <p>
                         In his view, if knowledge isn't improving you, it isn't useful. But he never establishes why his particular conception of intellectual cultivation should be considered the best use of time.
                     </p>
                     <p>
-                        This is where I think the book falls short. Beyond vague things like listen to yourself and don't waste time, the book doesn't effectively tackle how to steer through life meaningfully. He identifies the problem of wasting your life extremely well, but his solution amounts to "be more like me."
+                        This is where I think the book falls short.
+                    </p>
+                    <p>
+                        Beyond vague things like listen to yourself and don't waste time, the book doesn't effectively tackle how to steer through life meaningfully. He identifies the problem of wasting your life extremely well, but his solution amounts to "be more like me."
                     </p>
                     <p>
                         Knowing that time is valuable is not the same thing as knowing how to spend it well. Seneca gives you a useful reason to stop and examine your life, but his own answer to what makes that life worthwhile is much less convincing than his argument that you should be asking the question in the first place.
@@ -2236,7 +2362,10 @@
                         Filling in the Holes
                     </h3>
                     <p>
-                        Seneca makes mastering life sound much simpler than it is. He repeatedly argues that the person who has mastered their life is above Fortune because they are their own master. At the same time, he makes the case that financial responsibility is tied to a better life. I found this somewhat contradictory. If external circumstances can meaningfully affect the quality of your life, then your experience of life clearly isn't entirely independent of them. You cannot completely detach yourself from external circumstances, nor should you try to.
+                        Seneca makes mastering life sound much simpler than it is. He repeatedly argues that the person who has mastered their life is above Fortune because they are their own master. At the same time, he makes the case that financial responsibility is tied to a better life.
+                    </p>
+                    <p>
+                        I found this somewhat contradictory. If external circumstances can meaningfully affect the quality of your life, then your experience of life clearly isn't entirely independent of them. You cannot completely detach yourself from external circumstances, nor should you try to.
                     </p>
                     <p>
                         For me, the most valuable takeaways that aren't painfully obvious come from actually disagreeing with the book. The holes in his arguments force you to fill in what he leaves out, and sometimes the result is more interesting than what he originally said.
@@ -2629,6 +2758,27 @@
         });
     });
 
+</script>
+
+<script>
+    // inline toggles inside a review: show/hide the passage they control, then
+    // resize the open review so its max-height doesn't clip the new content
+    document.querySelectorAll('.inline-expand').forEach(function (toggle) {
+        var target = document.getElementById(toggle.getAttribute('aria-controls'));
+        function flip() {
+            var open = toggle.getAttribute('aria-expanded') !== 'true';
+            toggle.setAttribute('aria-expanded', open);
+            target.classList.toggle('open', open);
+            var review = toggle.closest('.collapsiblecontent');
+            if (review && review.style.maxHeight) {
+                review.style.maxHeight = review.scrollHeight + 'px';
+            }
+        }
+        toggle.addEventListener('click', flip);
+        toggle.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); }
+        });
+    });
 </script>
 
 <!--to offest scroll-->
