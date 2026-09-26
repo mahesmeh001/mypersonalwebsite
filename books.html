@@ -95,6 +95,12 @@
             overflow: hidden;
         }
 
+        /* section titles without a tagline (Short Stories, Philosophy, Non-Fiction)
+           need extra room above the cover banner that the tagline normally gives */
+        .w3-center > h2:only-child {
+            margin-bottom: 3rem;
+        }
+
         /* Commentary attached below a quote, inside its blockquote */
         blockquote .quote-note {
             font-style: normal;
@@ -2295,7 +2301,6 @@
         <div id="nonfic" style="border-color: #262626">
             <div class="w3-center">
                 <h2 style="text-decoration: underline">Non-Fiction</h2>
-                <p style="text-align: center"></p>
             </div>
 
 
