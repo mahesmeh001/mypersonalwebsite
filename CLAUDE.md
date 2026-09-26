@@ -15,3 +15,4 @@ box, pull quotes, etc.) to apply to every new review.
 - Pushing uses a repo-local credential helper that pulls mahesmeh001's token
   from `gh`. Never put a token in the remote URL or print one.
 - Commit only when asked; push only when asked.
+- No Co-Authored-By or other attribution trailers in commit messages.
