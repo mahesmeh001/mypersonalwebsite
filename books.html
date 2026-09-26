@@ -2612,6 +2612,22 @@
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+
+                // TOC jumps straight to a review: open it once the scroll settles
+                const button = targetElement.previousElementSibling;
+                if (targetElement.classList.contains('collapsiblecontent') &&
+                    button && button.classList.contains('collapsible') &&
+                    !button.classList.contains('open')) {
+                    let opened = false;
+                    const openReview = () => {
+                        if (opened) return;
+                        opened = true;
+                        window.removeEventListener('scrollend', openReview);
+                        if (!button.classList.contains('open')) button.click();
+                    };
+                    window.addEventListener('scrollend', openReview);
+                    setTimeout(openReview, 1000); // fallback: no scrollend support, or no scroll needed
+                }
             }
         });
     });
