@@ -238,7 +238,7 @@
 <div id="popupBanner" style="position: fixed; top: 20px; right: -350px; width: 320px; background: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); z-index: 1000; transition: right 0.3s ease; padding: 1.5rem; border: 1px solid rgba(0, 0, 0, 0.1);">
     <button id="popupClose" style="position: absolute; top: 8px; right: 8px; background: transparent !important; border: 0 !important; outline: none !important; color: red !important; font-size: 18px; cursor: pointer; padding: 0 !important; width: 20px; height: 20px; line-height: 1; font-weight: bold; box-shadow: none !important;">×</button>
     <h4 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.1rem;">Jump to my latest review!</h4>
-    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">Run and Hide</p>
+    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">On the Shortness of Life</p>
     <div style="display: flex; gap: 0.5rem;">
         <button id="popupYes" style="background: rgba(255,215,131,0.8); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">Yes</button>
         <button id="popupNo" style="background: rgba(0, 0, 0, 0.1); color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; line-height: 1;">No</button>
@@ -333,7 +333,8 @@
                             </i></p></div>
                             <div><a href="#philosophy"><b>Philosophy</b></a></div>
                             <div><p style="font-size: small; color: grey; text-align: center; margin-bottom: 1px"><i>
-                                <a href="#thesymposium">The Symposium</a>
+                                <a href="#shortnessoflife">On the Shortness of Life</a>
+                                • <a href="#thesymposium">The Symposium</a>
                             </i></p></div>
                             <div><a href="#nonfic"> <b>Non-Fiction</b></a></div>
                             <div><p style="font-size: small; color: grey; text-align: center; margin-bottom: 1px"><i>
@@ -2071,8 +2072,148 @@
             </div>
 
             <div class="w3-row w3-row-padding w3-center" id="philosophybanner">
-                <div><img src="images/Books/the-symposium.jpg" alt="The Symposium book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
+                <div class="w3-col" style="width: 50%">
+                    <div><img src="images/Books/on-the-shortness-of-life.jpg" alt="On the Shortness of Life book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
+                </div>
+                <div class="w3-col" style="width: 50%">
+                    <div><img src="images/Books/the-symposium.jpg" alt="The Symposium book cover" style="width: 100%; max-width: 200px" loading="lazy"></div>
+                </div>
             </div>
+
+            <!--On the Shortness of Life-->
+            <button class="collapsible">On the Shortness of Life by Seneca</button>
+            <div class="collapsiblecontent" id="shortnessoflife">
+                <div class="row">
+                    <div class="col text-start"><h3 style="margin-top: 15px">My Rating: 6/10</h3>
+                    </div>
+                    <div class="col text-end"><p><i>Read in Sep 2026</i></p>
+                    </div>
+                </div>
+
+                <!-- Score Sliders -->
+                <div id="shortnessoflife-scores"></div>
+                <script>
+                    var scores = {
+                        'Author bias': 10,
+                        'Narrative Depth': 3
+                    };
+                    var overall = 6;
+                    var color = '#708050';
+
+                    document.getElementById('shortnessoflife-scores').innerHTML = createScoreSlider(scores, overall, color, -25);
+                </script>
+
+                <div class="w3-row">
+                    <div class="w3-col w3-half">
+                        <div class="w3-center">
+                            <img alt="On the Shortness of Life" class="w3-image" height="600" src="images/Books/on-the-shortness-of-life.jpg"
+                                 width="400" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="w3-col w3-half" style="padding-left: 2%">
+                        <div class="">
+                            <p>
+                                I don't agree with a lot of what Seneca says in this book. He seems to constantly be on the verge of making a point I might agree with, only to take it way too far or contradict himself entirely. His personality comes through very strongly, and I can tell I definitely would not have liked this guy in real life.
+                            </p>
+                            <p>
+                                And yet, I have to give credit where credit is due: reading the book makes you want to get up and go do something. I think a good book is one that affects you personally, and despite all my disagreements with Seneca, this one did. But really, I don't like a lot of his takes.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        Consider his discussion of Augustus. Seneca describes one of the most powerful men in Rome as miserable because he spent his life living for everyone else, wishing he could escape and live peacefully as a normal person. At first, this sounds reasonable. But the more I think about it, the less convincing it becomes. Living for others isn't necessarily terrible—acts of service can be incredibly gratifying. And who's to say Augustus would actually have been happier if he got his wish? It seems just as (if not more) defensible to say that the fantasy of a peaceful life is more satisfying than reality would have been. I think a better take is that people simply tend to crave whatever they don't have.
+                    </p>
+                    <p>
+                        More broadly, Seneca is very good at telling you what not to do, but less good at explaining what you should actually do.
+                    </p>
+                    <p>
+                        Still, the main point sticks: life is not actually short; we simply waste most of it. Time is the most valuable commodity, and Seneca absolutely roasts people for squandering it. If you've been feeling like your time is slipping away, this is probably a pretty good book to read.
+                    </p>
+                    <p>
+                        Unfortunately, it definitely degrades the more you read. After about chapter 10, it starts to feel less like an argument and more like a series of increasingly crazy rants. My guy really loses the plot.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>
+                        Quotes
+                    </h3>
+                    <blockquote style="border-left-color: #708050">
+                        “The sunniest day in a miserable mortal’s life<br>
+                        Is always the first to fly”
+                        <p class="quote-note">
+                            If you live poorly you’ll find that happiness is fleeting
+                        </p>
+                    </blockquote>
+                    <blockquote style="border-left-color: #708050">
+                        “No one truly turns to examine his past, unless he is prepared to submit his acts to the courtroom of his conscience, which can never be fooled”
+                    </blockquote>
+                    <blockquote style="border-left-color: #708050">
+                        “In protecting wealth men are tight fisted, but when it comes to time, in the case of the one thing in which it is wise to be parsimonious, they are actually generous to a fault”
+                    </blockquote>
+                    <blockquote style="border-left-color: #708050">
+                        “A grey haired wrinkled man has not necessarily lived long. More accurately, he has existed for long”
+                        <p class="quote-note">
+                            the idea is that living is active, and you have to devote time to it. Unless you do that you haven’t ‘lived’. Kind of similar to how wisdom =/= old age
+                        </p>
+                    </blockquote>
+                    <blockquote style="border-left-color: #708050">
+                        “No single worthwhile goal can be successfully pursued by a man who is occupied with many tasks…because the mind, when its focus is split, absorbs little depth and rejects everything that is, so to speak, jammed into it”
+                    </blockquote>
+                    <blockquote style="border-left-color: #708050">
+                        “Casualties of vices rarely return to their former selves…like the waters of the ocean which continue to churn after a squall has passed, their lives remain in constrain turmoil”
+                    </blockquote>
+                </div>
+
+                <br>
+
+                <div class="" id="shortnessoflife-essay1">
+                    <h3>
+                        Good Question, Questionable Answer
+                    </h3>
+                    <p>
+                        Seneca argues that we're careless with time in a way we never are with anything else. People will be very frugal with tangible things, but give out time far too willingly, which is shocking considering that's a "trespass on one's very existence."
+                    </p>
+                    <p>
+                        His main example is the "busy" man, defined not by having too much to do, but by never stopping to examine whether those activities are actually worth doing. Consequently, his life flashes by and he's left feeling that life is too short. Seneca contrasts this with the person who maintains a relationship with their own conscience: someone who can reflect on their past, understand the path they are currently on, and deliberately decide what they want from the future. I like his point that being constantly occupied can become yet another way of wasting your life.
+                    </p>
+                    <p>
+                        This is also why Seneca treats putting things off until retirement as such a huge fault, because any moment could be your last. The broader point is that you should live with an awareness of your mortality rather than treating your time as an unlimited resource. If you knew you were going to die in five years, what would you actually want to do? The question forces you to separate the things you genuinely value from the things you've simply gotten used to spending time on.
+                    </p>
+                    <p>
+                        Seneca has his own opinion on what you should spend time on. He idealizes philosophy, reflection, reading, and intellectual cultivation above the activities of ordinary life. The problem is, he treats this hierarchy as self-evident. He's overconfident that the philosophical life is the good life, and spends considerably less time making the case for why his conception of a worthwhile life should take precedence over other ways of living.
+                    </p>
+                    <p>
+                        You can see this in how he talks about it. The philosopher alone, he says, is unfettered by the confines of humanity and lives forever, like a god, which is an extremely self-important thing to say. By chapter 12 he's become a bit of a stick in the mud, writing off people lost in leisure as already half dead and incapable of mastering their time, before moving on to a rant about historical trivia.
+                    </p>
+                    <p>
+                        In his view, if knowledge isn't improving you, it isn't useful. But he never establishes why his particular conception of intellectual cultivation should be considered the best use of time.
+                    </p>
+                    <p>
+                        This is where I think the book falls short. Beyond vague things like listen to yourself and don't waste time, the book doesn't effectively tackle how to steer through life meaningfully. He identifies the problem of wasting your life extremely well, but his solution amounts to "be more like me."
+                    </p>
+                    <p>
+                        Knowing that time is valuable is not the same thing as knowing how to spend it well. Seneca gives you a useful reason to stop and examine your life, but his own answer to what makes that life worthwhile is much less convincing than his argument that you should be asking the question in the first place.
+                    </p>
+                </div>
+
+                <br>
+
+                <div class="" id="shortnessoflife-essay2">
+                    <h3>
+                        Filling in the Holes
+                    </h3>
+                    <p>
+                        Seneca makes mastering life sound much simpler than it is. He repeatedly argues that the person who has mastered their life is above Fortune because they are their own master. At the same time, he makes the case that financial responsibility is tied to a better life. I found this somewhat contradictory. If external circumstances can meaningfully affect the quality of your life, then your experience of life clearly isn't entirely independent of them. You cannot completely detach yourself from external circumstances, nor should you try to.
+                    </p>
+                    <p>
+                        For me, the most valuable takeaways that aren't painfully obvious come from actually disagreeing with the book. The holes in his arguments force you to fill in what he leaves out, and sometimes the result is more interesting than what he originally said.
+                    </p>
+                </div>
+
+            </div>
+
+            <br>
 
             <!--The Symposium-->
             <button class="collapsible">The Symposium by Plato</button>
@@ -2534,7 +2675,7 @@
     const AUTO_TRIGGER_POPUP = false;
     
     // Check if user has seen this specific book review
-    const currentBook = 'runandhide'; // Change this when you add new reviews
+    const currentBook = 'shortnessoflife'; // Change this when you add new reviews
     const seenBooks = JSON.parse(localStorage.getItem('seenBooks') || '[]');
     
     if (!seenBooks.includes(currentBook) || AUTO_TRIGGER_POPUP) {
@@ -2553,7 +2694,7 @@
         // Handle Yes button click
         document.getElementById('popupYes').addEventListener('click', function() {
             // Scroll to book section using its ID
-            const bookSection = document.getElementById('runandhide');
+            const bookSection = document.getElementById('shortnessoflife');
             
             if (bookSection) {
                 // Use native smooth scroll for all browsers
