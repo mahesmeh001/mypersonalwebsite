@@ -220,9 +220,6 @@
             font-size: 0.9em;
             margin: 0.75rem 0 0 0;
         }
-        /* color legend for the Fav Quotes groupings */
-        .quote-legend { font-size: 0.85em; color: #666; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.1rem; }
-        .quote-legend i { display: inline-block; width: 0.8em; height: 0.8em; border-radius: 2px; margin-right: 0.35em; vertical-align: -0.05em; }
     </style>
 </head>
 
@@ -2641,17 +2638,20 @@
 
 
         <!--Quotes Section-->
+        <!--
+            Quote border colors mark content groupings (internal only, no visible key):
+              #3b6fb6 blue   - Reason & its limits
+              #4a8a4a green  - The inner journey
+              #c9a227 gold   - How we live, and time
+              #8a4fb0 purple - Self-deception and who we become
+              #c0392b red    - Society, labels and power
+              #e67e22 orange - Funny
+            Order is curated by hand, not by group.
+        -->
         <div id="quotes" style="border-color: #262626">
             <div class="w3-center">
                 <h2>Good Lines / Fav Quotes</h2>
                 <p>A collection of funny, ingenious, and otherwise memorable quotes and lines I've stumbled across.</p>
-                <p class="quote-legend">
-                    <span><i style="background: #3b6fb6"></i>Reason &amp; its limits</span>
-                    <span><i style="background: #4a8a4a"></i>The inner journey</span>
-                    <span><i style="background: #c9a227"></i>How we live</span>
-                    <span><i style="background: #8a4fb0"></i>Self-deception</span>
-                    <span><i style="background: #c0392b"></i>Society &amp; labels</span>
-                </p>
             </div>
             <br>
             <blockquote style="border-left-color: #3b6fb6">
@@ -2666,7 +2666,7 @@
             <blockquote style="border-left-color: #4a8a4a">
                 “If you know exactly where you’re headed, it’s no fun at all” - Food Wars
             </blockquote>
-            <blockquote style="border-left-color: #3b6fb6">
+            <blockquote style="border-left-color: #4a8a4a">
                 “A human heart is bound to be complex. But it must be limited.” - <a class="quote-source" href="#klaraandthesun">Klara and the Sun</a> (Kazuo Ishiguro)
                 <p class="quote-note">
                     A logical conclusion that somehow tastes like a lie. It speaks to a pivotal question at the roots of sentience, humanity, and religion: is one finite?
@@ -2675,7 +2675,7 @@
             <blockquote style="border-left-color: #4a8a4a">
                 “In the darkest times, hope is something you give yourself. That is the meaning of inner strength” - Uncle Iroh (Avatar: The Last Airbender)
             </blockquote>
-            <blockquote style="border-left-color: #3b6fb6">“Never let the truth get in the way of a good story” -
+            <blockquote style="border-left-color: #e67e22">“Never let the truth get in the way of a good story” -
                 Legend of Korra
             </blockquote>
             <blockquote style="border-left-color: #4a8a4a">
@@ -2690,7 +2690,7 @@
                     Illuminates how we should not be chasing some ideal based on an external representation of a goal. Our journey is within ourselves, and any expectation placed on what that should be is but a shackle.
                 </p>
             </blockquote>
-            <blockquote style="border-left-color: #3b6fb6">
+            <blockquote style="border-left-color: #c9a227">
                 “What’s the point of truth or beauty or knowledge when anthrax bombs are popping all around you?” - <a class="quote-source" href="#bravenewworld">Brave New World</a> (Aldous Huxley)
             </blockquote>
             <blockquote style="border-left-color: #c0392b">
@@ -2702,7 +2702,7 @@
                     Excellent way of demonstrating that labels are not representations of the individual, and that people are quick to assign labels and forget about the details / implications.
                 </p>
             </blockquote>
-            <blockquote style="border-left-color: #c9a227">
+            <blockquote style="border-left-color: #e67e22">
                 “When I find that I’m growing old, I shall kill myself.” - Oscar Wilde (<a class="quote-source" href="#doriangray">The Picture of Dorian Gray</a>)
             </blockquote>
             <blockquote style="border-left-color: #c9a227">“You will die the way you live” - Disputed author
@@ -2727,7 +2727,7 @@
                 to all crabbed constraint” - The School for Wives and The Learned Ladies, by Molière: Two comedies in an
                 acclaimed translation. (Richard Wilbur)
             </blockquote>
-            <blockquote style="border-left-color: #c0392b">“Why, goddamit, why did they insist upon confusing the
+            <blockquote style="border-left-color: #e67e22">“Why, goddamit, why did they insist upon confusing the
                 class struggle with the ass struggle, debasing both us and them--all human motives?” - <a class="quote-source" href="#invisibleman">Invisible Man</a>
                 (Ralph Ellison)
             </blockquote>
