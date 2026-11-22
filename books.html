@@ -220,6 +220,9 @@
             font-size: 0.9em;
             margin: 0.75rem 0 0 0;
         }
+        /* color legend for the Fav Quotes groupings */
+        .quote-legend { font-size: 0.85em; color: #666; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.1rem; }
+        .quote-legend i { display: inline-block; width: 0.8em; height: 0.8em; border-radius: 2px; margin-right: 0.35em; vertical-align: -0.05em; }
     </style>
 </head>
 
@@ -2642,66 +2645,93 @@
             <div class="w3-center">
                 <h2>Good Lines / Fav Quotes</h2>
                 <p>A collection of funny, ingenious, and otherwise memorable quotes and lines I've stumbled across.</p>
+                <p class="quote-legend">
+                    <span><i style="background: #3b6fb6"></i>Reason &amp; its limits</span>
+                    <span><i style="background: #4a8a4a"></i>The inner journey</span>
+                    <span><i style="background: #c9a227"></i>How we live</span>
+                    <span><i style="background: #8a4fb0"></i>Self-deception</span>
+                    <span><i style="background: #c0392b"></i>Society &amp; labels</span>
+                </p>
             </div>
             <br>
-            <blockquote style="border-left-color: #b24545">
-                (of philosophers) “a man who dreams of less than there is in heaven and earth” - <a class="quote-source" href="#bravenewworld">Brave New World</a> (Aldous Huxley)
+            <blockquote style="border-left-color: #3b6fb6">
+                “...philosophy as the finding of bad reason for what one believes by instinct…finding bad reasons for what one believes for other bad reasons—that’s philosophy.” - <a class="quote-source" href="#bravenewworld">Brave New World</a> (Aldous Huxley)
+                <p class="quote-note">
+                    Beautiful line because it demonstrates how logic/reasoning/rationality actually falls short of feeling. And that all reasoning is as an attempt to rationalize our feelings, and just like how a model of something can never be 100% accurate lest it be the thing, ‘reasons’ will always fall short.
+                </p>
             </blockquote>
-            <blockquote style="border-left-color: #708050">
-                “The sunniest day in a miserable mortal’s life<br>
-                Is always the first to fly” - <a class="quote-source" href="#shortnessoflife">On the Shortness of Life</a> (Seneca)
-            </blockquote>
-            <blockquote style="border-left-color: #e8461e">
-                “..and even this attentiveness to oneself, this search for hidden inner depths and mystery is false and deceptive” - <a class="quote-source" href="#runandhide">Run and Hide</a> (Pankaj Mishra)
-            </blockquote>
-            <blockquote style="border-left-color: #b24545">
-                “What’s the point of truth or beauty or knowledge when anthrax bombs are popping all around you?” - <a class="quote-source" href="#bravenewworld">Brave New World</a> (Aldous Huxley)
-            </blockquote>
-            <blockquote style="border-left-color: #87502f">
+            <blockquote style="border-left-color: #8a4fb0">
                 “By pretending to agree I had indeed agreed” - <a class="quote-source" href="#invisibleman">Invisible Man</a> (Ralph Ellison)
             </blockquote>
-            <blockquote style="border-left-color: #000000">
+            <blockquote style="border-left-color: #4a8a4a">
+                “If you know exactly where you’re headed, it’s no fun at all” - Food Wars
+            </blockquote>
+            <blockquote style="border-left-color: #3b6fb6">
+                “A human heart is bound to be complex. But it must be limited.” - <a class="quote-source" href="#klaraandthesun">Klara and the Sun</a> (Kazuo Ishiguro)
+                <p class="quote-note">
+                    A logical conclusion that somehow tastes like a lie. It speaks to a pivotal question at the roots of sentience, humanity, and religion: is one finite?
+                </p>
+            </blockquote>
+            <blockquote style="border-left-color: #4a8a4a">
+                “In the darkest times, hope is something you give yourself. That is the meaning of inner strength” - Uncle Iroh (Avatar: The Last Airbender)
+            </blockquote>
+            <blockquote style="border-left-color: #3b6fb6">“Never let the truth get in the way of a good story” -
+                Legend of Korra
+            </blockquote>
+            <blockquote style="border-left-color: #4a8a4a">
+                “..and even this attentiveness to oneself, this search for hidden inner depths and mystery is false and deceptive” - <a class="quote-source" href="#runandhide">Run and Hide</a> (Pankaj Mishra)
+                <p class="quote-note">
+                    This critique demonstrates the irony of ‘wanting’ to attain enlightenment, which is seen as freedom from desire itself
+                </p>
+            </blockquote>
+            <blockquote style="border-left-color: #4a8a4a">
+                “When we meet the ghost buddha, we should cut off his head” - Master Linji
+                <p class="quote-note">
+                    Illuminates how we should not be chasing some ideal based on an external representation of a goal. Our journey is within ourselves, and any expectation placed on what that should be is but a shackle.
+                </p>
+            </blockquote>
+            <blockquote style="border-left-color: #3b6fb6">
+                “What’s the point of truth or beauty or knowledge when anthrax bombs are popping all around you?” - <a class="quote-source" href="#bravenewworld">Brave New World</a> (Aldous Huxley)
+            </blockquote>
+            <blockquote style="border-left-color: #c0392b">
                 “When small men begin to cast big shadows, it means the sun is about to set” - Lin Yutang
             </blockquote>
-            <blockquote style="border-left-color: #e169fa">
+            <blockquote style="border-left-color: #c0392b">
+                “Yes of course she knew there was a word for people like him..two words actually..but two words do not make a language.” - <a class="quote-source" href="#theministry">The Ministry of Utmost Happiness</a> (Arundhati Roy)
+                <p class="quote-note">
+                    Excellent way of demonstrating that labels are not representations of the individual, and that people are quick to assign labels and forget about the details / implications.
+                </p>
+            </blockquote>
+            <blockquote style="border-left-color: #c9a227">
                 “When I find that I’m growing old, I shall kill myself.” - Oscar Wilde (<a class="quote-source" href="#doriangray">The Picture of Dorian Gray</a>)
             </blockquote>
-            <blockquote style="border-left-color: #b9b9b9">
-                “Out beyond the ideas of wrongdoing and rightdoing, there is a field. I’ll meet you there.” - Rumi, 13th
-                century.
-
+            <blockquote style="border-left-color: #c9a227">“You will die the way you live” - Disputed author
             </blockquote>
-            <blockquote style="border-left-color: #461e01">“It takes ten times longer to put yourself together than it
-                does
-                to fall apart” - Hunger Games: Mockingjay (Suzanne Collins)
-            </blockquote>
-            <blockquote style="border-left-color: #33da20">“Change is the only constant” - Heraclitus</blockquote>
-            <blockquote style="border-left-color: #ac20da">“You will die the way you live” - Disputed author
-            </blockquote>
-            <blockquote style="border-left-color: goldenrod">“None shrank and simpered as you did, and yet the great
+            <blockquote style="border-left-color: #8a4fb0">“None shrank and simpered as you did, and yet the great
                 Helios stepped on you all the faster, because you were already crouched” - <a class="quote-source" href="#circe">Circe</a> (Madeline Miller)
             </blockquote>
-            <blockquote style="border-left-color: goldenrod">“But perhaps no parent can truly see their child. When we
+            <blockquote style="border-left-color: #8a4fb0">“But perhaps no parent can truly see their child. When we
                 look we see only the mirror of our own faults” - <a class="quote-source" href="#circe">Circe</a> (Madeline Miller)
             </blockquote>
-            <blockquote style="border-left-color: #FF8000">“Someone else said he was a rapevictim (which was a word in
+            <blockquote style="border-left-color: #c9a227">
+                “The sunniest day in a miserable mortal’s life<br>
+                Is always the first to fly” - <a class="quote-source" href="#shortnessoflife">On the Shortness of Life</a> (Seneca)
+                <p class="quote-note">
+                    If you live poorly you’ll find that happiness is fleeting
+                </p>
+            </blockquote>
+            <blockquote style="border-left-color: #c0392b">“Someone else said he was a rapevictim (which was a word in
                 every language)” - <a class="quote-source" href="#theministry">The Ministry of Utmost Happiness</a> (Arundhati Roy)
             </blockquote>
-            <blockquote style="border-left-color: green">“‘Sad stories make good books’” - <a class="quote-source" href="#kiterunner">The Kite Runner</a> (Khaled
-                Hosseini)
-            </blockquote>
-            <blockquote style="border-left-color: orangered">“Life will not be controlled, but makes a fluent resistance
+            <blockquote style="border-left-color: #c9a227">“Life will not be controlled, but makes a fluent resistance
                 to all crabbed constraint” - The School for Wives and The Learned Ladies, by Molière: Two comedies in an
                 acclaimed translation. (Richard Wilbur)
             </blockquote>
-            <blockquote style="border-left-color: dodgerblue">“Why, goddamit, why did they insist upon confusing the
+            <blockquote style="border-left-color: #c0392b">“Why, goddamit, why did they insist upon confusing the
                 class struggle with the ass struggle, debasing both us and them--all human motives?” - <a class="quote-source" href="#invisibleman">Invisible Man</a>
                 (Ralph Ellison)
             </blockquote>
-            <blockquote style="border-left-color: lawngreen">“Never let the truth get in the way of a good story” -
-                Legend of Korra
-            </blockquote>
-            <blockquote style="border-left-color: #faff11">“I grant this food will be somewhat dear, and therefore very
+            <blockquote style="border-left-color: #c0392b">“I grant this food will be somewhat dear, and therefore very
                 proper for landlords, who, as they have already devoured most of the parents, seem to have the best
                 title to the children.” - A Modest Proposal (Dr. Jonathan Swift)
             </blockquote>
