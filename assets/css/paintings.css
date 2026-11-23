@@ -1,5 +1,42 @@
 /* Paintings: simple masonry grid + lightbox */
 
+/* Medium filter pills: All / Watercolor / Acrylic / Oil */
+.painting-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1.5rem;
+}
+
+.painting-filters button {
+  height: auto;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: normal;
+  box-shadow: none;
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: 400;
+  font-size: 0.86rem;
+  color: #2c2825;
+  padding: 0.35rem 0.95rem;
+  border: 1px solid rgba(201, 123, 99, 0.28);
+  border-radius: 999px;
+  background: rgba(250, 246, 241, 0.92);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.painting-filters button:hover {
+  background: rgba(240, 221, 212, 0.6);
+  border-color: rgba(201, 123, 99, 0.42);
+}
+
+.painting-filters button[aria-pressed="true"] {
+  background: rgba(240, 221, 212, 0.95);
+  border-color: rgba(201, 123, 99, 0.6);
+}
+
 /* JS splits paintings into columns, filling left to right so list order reads across rows */
 .painting-grid {
   display: flex;

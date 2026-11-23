@@ -1,20 +1,46 @@
-// Renders PAINTINGS (defined in paintings.html) as a grid with a click-to-enlarge lightbox.
+// Renders PAINTINGS (defined in paintings.html) as a grid with a medium filter
+// and a click-to-enlarge lightbox.
 (function () {
-  var shown = PAINTINGS.filter(function (p) { return !p.draft; });
+  var all = PAINTINGS.filter(function (p) { return !p.draft; });
   var grid = document.getElementById('gallery');
   var box = document.getElementById('lightbox');
   var big = box.querySelector('img');
   var caption = box.querySelector('p');
-  var current = 0;
 
-  var figs = shown.map(function (p, i) {
+  var visible = all;   // paintings matching the current filter
+  var current = 0;     // index into visible, for the lightbox
+
+  all.forEach(function (p) {
     var fig = document.createElement('figure');
     fig.innerHTML = '<img loading="lazy" alt=""><figcaption></figcaption>';
     fig.querySelector('img').src = p.image;
     fig.querySelector('img').alt = p.title;
     fig.querySelector('figcaption').textContent = p.title;
-    fig.addEventListener('click', function () { open(i); });
-    return fig;
+    fig.addEventListener('click', function () { open(visible.indexOf(p)); });
+    p.fig = fig;
+  });
+
+  // Medium filter pills: "All" plus one per medium, one active at a time.
+  var pills = document.getElementById('filter-pills');
+  var order = ['watercolor', 'acrylic', 'oil'];
+  var mediums = [];
+  all.forEach(function (p) {
+    (p.category || []).forEach(function (m) { if (mediums.indexOf(m) < 0) mediums.push(m); });
+  });
+  mediums.sort(function (x, y) { return (order.indexOf(x) + 1 || 99) - (order.indexOf(y) + 1 || 99); });
+
+  ['all'].concat(mediums).forEach(function (m) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = m === 'all' ? 'All' : m.charAt(0).toUpperCase() + m.slice(1);
+    b.setAttribute('aria-pressed', m === 'all');
+    b.addEventListener('click', function () {
+      pills.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+      visible = m === 'all' ? all : all.filter(function (p) { return (p.category || []).indexOf(m) >= 0; });
+      cols = 0;
+      layout();
+    });
+    pills.appendChild(b);
   });
 
   // Deal paintings into columns round-robin, so the first row holds the first N paintings.
@@ -29,16 +55,16 @@
       colEls.push(grid.appendChild(document.createElement('div')));
       colEls[c].className = 'painting-col';
     }
-    figs.forEach(function (fig, i) { colEls[i % n].appendChild(fig); });
+    visible.forEach(function (p, i) { colEls[i % n].appendChild(p.fig); });
   }
   layout();
   window.addEventListener('resize', layout);
 
   function open(i) {
-    current = (i + shown.length) % shown.length;
-    big.src = shown[current].image;
-    big.alt = shown[current].title;
-    caption.textContent = shown[current].title;
+    current = (i + visible.length) % visible.length;
+    big.src = visible[current].image;
+    big.alt = visible[current].title;
+    caption.textContent = visible[current].title;
     box.classList.add('open');
   }
 

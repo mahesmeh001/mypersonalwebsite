@@ -73,7 +73,10 @@
             </p>
         </div>
 
-        <div id="gallery" class="painting-grid" aria-label="Painting gallery"></div>
+        <div>
+            <div class="painting-filters" id="filter-pills" aria-label="Filter by medium"></div>
+            <div id="gallery" class="painting-grid" aria-label="Painting gallery"></div>
+        </div>
 
         <p style="text-align: center">
             Questions about a piece? <a href="https://www.instagram.com/mehul_maheshwari/?hl=en">Say hi on Instagram</a>.
@@ -92,36 +95,38 @@
 
   <script>
     // Shown in this order. draft: true hides a painting.
+    // category = medium; drives the filter pills.
+    // size / priority: kept for the record from the old gallery, not used.
     const PAINTINGS = [
-      { title: "Edinburgh", image: "images/Paintings/edinburgh.jpeg" },
-      { title: "Elden Ring Bridge", image: "images/Paintings/elden-ring-bridge.jpeg" },
-      { title: "Elden Ring Swamp", image: "images/Paintings/elden-ring-swamp.jpeg" },
-      { title: "Crested Butte", image: "images/Paintings/crested-butte.jpeg" },
-      { title: "1917", image: "images/Paintings/1917.jpeg" },
-      { title: "Point Reyes", image: "images/Paintings/point-reyes.JPG" },
-      { title: "Sunset Road", image: "images/Paintings/sunset-road.jpeg" },
-      { title: "Gateway Hills", image: "images/Paintings/gateway-hills.jpeg" },
-      { title: "MSP", image: "images/Paintings/msp.jpeg" },
-      { title: "Beach House", image: "images/Paintings/beach_house.JPG" },
-      { title: "Sunset", image: "images/Paintings/painting_sunset.jpeg" },
-      { title: "Devil's Lake", image: "images/Paintings/painting_devils_lake.jpeg" },
-      { title: "Greece", image: "images/Paintings/painting_greece.jpeg" },
-      { title: "Lavendar Field", image: "images/Paintings/lavendar-field.jpeg" },
-      { title: "SF Houses", image: "images/Paintings/sf-houses.jpeg" },
-      { title: "SD Beaches", image: "images/Paintings/sd-beaches.jpeg" },
-      { title: "Cafe Flowers", image: "images/Paintings/painting_cafe_flowers.jpeg" },
-      { title: "Minimal Flower Field", image: "images/Paintings/minimal-flower-field.jpeg" },
-      { title: "Redwood Trees Forest Minimal", image: "images/Paintings/redwood-trees-forest-minimal.jpeg" },
-      { title: "Turtle", image: "images/Paintings/painting_turtle.JPG" },
-      { title: "Tutorial Boat on Coast", image: "images/Paintings/tutorial-boat-on-coast.jpeg" },
-      { title: "UCSD Tree", image: "images/Paintings/ucsd-tree.jpeg", draft: true },
-      { title: "Balboa Buildings", image: "images/Paintings/draft-balboa-buildings.jpeg", draft: true },
-      { title: "Rainy Cars", image: "images/Paintings/draft-rainy-cars.jpeg", draft: true },
-      { title: "UCSD Bike", image: "images/Paintings/draft-ucsd-bike.jpeg", draft: true },
-      { title: "UCSD Trees", image: "images/Paintings/draft-ucsd-trees.jpeg", draft: true },
-      { title: "Abstract Flowers", image: "images/Paintings/abstract-flowers.jpeg", draft: true },
-      { title: "River Tutorial", image: "images/Paintings/river-tutorial.jpeg", draft: true },
-      { title: "Tutorial Tree on Lake", image: "images/Paintings/tutorial-tree-on-lake.jpeg", draft: true }
+      { title: "Edinburgh", image: "images/Paintings/edinburgh.jpeg", category: ["acrylic"] },
+      { title: "Elden Ring Bridge", image: "images/Paintings/elden-ring-bridge.jpeg", category: ["watercolor"] },
+      { title: "Elden Ring Swamp", image: "images/Paintings/elden-ring-swamp.jpeg", category: ["watercolor"] },
+      { title: "Crested Butte", image: "images/Paintings/crested-butte.jpeg", category: ["acrylic"] },
+      { title: "1917", image: "images/Paintings/1917.jpeg", category: ["acrylic"] },
+      { title: "Point Reyes", image: "images/Paintings/point-reyes.JPG", size: "large", priority: 22, category: ["acrylic"] },
+      { title: "Sunset Road", image: "images/Paintings/sunset-road.jpeg", category: ["acrylic"] },
+      { title: "Gateway Hills", image: "images/Paintings/gateway-hills.jpeg", size: "medium", priority: 16, category: ["watercolor"] },
+      { title: "MSP", image: "images/Paintings/msp.jpeg", category: ["watercolor"] },
+      { title: "Beach House", image: "images/Paintings/beach_house.JPG", size: "medium", priority: 15, category: ["acrylic"] },
+      { title: "Sunset", image: "images/Paintings/painting_sunset.jpeg", size: "large", priority: 20, category: ["acrylic"] },
+      { title: "Devil's Lake", image: "images/Paintings/painting_devils_lake.jpeg", size: "large", priority: 18, category: ["acrylic"] },
+      { title: "Greece", image: "images/Paintings/painting_greece.jpeg", size: "medium", priority: 12, category: ["acrylic"] },
+      { title: "Lavendar Field", image: "images/Paintings/lavendar-field.jpeg", size: "medium", priority: 10, category: ["watercolor"] },
+      { title: "SF Houses", image: "images/Paintings/sf-houses.jpeg", size: "medium", priority: 10, category: ["watercolor"] },
+      { title: "SD Beaches", image: "images/Paintings/sd-beaches.jpeg", size: "medium", priority: 10, category: ["watercolor"] },
+      { title: "Cafe Flowers", image: "images/Paintings/painting_cafe_flowers.jpeg", size: "small", priority: 8, category: ["acrylic"] },
+      { title: "Minimal Flower Field", image: "images/Paintings/minimal-flower-field.jpeg", size: "small", priority: 8, category: ["watercolor"] },
+      { title: "Redwood Trees Forest Minimal", image: "images/Paintings/redwood-trees-forest-minimal.jpeg", size: "small", priority: 8, category: ["watercolor"] },
+      { title: "Turtle", image: "images/Paintings/painting_turtle.JPG", size: "small", priority: 7, category: ["oil"] },
+      { title: "Tutorial Boat on Coast", image: "images/Paintings/tutorial-boat-on-coast.jpeg", size: "medium", priority: 6, category: ["watercolor"] },
+      { title: "UCSD Tree", image: "images/Paintings/ucsd-tree.jpeg", size: "small", priority: 10, category: ["acrylic"], draft: true },
+      { title: "Balboa Buildings", image: "images/Paintings/draft-balboa-buildings.jpeg", size: "medium", priority: 10, category: ["acrylic"], draft: true },
+      { title: "Rainy Cars", image: "images/Paintings/draft-rainy-cars.jpeg", size: "medium", priority: 10, category: ["acrylic"], draft: true },
+      { title: "UCSD Bike", image: "images/Paintings/draft-ucsd-bike.jpeg", size: "medium", priority: 10, category: ["acrylic"], draft: true },
+      { title: "UCSD Trees", image: "images/Paintings/draft-ucsd-trees.jpeg", size: "medium", priority: 10, category: ["acrylic"], draft: true },
+      { title: "Abstract Flowers", image: "images/Paintings/abstract-flowers.jpeg", size: "small", priority: 9, category: ["acrylic"], draft: true },
+      { title: "River Tutorial", image: "images/Paintings/river-tutorial.jpeg", size: "small", priority: 6, category: ["acrylic"], draft: true },
+      { title: "Tutorial Tree on Lake", image: "images/Paintings/tutorial-tree-on-lake.jpeg", size: "small", priority: 6, category: ["acrylic"], draft: true }
     ];
   </script>
   <script src="assets/js/jquery.min.js"></script>
