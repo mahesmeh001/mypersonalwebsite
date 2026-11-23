@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/site-shell.css">
   <link rel="stylesheet" href="assets/css/paintings.css">
   <link rel="stylesheet" href="assets/css/topbutton.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -21,7 +20,7 @@
   gtag('config', 'G-XBFRQTPP7V');
 </script>
 
-<body class="is-preload site-page--paintings">
+<body class="is-preload">
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -74,86 +73,55 @@
             </p>
         </div>
 
-        <main class="site-main" style="padding-top: 0">
-    <div class="painting-filters" id="painting-filters">
-      <div class="painting-filters-bar">
-        <div class="painting-filter-dropdown">
-          <button
-            type="button"
-            class="painting-filter-trigger"
-            id="filter-trigger"
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-controls="filter-menu"
-          >
-            Filter
-          </button>
-          <ul class="painting-filter-menu" id="filter-menu" role="listbox" hidden></ul>
-        </div>
-        <div class="painting-filter-chips" id="filter-chips" aria-live="polite"></div>
-      </div>
-      <p class="painting-grid-empty" id="gallery-empty" hidden>No paintings match these filters.</p>
-    </div>
+        <div id="gallery" class="painting-grid" aria-label="Painting gallery"></div>
 
-    <div id="gallery" class="painting-grid" aria-label="Painting gallery"></div>
-
-    <section class="site-section" id="contact">
-      <p>
-        Questions about a piece?
-        <a class="site-link" href="https://www.instagram.com/mehul_maheshwari/?hl=en">Say hi on Instagram</a>.
-      </p>
-    </section>
-        </main>
+        <p style="text-align: center">
+            Questions about a piece? <a href="https://www.instagram.com/mehul_maheshwari/?hl=en">Say hi on Instagram</a>.
+        </p>
 
     </div> <!--Main end-->
 
 </div> <!--Wrapper end-->
 
-  <div id="painting-lightbox" role="dialog" aria-modal="true" aria-label="Painting viewer">
-    <div class="lightbox-inner">
-      <div class="lightbox-image-wrap">
-        <img src="" alt="">
-        <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
-        <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous painting">&#8249;</button>
-        <button class="lightbox-nav lightbox-next" type="button" aria-label="Next painting">&#8250;</button>
-      </div>
-      <div class="lightbox-info">
-        <h2></h2>
-        <p class="lightbox-meta"></p>
-        <p class="lightbox-description"></p>
-        <p class="lightbox-notes"></p>
-      </div>
-      <span class="lightbox-counter"></span>
-    </div>
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Painting viewer">
+    <button class="prev" type="button" aria-label="Previous painting">&#8249;</button>
+    <img src="" alt="">
+    <p></p>
+    <button class="next" type="button" aria-label="Next painting">&#8250;</button>
   </div>
 
   <script>
-    // size: "small" | "medium" | "large". priority: higher = placed earlier (loosely).
-    // category: array of medium tags, e.g. ["watercolor"], ["acrylic"], ["oil"].
-    // draft: true hides from gallery.
+    // Shown in this order. draft: true hides a painting.
     const PAINTINGS = [
-      { title: "Point Reyes",                  image: "images/Paintings/point-reyes.JPG",                      size: "large",  priority: 22, category: ["acrylic"],    draft: false },
-      { title: "Sunset",                       image: "images/Paintings/painting_sunset.jpeg",                 size: "large",  priority: 20, category: ["acrylic"],    draft: false },
-      { title: "Cafe Flowers",                 image: "images/Paintings/painting_cafe_flowers.jpeg",           size: "small",  priority: 8,  category: ["acrylic"],    draft: false },
-      { title: "Devil's Lake",                 image: "images/Paintings/painting_devils_lake.jpeg",            size: "large",  priority: 18, category: ["acrylic"],    draft: false },
-      { title: "Greece",                       image: "images/Paintings/painting_greece.jpeg",                 size: "medium", priority: 12, category: ["acrylic"],    draft: false },
-      { title: "Beach House",                  image: "images/Paintings/beach_house.JPG",                      size: "medium", priority: 15, category: ["acrylic"],    draft: false },
-      { title: "Turtle",                       image: "images/Paintings/painting_turtle.JPG",                  size: "small",  priority: 7,  category: ["oil"],        draft: false },
-      { title: "Gateway Hills",                image: "images/Paintings/gateway-hills.jpeg",                   size: "medium", priority: 16, category: ["watercolor"], draft: false },
-      { title: "Lavendar Field",               image: "images/Paintings/lavendar-field.jpeg",                  size: "medium", priority: 10, category: ["watercolor"], draft: false },
-      { title: "SF Houses",                    image: "images/Paintings/sf-houses.jpeg",                       size: "medium", priority: 10, category: ["watercolor"], draft: false },
-      { title: "UCSD Tree",                    image: "images/Paintings/ucsd-tree.jpeg",                       size: "small",  priority: 10, category: ["acrylic"],    draft: true },
-      { title: "SD Beaches",                   image: "images/Paintings/sd-beaches.jpeg",                      size: "medium", priority: 10, category: ["watercolor"], draft: false },
-      { title: "Abstract Flowers",             image: "images/Paintings/abstract-flowers.jpeg",                size: "small",  priority: 9,  category: ["acrylic"],    draft: true },
-      { title: "Minimal Flower Field",         image: "images/Paintings/minimal-flower-field.jpeg",            size: "small",  priority: 8,  category: ["watercolor"], draft: false },
-      { title: "Redwood Trees Forest Minimal", image: "images/Paintings/redwood-trees-forest-minimal.jpeg",    size: "small",  priority: 8,  category: ["watercolor"], draft: false },
-      { title: "River Tutorial",               image: "images/Paintings/river-tutorial.jpeg",                  size: "small",  priority: 6,  category: ["acrylic"],    draft: true },
-      { title: "Tutorial Boat on Coast",       image: "images/Paintings/tutorial-boat-on-coast.jpeg",          size: "medium", priority: 6,  category: ["watercolor"], draft: false },
-      { title: "Tutorial Tree on Lake",        image: "images/Paintings/tutorial-tree-on-lake.jpeg",           size: "small",  priority: 6,  category: ["acrylic"],    draft: true },
-      { title: "Balboa Buildings",             image: "images/Paintings/draft-balboa-buildings.jpeg",          size: "medium", priority: 10, category: ["acrylic"],    draft: true },
-      { title: "Rainy Cars",                   image: "images/Paintings/draft-rainy-cars.jpeg",                size: "medium", priority: 10, category: ["acrylic"],    draft: true },
-      { title: "UCSD Bike",                    image: "images/Paintings/draft-ucsd-bike.jpeg",                 size: "medium", priority: 10, category: ["acrylic"],    draft: true },
-      { title: "UCSD Trees",                   image: "images/Paintings/draft-ucsd-trees.jpeg",                size: "medium", priority: 10, category: ["acrylic"],    draft: true }
+      { title: "Edinburgh", image: "images/Paintings/edinburgh.jpeg" },
+      { title: "Elden Ring Bridge", image: "images/Paintings/elden-ring-bridge.jpeg" },
+      { title: "Elden Ring Swamp", image: "images/Paintings/elden-ring-swamp.jpeg" },
+      { title: "Crested Butte", image: "images/Paintings/crested-butte.jpeg" },
+      { title: "1917", image: "images/Paintings/1917.jpeg" },
+      { title: "Point Reyes", image: "images/Paintings/point-reyes.JPG" },
+      { title: "Sunset Road", image: "images/Paintings/sunset-road.jpeg" },
+      { title: "Gateway Hills", image: "images/Paintings/gateway-hills.jpeg" },
+      { title: "MSP", image: "images/Paintings/msp.jpeg" },
+      { title: "Beach House", image: "images/Paintings/beach_house.JPG" },
+      { title: "Sunset", image: "images/Paintings/painting_sunset.jpeg" },
+      { title: "Devil's Lake", image: "images/Paintings/painting_devils_lake.jpeg" },
+      { title: "Greece", image: "images/Paintings/painting_greece.jpeg" },
+      { title: "Lavendar Field", image: "images/Paintings/lavendar-field.jpeg" },
+      { title: "SF Houses", image: "images/Paintings/sf-houses.jpeg" },
+      { title: "SD Beaches", image: "images/Paintings/sd-beaches.jpeg" },
+      { title: "Cafe Flowers", image: "images/Paintings/painting_cafe_flowers.jpeg" },
+      { title: "Minimal Flower Field", image: "images/Paintings/minimal-flower-field.jpeg" },
+      { title: "Redwood Trees Forest Minimal", image: "images/Paintings/redwood-trees-forest-minimal.jpeg" },
+      { title: "Turtle", image: "images/Paintings/painting_turtle.JPG" },
+      { title: "Tutorial Boat on Coast", image: "images/Paintings/tutorial-boat-on-coast.jpeg" },
+      { title: "UCSD Tree", image: "images/Paintings/ucsd-tree.jpeg", draft: true },
+      { title: "Balboa Buildings", image: "images/Paintings/draft-balboa-buildings.jpeg", draft: true },
+      { title: "Rainy Cars", image: "images/Paintings/draft-rainy-cars.jpeg", draft: true },
+      { title: "UCSD Bike", image: "images/Paintings/draft-ucsd-bike.jpeg", draft: true },
+      { title: "UCSD Trees", image: "images/Paintings/draft-ucsd-trees.jpeg", draft: true },
+      { title: "Abstract Flowers", image: "images/Paintings/abstract-flowers.jpeg", draft: true },
+      { title: "River Tutorial", image: "images/Paintings/river-tutorial.jpeg", draft: true },
+      { title: "Tutorial Tree on Lake", image: "images/Paintings/tutorial-tree-on-lake.jpeg", draft: true }
     ];
   </script>
   <script src="assets/js/jquery.min.js"></script>

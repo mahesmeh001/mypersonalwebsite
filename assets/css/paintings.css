@@ -1,545 +1,103 @@
-/* Paintings gallery + lightbox */
+/* Paintings: simple masonry grid + lightbox */
 
-body.site-page--paintings {
-  --page-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  position: relative;
-  isolation: isolate;
-}
-
-body.site-page--paintings::before,
-body.site-page--paintings::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-}
-
-body.site-page--paintings::before {
-  z-index: -2;
-  background:
-    radial-gradient(ellipse 85% 55% at 18% 12%, rgba(201, 123, 99, 0.07) 0%, transparent 68%),
-    radial-gradient(ellipse 70% 50% at 82% 28%, rgba(201, 123, 99, 0.05) 0%, transparent 62%),
-    radial-gradient(ellipse 90% 65% at 50% 100%, rgba(201, 123, 99, 0.04) 0%, transparent 70%),
-    linear-gradient(175deg, rgba(240, 221, 212, 0.35) 0%, rgba(250, 246, 241, 0) 45%);
-}
-
-body.site-page--paintings::after {
-  z-index: -1;
-  opacity: 0.22;
-  background-image: var(--page-texture);
-  background-size: 220px 220px;
-  mix-blend-mode: multiply;
-}
-
-body.site-page--paintings .site-header {
-  background:
-    radial-gradient(ellipse 70% 140% at 8% 50%, rgba(201, 123, 99, 0.14) 0%, transparent 72%),
-    radial-gradient(ellipse 55% 120% at 92% 50%, rgba(201, 123, 99, 0.1) 0%, transparent 68%),
-    linear-gradient(180deg, rgba(245, 235, 228, 0.98) 0%, rgba(250, 246, 241, 0.96) 100%);
-  border-bottom: 1px solid rgba(201, 123, 99, 0.42);
-  box-shadow:
-    0 1px 0 rgba(240, 221, 212, 0.95),
-    0 8px 24px rgba(44, 40, 37, 0.08),
-    0 2px 6px rgba(201, 123, 99, 0.1);
-  backdrop-filter: blur(10px);
-}
-
-body.site-page--paintings .site-nav-toggle {
-  border-color: rgba(201, 123, 99, 0.28);
-  background: rgba(240, 221, 212, 0.45);
-}
-
-.painting-filters {
-  margin-bottom: 1.5rem;
-}
-
-.painting-filters-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.painting-filter-dropdown {
-  position: relative;
-}
-
-.painting-filter-trigger {
-  appearance: none;
-  border: 1px solid rgba(201, 123, 99, 0.28);
-  border-radius: 999px;
-  background: rgba(250, 246, 241, 0.92);
-  color: var(--site-text);
-  font-family: var(--site-font-body);
-  font-size: 0.92rem;
-  font-weight: 500;
-  padding: 0.45rem 1rem;
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.painting-filter-trigger:hover,
-.painting-filter-trigger[aria-expanded="true"] {
-  background: rgba(240, 221, 212, 0.75);
-  border-color: rgba(201, 123, 99, 0.42);
-  box-shadow: 0 2px 8px rgba(201, 123, 99, 0.1);
-}
-
-.painting-filter-trigger:focus-visible {
-  outline: 2px solid var(--site-accent);
-  outline-offset: 2px;
-}
-
-.painting-filter-menu {
-  position: absolute;
-  top: calc(100% + 0.4rem);
-  left: 0;
-  z-index: 20;
-  min-width: 9.5rem;
-  margin: 0;
-  padding: 0.35rem;
-  list-style: none;
-  border: 1px solid rgba(201, 123, 99, 0.22);
-  border-radius: 12px;
-  background: rgba(250, 246, 241, 0.98);
-  box-shadow: 0 8px 24px rgba(44, 40, 37, 0.1);
-  backdrop-filter: blur(8px);
-}
-
-.painting-filter-menu[hidden] {
-  display: none;
-}
-
-.painting-filter-option {
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 8px;
-  background: transparent;
-  color: var(--site-text);
-  font-family: var(--site-font-body);
-  font-size: 0.9rem;
-  text-align: left;
-  padding: 0.45rem 0.65rem;
-  cursor: pointer;
-}
-
-.painting-filter-option:hover,
-.painting-filter-option:focus-visible {
-  background: rgba(240, 221, 212, 0.7);
-  outline: none;
-}
-
-.painting-filter-menu-empty {
-  padding: 0.45rem 0.65rem;
-  color: var(--site-text-muted);
-  font-size: 0.86rem;
-}
-
-.painting-filter-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  padding-top: 0.3rem;
-  padding-right: 0.3rem;
-}
-
-.painting-filter-chip {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid rgba(201, 123, 99, 0.28);
-  border-radius: 999px;
-  background: rgba(240, 221, 212, 0.55);
-  color: var(--site-text);
-  font-family: var(--site-font-body);
-  font-size: 0.86rem;
-  padding: 0.3rem 0.75rem;
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
-}
-
-.painting-filter-chip:hover,
-.painting-filter-chip:focus-visible {
-  background: rgba(240, 221, 212, 0.85);
-  border-color: rgba(201, 123, 99, 0.42);
-  outline: none;
-}
-
-.painting-filter-chip:focus-visible {
-  box-shadow: 0 0 0 2px rgba(201, 123, 99, 0.25);
-}
-
-.painting-filter-chip-remove {
-  position: absolute;
-  top: -0.38rem;
-  right: -0.38rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1rem;
-  height: 1rem;
-  border: 1px solid rgba(201, 123, 99, 0.28);
-  border-radius: 50%;
-  background: rgba(250, 246, 241, 0.98);
-  color: var(--site-text-muted);
-  font-size: 0.78rem;
-  line-height: 1;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.15s ease, color 0.15s ease, background 0.15s ease;
-}
-
-.painting-filter-chip:hover .painting-filter-chip-remove,
-.painting-filter-chip:focus-visible .painting-filter-chip-remove {
-  opacity: 1;
-}
-
-.painting-filter-chip:hover .painting-filter-chip-remove {
-  color: var(--site-text);
-  background: rgba(240, 221, 212, 0.98);
-}
-
-.painting-grid-empty {
-  margin: 1rem 0 0;
-  color: var(--site-text-muted);
-  font-size: 0.95rem;
-}
-
+/* JS splits paintings into columns, filling left to right so list order reads across rows */
 .painting-grid {
-  --grid-cols: 3;
-  --gap-x: 1.25rem;
-  --gap-y: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin: 1rem 0 2rem;
+}
+
+.painting-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.painting-grid figure {
   position: relative;
-}
-
-.painting-grid.is-filter-layout-animating {
-  transition: height 0.48s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.painting-card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: var(--site-bg-soft);
-  cursor: pointer;
-  border-radius: var(--site-radius);
+  margin: 0 0 1.25rem;
+  border-radius: 4px;
   overflow: hidden;
-  max-width: 100%;
-  transform: translate3d(0, 0, 0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.painting-card.is-filter-exiting {
-  transition: opacity 0.48s cubic-bezier(0.22, 1, 0.36, 1);
-  pointer-events: none;
+.painting-grid figure:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
 
-.painting-card.is-filter-entering {
-  opacity: 0;
-}
-
-.painting-card.is-filter-animating {
-  will-change: transform, opacity;
-  transition:
-    transform 0.48s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.48s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.painting-card:focus-visible {
-  outline: 2px solid var(--site-accent);
-  outline-offset: 3px;
-}
-
-.painting-card img {
+.painting-grid img {
   display: block;
   width: 100%;
   height: auto;
-  transition: transform 0.35s ease;
 }
 
-.painting-card:hover img,
-.painting-card:focus-visible img {
-  transform: scale(1.03);
-}
-
-.painting-card-overlay {
+/* title slides up over the bottom of the painting on hover */
+.painting-grid figcaption {
   position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 1rem 1.1rem;
-  background: linear-gradient(to top, rgba(26, 24, 22, 0.72) 0%, transparent 55%);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.45rem 0.75rem;
+  background: rgba(20, 16, 14, 0.55);
+  backdrop-filter: blur(3px);
+  color: #fdf2e9;
+  font-size: 0.8em;
   opacity: 0;
-  transition: opacity 0.25s ease;
-  pointer-events: none;
+  transform: translateY(100%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.painting-card:hover .painting-card-overlay,
-.painting-card:focus-visible .painting-card-overlay {
+.painting-grid figure:hover figcaption {
   opacity: 1;
+  transform: translateY(0);
 }
 
-.painting-card-overlay h3 {
-  margin: 0 0 0.2rem;
-  font-family: var(--site-font-display);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
-}
-
-.painting-card-overlay p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.78);
-}
-
-#painting-lightbox {
-  display: none;
+/* Lightbox */
+#lightbox {
   position: fixed;
   inset: 0;
-  z-index: 1000;
-  background: rgba(15, 14, 13, 0.94);
+  z-index: 10000;
+  display: none;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
-}
-
-#painting-lightbox.is-open {
-  display: flex;
-}
-
-body.lightbox-open {
-  overflow: hidden;
-}
-
-.lightbox-inner {
-  position: relative;
-  max-width: 960px;
-  width: 100%;
-  max-height: 100%;
-  display: flex;
   flex-direction: column;
-  align-items: center;
+  background: rgba(20, 16, 14, 0.92);
+  cursor: zoom-out;
 }
 
-.lightbox-close {
-  /* share the right arrow's column, hugging the image's top-right corner */
-  position: absolute;
-  top: -0.5rem;
-  right: -3rem;
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0 0.75rem;
-  z-index: 2;
+#lightbox.open {
+  display: flex;
 }
 
-.lightbox-close:hover {
-  color: #fff;
+#lightbox img {
+  max-width: 92vw;
+  max-height: 84vh;
+  border-radius: 4px;
 }
 
-.lightbox-image-wrap {
-  /* shrink-wrap the image so the controls anchor to its real bounds */
-  position: relative;
-  width: fit-content;
-  max-width: 100%;
-  max-height: 72vh;
-  margin: 0 auto;
+#lightbox p {
+  color: #f0e6dd;
+  margin: 0.8rem 0 0;
+  font-size: 0.9em;
 }
 
-.lightbox-image-wrap img {
-  max-width: 100%;
-  max-height: 72vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: var(--site-radius);
-}
-
-.lightbox-info {
-  margin-top: 1.25rem;
-  text-align: center;
-  color: #f5f0eb;
-  max-width: 36rem;
-}
-
-.lightbox-info h2 {
-  color: #f5f0eb;
-  font-family: var(--site-font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
-}
-
-.lightbox-meta {
-  font-size: 0.95rem;
-  color: rgba(245, 240, 235, 0.75);
-  margin: 0 0 0.75rem;
-}
-
-.lightbox-description,
-.lightbox-notes {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(245, 240, 235, 0.85);
-  margin: 0.5rem 0 0;
-}
-
-.lightbox-notes {
-  font-size: 0.88rem;
-  color: rgba(245, 240, 235, 0.6);
-  font-style: italic;
-}
-
-.lightbox-nav {
+#lightbox button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.85) !important;
-  width: auto;
-  height: auto;
-  font-size: 2.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.75rem;
-  transition: background 0.15s;
-}
-
-.lightbox-nav:hover {
-  color: #fff !important;
-}
-
-.lightbox-prev {
-  left: -3rem;
-}
-
-.lightbox-next {
-  right: -3rem;
-}
-
-/* when the image runs close to the viewport edge, tuck the controls onto it */
-@media (max-width: 1100px) {
-  .lightbox-prev {
-    left: 0.25rem;
-  }
-
-  .lightbox-next {
-    right: 0.25rem;
-  }
-
-  .lightbox-close {
-    top: 0.25rem;
-    right: 0.25rem;
-  }
-
-  .lightbox-nav,
-  .lightbox-close {
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
-  }
-}
-
-.lightbox-counter {
-  position: absolute;
-  bottom: -2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.45);
-  white-space: nowrap;
-}
-
-@media (max-width: 900px) {
-  .painting-grid {
-    --grid-cols: 2;
-    --gap-x: 1rem;
-    --gap-y: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  body.site-page--paintings .site-nav {
-    background:
-      radial-gradient(ellipse 80% 120% at 15% 0%, rgba(201, 123, 99, 0.12) 0%, transparent 70%),
-      linear-gradient(180deg, rgba(245, 235, 228, 0.97) 0%, rgba(250, 246, 241, 0.95) 100%);
-    border-bottom-color: rgba(201, 123, 99, 0.22);
-  }
-}
-
-@media (max-width: 540px) {
-  .painting-grid {
-    --grid-cols: 2;
-    --gap-x: 0.875rem;
-    --gap-y: 0.875rem;
-  }
-
-  .painting-card-overlay {
-    opacity: 1;
-    background: linear-gradient(to top, rgba(26, 24, 22, 0.55) 0%, transparent 40%);
-  }
-
-  .lightbox-prev {
-    left: 0.25rem;
-  }
-
-  .lightbox-next {
-    right: 0.25rem;
-  }
-
-  .lightbox-close {
-    right: 0.25rem;
-  }
-
-  .lightbox-nav {
-    width: 2.25rem;
-    height: 2.25rem;
-    font-size: 1.2rem;
-  }
-}
-
-/* main.css draws a divider above every #main child — not wanted above the gallery.
-   Match the intro .post's horizontal padding so the filter aligns with the text. */
-body.site-page--paintings #main > .site-main {
-  border-top: 0;
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
-@media screen and (max-width: 1280px) {
-  body.site-page--paintings #main > .site-main {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-
-@media screen and (max-width: 736px) {
-  body.site-page--paintings #main > .site-main {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-/* Massively (main.css) button chrome leaks onto the gallery's <button>s — reset it */
-body.site-page--paintings .painting-card,
-body.site-page--paintings .painting-filter-trigger,
-body.site-page--paintings .painting-filter-menu button,
-body.site-page--paintings .painting-filter-chips button,
-body.site-page--paintings .lightbox-close,
-body.site-page--paintings .lightbox-nav {
-  height: auto;
-  line-height: normal;
-  letter-spacing: normal;
-  text-transform: none;
-  white-space: normal;
+  border: 0;
   box-shadow: none;
+  color: #f0e6dd;
+  font-size: 3rem;
+  line-height: 1;
+  padding: 1rem;
+  height: auto;
+  cursor: pointer;
 }
+
+#lightbox .prev { left: 0.5rem; }
+#lightbox .next { right: 0.5rem; }
